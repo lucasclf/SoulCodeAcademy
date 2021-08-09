@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste</title>
+    <style>
+        div{
+            background-color: aqua;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>AQUI É UM TITULO!</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim facilis ipsum dolorem iusto repellendus aperiam voluptatum accusantium deserunt tempore eveniet! Non suscipit eaque exercitationem neque mollitia labore, fugiat tenetur ducimus incidunt similique a voluptatibus hic accusamus ipsam nostrum obcaecati magnam inventore deleniti error quasi ad! Ullam quisquam repellat fugit dicta deleniti assumenda amet illum aut a aliquam aliquid, illo delectus voluptatem dignissimos nobis? Ipsam dolores adipisci ullam veniam omnis animi repellat deserunt veritatis sit debitis, voluptatum inventore sapiente aperiam corporis sed. Quasi, nesciunt voluptatum dolorum vel, sequi cum corrupti perspiciatis voluptatem omnis optio quos nulla saepe adipisci perferendis praesentium natus?</p>
-    <img src="zap.png" alt="feijão" class="imagem">
-    <h2 id="subtitulo">Aqui é um subtitulo!</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quos architecto illum odio nemo consequatur, quasi perferendis? Aliquam sunt voluptates atque delectus natus esse perferendis at laudantium, non quis sint repudiandae asperiores maiores adipisci accusantium vero alias aut assumenda incidunt ut nobis. Maiores voluptatum reiciendis quibusdam veritatis illum eaque quas voluptas dolorum non aut culpa, adipisci asperiores vero sit consequatur soluta incidunt reprehenderit alias! Aspernatur in libero non officia sed voluptatem magni natus sint quos, nihil sunt fuga, voluptatum ad eaque nemo aperiam. Eveniet, iusto ducimus nemo saepe dolore ipsam at maiores. Perspiciatis officia est itaque odio iure quis delectus.</p>
-    <script src="script.js"></script>
+
+    <p>
+        Arraste o seu mouse para dentro da divisão para ver o resultado:
+    </p>
+    <div onmouseover="over()" onmouseout="out()">
+        <h2>
+            Agora está dentro da divisão
+        </h2>
+    </div>
+
+<p>
+
+    Clique no botão a seguir e veja o resultado
+
+</p>
+<form>
+    <input type="button" onclick="sayHello()" value="Say Hello">
+    <input type="text" onblur="colorirInput()" id="fname">
+</form>
+<script type="text/javascript" src="script.js"></script>
+
 </body>
+
 </html>
