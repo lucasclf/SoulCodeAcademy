@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Menu Dropdown - Linha de Código</title>
+    <style>
+        .vertical {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 150px;
+        }
+        ul li {
+    position: relative;
+        }
+        li ul {
+    position: absolute;
+    left: 149px;
+    top: 0;
+    display: none;
+        }
+        ul li a {
+    display: block;
+    text-decoration: none;
+    color: #E2144A;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+        }
+        li:hover ul { 
+    display: block; 
+        }
+        ul li a:hover{
+    text-decoration:underline;
+    font-weight: bold;
+    background: #ccc;
+        }
+    </style>
+  </head>
+  <body>
+    <ul id="nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li>
+        <a href="#">O que Fazemos?</a>
+        <ul>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Hospedagem</a></li>
+          <li><a href="#">SEO</a></li>
+          <li><a href="#">Sistemas</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </body>
+</html>

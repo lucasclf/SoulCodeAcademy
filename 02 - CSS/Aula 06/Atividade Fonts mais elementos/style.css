@@ -1,0 +1,27 @@
+p:nth-child(1) {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-style: normal;
+    font-weight: 800;
+}
+
+p:nth-child(2) {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    font-style: italic;
+    font-weight: 200;
+}   
+
+p:nth-child(3) {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: normal;
+    font-style: oblique;
+    font-weight: 500;
+}
+
+p:nth-child(4) {
+    font-family: fantasy;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: 400;
+}

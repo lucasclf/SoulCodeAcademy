@@ -1,0 +1,30 @@
+div:nth-child(1) {
+    background: red;
+}
+div:nth-last-child(2) {
+    background: #ab82ff;
+}
+li:nth-of-type(1) {
+    color: green;
+}
+li:nth-of-type(1) {
+    color: green;
+}
+li:nth-last-of-type(1) {
+    color: yellow;
+}
+div:last-child {
+    background: orange;
+}
+div:first-of-type {
+    border: solid 5px green;
+}
+div:last-of-type {
+    border: solid 5px brown;
+}
+p:only-child {
+    font-size: 30px;
+}
+ul:only-of-type {
+    text-decoration: underline;
+}

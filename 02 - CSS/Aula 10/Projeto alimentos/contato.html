@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="contato.css">
+    <title>Contato</title>
+</head>
+
+<body>
+    <header>
+        <section>
+            <img src="logo.png" alt="logo empresa">
+        </section>
+        <section id="topo">
+            <section id="search">
+                <input type="search" placeholder="Pesquisar" autofocus>
+                <button name="buscar" class="button"></button>
+            </section>
+        </section>
+            <nav> 
+                <ul class="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="quemSomos.html">QUEM SOMOS</a></li>
+                    <li><a href="produtos.html">PRODUTOS</a></li>
+                    <li><a href="carreiras.html">TRABALHE CONOSCO</a></li>
+                    <li><a href="contato.html">CONTATO</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>    
+        
+    </header>
+
+    <h1>Contato</h1>
+
+    <main class="container">
+        <form action="/pagina-processa-dados-do-form" method="post">
+            <div>
+                <label for="nome"><b>Nome: <span>*</span></b></label>
+                <input type="text" id="nome" required>
+            </div> <br>
+            <div>
+                <label for="email"><b>E-mail: <span>*</span></b></label>
+                <input type="email" id="email" placeholder="seuemail@email.com.br" required>
+            </div> <br>
+            <div>
+                <label for="tele"><b>Telefone:</b></label>
+                <input type="tel" id="tele" placeholder="(00) 00000-0000">
+            </div> <br>
+            <div>
+                <label for="estado"><b>Estado:</b></label>
+                <input type="text" id="estado">
+            </div> <br>
+            <div>
+                <label for="Cidade"><b>Cidade:</b></label>
+                <input type="text" id="cidade">
+            </div> <br>
+            <div>
+                <label for="assunto"><b>Assunto: <span>*</span></b></label>
+                <select id="assunto" name="assunto" required>
+                    <option value="assunto">Assunto</option>
+                    <option value="sugestoes">Sugestões</option>
+                    <option value="reclamacoes">Reclamações</option>
+                    <option value="elogios">Elogios</option>
+                    <option value="informacoes">Informações</option>
+                </select>
+            </div> <br>
+            <div>
+                <!-- <label for="mensagem"><b>Mensagem: <span>*</span></b></label> -->
+                <textarea name="mensagem" id="mensagem" cols="50" rows="10" placeholder="Deixe aqui a sua mensagem" required></textarea>
+            </div> <br>
+            <div id="novi">
+                    <input type="checkbox" id="novidades" name="aceitanovidades" value="aceitanovidades"> 
+                    <label for="novidades">Aceito receber novidades e promoções.</label>
+                </div>
+            </div> <br> 
+            <div class="button">
+                <input type="submit" name="enviar" value="Enviar sua mensagem">
+            </div>
+        </form>
+        <img class="tracejado" id="tracejado1" src="traco.png" alt="">
+        <article id="boxinfo">
+            <div id="end"> 
+                <p><strong>Endereço:</strong></p>
+                <p>Av. das Nações, 5555.</p>
+                <p>São Paulo - SP </p>
+                <p>CEP: 55555-555</p>
+                <p style="color: #4286f4; font-size: larger;"><strong>SAC: 0800-555-555 </strong></p>
+            </div> 
+
+            <img id="iconewhats" src="whatsapp_icon.png" alt="" style="cursor: pointer;"> 
+            <p id="chatbot">Fale com nosso chatbot</p>
+        </article>
+    </main>
+
+    <footer>
+        <footer>
+            <span> &copy; Nome empresa, 2021</span>
+             <img id="logo_footer" src="logo.png" alt="logo">
+             <section>
+                 <img class="logos_footer" src="face_icon.png" alt="">
+                 <img class="logos_footer" src="instagram_icon.png" alt="">
+                 <img class="logos_footer" src="telegram_icon.png" alt="">
+                 <img class="logos_footer" src="whatsapp_icon.png" alt="">
+                 <img class="logos_footer" src="twitter_icon.png" alt="">
+             </section>
+         </footer> 
+    </footer>
+</body>
+</html>

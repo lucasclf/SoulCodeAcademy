@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form action="agradecimento.html" method="post">
+        <div>
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome">
+        </div>
+        <br>
+        <div>
+            <label for="tel">Telefone: </label>
+            <input type="tel" id="tel">
+        </div>
+        <br>
+        <div>
+            <label for="email">E-mail: </label>
+            <input type="email" id="email">
+        </div>
+        <br>
+        <div>
+            <label for="msg">Mensagem: </label>
+            <textarea id="msg"></textarea>
+        </div>
+        <br>
+        <div>
+            Genero:
+            <br>
+            <input type="radio" id="naoresponder" name="genero" value="naoresponder">
+            <label for="naoresponder">Prefiro não responder.</label>
+            <br>
+            <input type="radio" id="feminino" name="genero" value="feminino">
+            <label for="feminino">Feminino.</label>
+            <br>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino.</label>
+            <br>
+            <input type="radio" id="outro" name="genero" value="outro">
+            <label for="outro">Outro: </label>
+            <input type="text" id="outrogenero">
+            <label for="outrogenero"></label>
+        </div>
+        <br>
+        <div>
+            Periodo dispónivel para trabalho:
+            <br>
+            <input type="checkbox" id="manha" name="periodo manha" value="manha">
+            <label for="manha">Manhã.</label>
+            <br>
+            <input type="checkbox" id="tarde" name="periodo tarde" value="tarde">
+            <label for="tarde">Tarde.</label>
+            <br>
+            <input type="checkbox" id="noite" name="periodo noite" value="noite">
+            <label for="noite">Noite.</label>
+        </div>
+        <br>
+        <div>
+            <button type="submit">Enviar sua mensagem</button>
+            <button type="reset">Reset</button>
+        </div>
+        <br>
+        </form>
+</body>
+</html>

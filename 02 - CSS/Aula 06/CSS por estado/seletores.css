@@ -1,0 +1,35 @@
+:target {
+    color: green;
+    font-weight: bold;
+    }
+::selection {
+    color: red;
+}
+:empty {
+    border: solid 1px;
+    height: 50px;
+    background: gray;
+}
+input:checked {
+    width: 40px;
+
+}
+h1 {
+    font-family: "Courier New";
+}
+:not(h1) {
+    font-family: "Arial";
+}
+input ~ span {
+    color: orange;
+}
+input:disabled {
+    border: solid 1px red;
+    background-color: silver;
+    height: 25px;
+}
+input:enabled {
+    border: solid 1px blue;
+    background-color: #fff;
+    height: 25px;
+}

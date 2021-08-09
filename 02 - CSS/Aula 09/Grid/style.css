@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    background-color: black;
+/*     height: 20vh; */
+}
+
+article {
+    background-color: violet;
+    border: solid rgb(121, 0, 121) 2px;
+    color: yellow;
+    text-align: center;
+}
+
+.wrapper1 article {
+    background-color: violet;
+}
+
+.wrapper2 article {
+    background-color: turquoise;
+}
+
+.wrapper1 {
+    width: 50vw;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 20fr 30fr 30fr 20fr;
+}
+
+.wrapper2 {
+    width: 400px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.wrapper3 {
+    width: 50vw;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: repeat(2, 20fr 30fr);
+}
+
+.wrapper4 {
+    width: 50vw;
+    display: grid;
+    grid-template-columns: repeat(2, 20fr 30fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.box4 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.wrapper5 {
+    width: 50vw;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.box1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+}
+
+.verde {
+    background: chartreuse;
+}
