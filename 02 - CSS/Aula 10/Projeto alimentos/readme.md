@@ -1,0 +1,1 @@
+Autores / Authors: Carlos Junior, Diana Müller, Lucas Coquenão, Mateus Machado, Noemi Cunha
