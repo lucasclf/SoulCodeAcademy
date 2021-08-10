@@ -1,1 +1,11 @@
-Autores / Authors: Carlos Junior, Diana Müller, Lucas Coquenão, Mateus Machado, Noemi Cunha
+Autores / Authors:
+
+Carlos Junior - @Carlojunior800
+
+Diana Müller - @mullerdiana
+
+Lucas Coquenão - @lucasclf
+
+Mateus Machado - @Mateusfmac
+
+Noemi Cunha - @mi-cunha
