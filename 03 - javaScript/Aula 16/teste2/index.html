@@ -1,0 +1,36 @@
+<script>
+
+    function campob() {
+        document.getElementById("nome").style.backgroundColor = "red"
+    }
+
+    function campof() {
+        document.getElementById("nome").style.backgroundColor = "green"
+    }
+</script>
+</head>
+
+<body>
+<form>
+    <div>
+        <label for="name">Qual o seu nome?</label>
+        <input type="text" id="nome" onblur="campob()" onfocus="campof()">
+    </div>
+    <br>
+    <div>
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" onblur="campob" onfocus="campof">
+    </div>
+    <br>
+    <div>
+        <label for="msg">Mensagem:</label>
+        <textarea id="msg"></textarea>
+    </div>
+    <br>
+    <div class="button">
+        <button type="submit">Enviar sua mensagem</button>
+        <button type="reset">Limpar</button>
+    </div>
+     
+</form>
+</body>
