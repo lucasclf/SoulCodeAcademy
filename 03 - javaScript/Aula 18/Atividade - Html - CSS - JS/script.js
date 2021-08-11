@@ -1,8 +1,8 @@
 function exercicio() {
-    var tamanhoTemperaturas = 0, temperaturas = [], tamanhoNomes = 0, nomes = [], tempMaior = []
+    var tamanhoTemperaturas, temperaturas = [], tamanhoNomes, nomes = [], tempMaior = []
 
-    while (tamanhoTemperaturas < 1 || tamanhoTemperaturas > 10 || isNaN(tamanhoTemperaturas)){
-        tamanhoTemperaturas = parseInt(prompt("Informe o numero de temperaturas a serem analisadas: "))
+    while (tamanhoTemperaturas < 0 || tamanhoTemperaturas > 10 || isNaN(tamanhoTemperaturas)){
+        tamanhoTemperaturas = parseInt(prompt("Informe o numero de temperaturas a serem analisadas entre 0 a 10: "))
     } 
 
     for (i=0; i<tamanhoTemperaturas; i++){
@@ -10,7 +10,7 @@ function exercicio() {
         temperaturas[i] = parseInt(prompt("Informe a "+(parseInt(i)+1)+"ª temperatura a ser analisada: "))
     }
 
-    while (tamanhoNomes < 1 || tamanhoNomes > 10 || isNaN(tamanhoNomes)){
+    while (tamanhoNomes < 0 || tamanhoNomes > 10 || isNaN(tamanhoNomes)){
         tamanhoNomes = parseInt(prompt("Informe o numero de nomes a serem analisados: "))
     }
 
