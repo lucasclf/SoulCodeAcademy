@@ -1,45 +1,23 @@
 // QUESTÃO 01:
 
-/* var txt = "abcdefghijklm"
-var pos = txt.indexOf("h")
-document.write(pos) */
+/* var d = Date()
+alert(d) */
+
 
 // QUESTÃO 02:
 
-/* var txt = "Posso comer bananas o dia todo"
-var pos = txt.slice(txt.indexOf(" b"), txt.indexOf(" o"))
-document.write(pos) */
+/* var d = new Date();
+var ano = d.getFullYear();
+document.write(ano) */
 
 // QUESTÃO 03:
 
-/* var txt = "Olá, mundo"
-txt = txt.replace = "Olá, bem-vindo"
-document.write(txt)  */
+/* var d = new Date();
+var mes = d.getMonth();
+document.write(mes) */
 
 // QUESTÃO 04:
 
-/* var txt = "Olá, mundo"
-txt = txt.toUpperCase()
-document.write(txt) */
-
-// QUESTÃO 05:
-
-/* var txt = "OLÁ, MUNDO"
-txt = txt.toLowerCase()
- */
-
-// QUESTÃO 06:
-
-/* var txt = "Olá, mundo!"
-x = txt.length
-alert(x) */
-
-// QUESTÃO 07:
-
-/* var txt = "We are \"Vikings\""
-alert(txt) */
-
-// QUESTÃO 08:
-
-/* var str1 = "Olá ", str2 = "Mundo!"
-alert(str1+str2) */
+var d = new Date();
+d.setFullYear(2020);
+document.write(d)
