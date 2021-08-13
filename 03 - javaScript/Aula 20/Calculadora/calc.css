@@ -7,6 +7,11 @@
     position: absolute;
 }
 
+header {
+    height: 200px;
+    background-color: purple;
+}
+
 /* Formatação geral de botões. */
 
 input[type="button"]{
@@ -31,7 +36,7 @@ input[type="button"]{
 /* Formatação geral das tela de numeros */
 
 #tela1, #tela2 {
-    width: 30vw;
+    width: 19vw;
     min-height: 5vh;
     font-size: 2rem;
     border: none
@@ -40,7 +45,7 @@ input[type="button"]{
 /* Formatação geral da tela de resultado*/
 
 #telaResultado {
-    width: 40.5vw;
+    width: 23vw;
     min-height: 5vh;
     font-size: 2rem;
     border: none

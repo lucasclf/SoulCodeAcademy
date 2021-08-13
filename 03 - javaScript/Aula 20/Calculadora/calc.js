@@ -7,10 +7,14 @@ function btn(botao) {
 }
 
 function btnSimbolo(botao) {
-    if (document.calc.tela1.value) {
+    if (document.calc.telaResultado.value) {
+        document.calc.tela1.value = document.calc.telaResultado.value
+        document.calc.tela2.value = ""
+        document.calc.telaResultado.value = ""
+    } else if (document.calc.tela1.value) {
         document.calc.telaSimbolo.value = botao
     }
-    //função geral dos botões aritiméticos, basicamente ele acrescenta o simbolo aritimético ao input "telaSimbolo" caso esteja em branco, ou substituindo ele caso esteja com outro simbolo.
+    //função geral dos botões aritiméticos, se a tela 1, possuir um valor, ele acrescenta o simbolo aritimético ao input "telaSimbolo" caso esteja em branco, ou substituindo ele caso esteja com outro simbolo, adcionalmente, se a telaResultado estiver preenchida, ele move o valor para a tela1 e reseta as outras telas.
 }
 
 function btnReset() {
