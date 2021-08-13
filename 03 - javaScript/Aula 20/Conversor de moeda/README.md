@@ -4,4 +4,4 @@ Currency converter prototype for future insertion into SoulCode Academy Full Sta
 
 ----------------------------------------------------------------------------------------
 
-Autores/Authors: Diana Müller, Márcia Alves, Lucas Coquenão, Ricardo Nunes, Yago Martins e Mirian
+Autores/Authors: Diana Müller, Márcia Alves, Lucas Coquenão, Ricardo Nunes, Yago Martins e Mirian Virginia

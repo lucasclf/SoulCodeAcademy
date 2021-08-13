@@ -4,4 +4,4 @@ Calculator prototype for future insertion into SoulCode Academy Full Stack Devel
 
 ----------------------------------------------------------------------------------------
 
-Autores/Authors: Diana Müller, Márcia Alves, Lucas Coquenão, Ricardo Nunes, Yago Martins e Mirian
+Autores/Authors: Diana Müller, Márcia Alves, Lucas Coquenão, Ricardo Nunes, Yago Martins e Mirian Virginia
