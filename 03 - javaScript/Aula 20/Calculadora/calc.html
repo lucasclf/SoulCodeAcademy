@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <nav>
+
+    </nav>
+    <main>
+        <form name="calc">
+            <input type="text" id="tela" readonly />
+            <input type="text" id="telaSimbolo" readonly />
+            <br>
+            <input type="button" class="botaoCalc" value="7" onclick="btn(value)">
+            <input type="button" class="botaoCalc" value="8" onclick="btn(value)">
+            <input type="button" class="botaoCalc" value="9" onclick="btn(value)">
+            <input type="button" class="botaoCalc" value="/" onclick="btn(value)">
+            <input type="button" class="botaoCalc" value="apagar" onclick="btnApagar()">
+            <br>
+            <input type="button" class="botaoCalc" value="4" onclick="btn(value)">
+            <input type="button" class="botaoCalc" value="5" onclick="btn(value)">
+            <input type="button" class="botaoCalc" value="6" onclick="btn(value)">
+            <input type="button" class="botaoCalc" value="*" onclick="btn(value)">
+            <input type="button" class="botaoCalc" value="Cientifica" onclick="btnCien()">
+            <br>
+            <input type="button" class="botaoCalc" value="3" onclick="btn(value)">
+            <input type="button" class="botaoCalc" value="2" onclick="btn(value)">
+            <input type="button" class="botaoCalc" value="1" onclick="btn(value)">
+            <input type="button" class="botaoCalc" value="-" onclick="btn(value)">
+            <br>
+            <input type="button" class="botaoCalc" value="0" onclick="btn(value)">
+            <input type="button" class="botaoCalc" value="=" onclick="btnResult()">
+            <input type="button" class="botaoCalc" value="C" onclick="btnReset()">
+            <input type="button" class="botaoCalc" value="+" onclick="btn(value)">
+            <br>
+            <input type="button" class="botaoCalc Adv" value="Raiz" onclick="btnRaiz()">
+            <input type="button" class="botaoCalc Adv" value="^2" onclick="btnElev2()">
+            <input type="button" class="botaoCalc Adv" value="^3" onclick="btnElev3()">
+            <input type="button" class="botaoCalc Adv" value="Pi" onclick="btnPi()">
+            <br>
+        </form>
+
+    </main>
+    <script src="calc.js"></script>
+</body>
+</html>

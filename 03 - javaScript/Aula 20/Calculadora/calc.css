@@ -1,0 +1,25 @@
+.botaoCalc {
+    color: #030303;
+    background-color: #F1F1F1;
+    font-weight: 700;
+    min-width: 10vw;
+    min-height: 15vh;
+    padding: 1%;
+    font-size: 1rem;
+}
+
+#tela {
+    width: 30vw;
+    min-height: 5vh;
+    font-size: 2rem;
+    border-right: none;
+}
+
+#telaSimbolo {
+    width: 5vw;
+    min-height: 5vh;
+    font-size: 2rem;
+    border-left: none;
+    position:absolute;
+    left: 30.7vw
+}
