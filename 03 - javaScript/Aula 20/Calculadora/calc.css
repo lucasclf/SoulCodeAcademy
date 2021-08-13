@@ -1,6 +1,15 @@
 * {
     padding: 0%;
     margin: 0%;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#container {
+    width: 35vw;
+    height: 63vh;
+    background-color: pink;
+    display: flex;
 }
 
 .calc {
@@ -16,56 +25,64 @@ header {
 
 input[type="button"]{
     border: none;
-    border-radius: 8px;
     text-align: center;
     cursor: pointer;
     position: relative;
     color:#5386a4;
-    font-weight: 700;
     font-size: 1em;
-    text-shadow: 1px 1px 1px#5386a4;
     background-color: #272727;
     margin: 0.3rem;
 }
 
 .botaoCalc {
+    border-radius: 8px;
     height: 5vh ;
     width: 5vw;
 }
 
-/* Formatação geral das tela de numeros */
+#simples {
+    border-radius: 8px;
+}
+
+.btnNeg {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+}
+
+#negativo2 {
+    position: relative;
+    bottom:4px
+}
+
+/* Formatação geral das telas*/
 
 #tela1, #tela2 {
     width: 19vw;
     min-height: 5vh;
     font-size: 2rem;
-    border: none
-}
-
-/* Formatação geral da tela de resultado*/
-
-#telaResultado {
-    width: 23vw;
-    min-height: 5vh;
-    font-size: 2rem;
-    border: none
+    border: none;
+    outline: none;
+    background-color: inherit;
 }
 
 /* Formatação geral da tela de simbolos */
 
 #telaSimbolo {
-    width: 5vw;
-    min-height: 10vh;
-    font-size: 4rem;
-    position:absolute;
-    left: 40vw;
-    border: none
+    width: 1vw;
+    min-height: 5vh;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    position: relative;
+    right: 20px;
+    background-color: inherit;
 }
 
 /* Formatação de posicionamento no eixo X (largura) dos botões de alteração de calculadora. */
 
 #simples {
     height: 5vh;
-    width: 40.5vw;
+    width: 10.9vw;
     position: relative
 }

@@ -17,66 +17,48 @@
 
     </nav>
     <main>
-        <section>
+        <section id="container">
             <form name="calc">
-                <article id="linha1">
-                    <input type="button" value="Simples" id="simples" onclick="btnSimples()">
-                </article>
-                <article id="linha2">
-                    <input type="button" value="-" onclick="btnNegativo1()">
-                    <input type="text" id="tela1" readonly />
-                </article>
-                <article id="linhasimbolo">
-                    <input type="text" id="telaSimbolo" readonly />
-                    <br>
-                </article>
-                <article id="linha3">
-                    <input type="button" value="-" onclick="btnNegativo2()">
-                    <input type="text" id="tela2" readonly />
-                    <br>
-                </article>
-                <article id="linha4">
-                    <input type="button" class="botaoCalc" value="7" onclick="btn(value)">
-                    <input type="button" class="botaoCalc" value="8" onclick="btn(value)">
-                    <input type="button" class="botaoCalc" value="9" onclick="btn(value)">
-                    <input type="button" class="botaoCalc" value="/" onclick="btnSimbolo(value)">
-                    <input type="button" class="botaoCalc" id="apagar1" value="&lt;" onclick="btnApagar()">
-                    <br>
-                </article>
-                <article id="linha5">
-                    <input type="button" class="botaoCalc" value="4" onclick="btn(value)">
-                    <input type="button" class="botaoCalc" value="5" onclick="btn(value)">
-                    <input type="button" class="botaoCalc" value="6" onclick="btn(value)">
-                    <input type="button" class="botaoCalc" value="*" onclick="btnSimbolo(value)">
-                    <br>
-                </article>
-                <article id="linha6">
-                    <input type="button" class="botaoCalc" value="3" onclick="btn(value)">
-                    <input type="button" class="botaoCalc" value="2" onclick="btn(value)">
-                    <input type="button" class="botaoCalc" value="1" onclick="btn(value)">
-                    <input type="button" class="botaoCalc" value="-" onclick="btnSimbolo(value)">
-                    <br>
-                </article>
-                <article id="linha7">
-                    <input type="button" class="botaoCalc" value="0" onclick="btn(value)">
-                    <input type="button" class="botaoCalc" value="=" onclick="btnResult()">
-                    <input type="button" class="botaoCalc" value="C" onclick="btnReset()">
-                    <input type="button" class="botaoCalc" value="+" onclick="btnSimbolo(value)">
-                    <br>
-                </article>
-                <article id="linhacientifica">
-                    <input type="button" id="raiz" class="botaoCalc adv" value="&radic;2" onclick="btnRaiz()">
-                    <input type="button" class="botaoCalc adv" value="^2" onclick="btnElev(value)">
-                    <input type="button" class="botaoCalc adv" value="^3" onclick="btnElev(value)">
-                    <input type="button" class="botaoCalc adv" value="Pi" onclick="btnPi()">
-                    <br>
-                    <input type="text" id="telaResultado" readonly />
-                </article>
+                <input type="button" class="btnNeg" id="negativo1" value="-" onclick="btnNegativo1()">
+                <input type="text" id="tela1" readonly />
+                <input type="text" id="telaSimbolo" readonly />
+                <br>
+                <input type="button" class="btnNeg" id="negativo2" value="-" onclick="btnNegativo2()">
+                <input type="text" id="tela2" readonly />
+                <br>
+                <input type="button" value="Simples" id="simples" onclick="btnSimples()">
+                <input type="button" class="botaoCalc" value="C" onclick="btnReset()">
+                <input type="button" class="botaoCalc" id="apagar1" value="&lt;" onclick="btnApagar()">
+                <br>
+                <input type="button" class="botaoCalc" value="7" onclick="btn(value)">
+                <input type="button" class="botaoCalc" value="8" onclick="btn(value)">
+                <input type="button" class="botaoCalc" value="9" onclick="btn(value)">
+                <input type="button" class="botaoCalc" value="/" onclick="btnSimbolo(value)">
+                <br>
+                <input type="button" class="botaoCalc" value="4" onclick="btn(value)">
+                <input type="button" class="botaoCalc" value="5" onclick="btn(value)">
+                <input type="button" class="botaoCalc" value="6" onclick="btn(value)">
+                <input type="button" class="botaoCalc" value="*" onclick="btnSimbolo(value)">
+                <br>
+                <input type="button" class="botaoCalc" value="3" onclick="btn(value)">
+                <input type="button" class="botaoCalc" value="2" onclick="btn(value)">
+                <input type="button" class="botaoCalc" value="1" onclick="btn(value)">
+                <input type="button" class="botaoCalc" value="-" onclick="btnSimbolo(value)">
+                <br>
+                <input type="button" class="botaoCalc" value="0" onclick="btn(value)">
+                <input type="button" class="botaoCalc" value="." onclick="btn(value)">
+                <input type="button" class="botaoCalc" value="=" onclick="btnResult()">
+                <input type="button" class="botaoCalc" value="+" onclick="btnSimbolo(value)">
+                <br>
+                <input type="button" id="raiz" class="botaoCalc adv" value="&radic;2" onclick="btnRaiz()">
+                <input type="button" class="botaoCalc adv" value="^2" onclick="btnElev(value)">
+                <input type="button" class="botaoCalc adv" value="^3" onclick="btnElev(value)">
+                <input type="button" class="botaoCalc adv" value="Pi" onclick="btnPi()">
             </form>
         </section>
     </main>
     <footer>
-        
+
     </footer>
     <script src="calc.js"></script>
 </body>

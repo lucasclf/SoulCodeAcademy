@@ -7,21 +7,17 @@ function btn(botao) {
 }
 
 function btnSimbolo(botao) {
-    if (document.calc.telaResultado.value) {
-        document.calc.tela1.value = document.calc.telaResultado.value
-        document.calc.tela2.value = ""
-        document.calc.telaResultado.value = ""
-    } else if (document.calc.tela1.value) {
-        document.calc.telaSimbolo.value = botao
+    if (document.calc.tela1.value) {
+    document.calc.telaSimbolo.value = botao
     }
-    //função geral dos botões aritiméticos, se a tela 1, possuir um valor, ele acrescenta o simbolo aritimético ao input "telaSimbolo" caso esteja em branco, ou substituindo ele caso esteja com outro simbolo, adcionalmente, se a telaResultado estiver preenchida, ele move o valor para a tela1 e reseta as outras telas.
+
+    //função geral dos botões aritiméticos ele acrescenta o simbolo aritimético ao input "telaSimbolo" caso esteja em branco, ou substituindo ele caso esteja com outro simbolo.
 }
 
 function btnReset() {
     document.calc.tela1.value = ""
     document.calc.tela2.value = ""
     document.calc.telaSimbolo.value = ""
-    document.calc.telaResultado.value = ""
     //função do botão "C" que apaga todos os input tela
 }
 
@@ -29,10 +25,14 @@ function btnResult() {
     var aux = document.calc.tela1.value + document.calc.telaSimbolo.value + document.calc.tela2.value, resultado
     if (aux) {
         resultado = eval(aux)
-        document.calc.telaResultado.value = resultado
+        document.calc.tela1.value = resultado
+        document.calc.tela2.value = ""
+        document.calc.telaSimbolo.value = ""
     } else {
         resultado = "0"
-        document.calc.telaResultado.value = resultado
+        document.calc.tela1.value = resultado
+        document.calc.tela2.value = ""
+        document.calc.telaSimbolo.value = ""
     }
 
     //função do botão "=", ele pega o valor do input "tela" joga na variavel aux, depois se aux tiver algum valor(true), ele joga aux na função nativa eval e define esse valor para a variavel resultado e altera o valor do input "tela" para resultado. Por fim, se aux não tiver valor(false), ele retorna o valor 0 no input "tela"
@@ -66,7 +66,7 @@ function btnPi() {
 function btnRaiz() {
     var aux = eval(document.calc.tela1.value)
     if (!document.calc.tela2.value) {
-        document.calc.telaResultado.value = Math.sqrt(aux)
+        document.calc.tela1.value = Math.sqrt(aux)
     } else
         alert("A função de raiz só pode ser utilizada caso o segundo valor esteja em branco, favor apaga-lo")
 
@@ -75,18 +75,21 @@ function btnRaiz() {
 }
 
 function btnElev(num) {
-    var aux = eval(document.calc.tela1.value)
-    var potencia = num.substring(1)
-    console.log(potencia)
-    document.calc.tela1.value = Math.pow(aux, potencia)
+    if (!document.calc.tela2.value) {
+        var aux = eval(document.calc.tela1.value)
+        var potencia = num.substring(1)
+        console.log(potencia)
+        document.calc.tela1.value = Math.pow(aux, potencia)
+    } else
+        alert("A função de potencia só pode ser utilizada caso o segundo valor esteja em branco, favor apaga-lo")
 
     //Função para os botões de calcular elevado, primeiro ele joga o valor do input "tela" na função eval e define o resultado para a variavel aux. Tambem pega o valor do botão, e joga na variavel potencia, utilizando por substring apena o ultimo valor(que em teoria é o numérico), por fim, joga aux, potencia no objeto Math.pow e o resultado vai para o input "tela"
 
 }
 
 function btnSimples() {
-    
-    if (document.calc.querySelectorAll(".adv")[1].style.visibility == "hidden"){
+
+    if (document.calc.querySelectorAll(".adv")[1].style.visibility == "hidden") {
         for (i = 0; i < document.calc.querySelectorAll(".adv").length; i++) {
             document.calc.querySelectorAll(".adv")[i].style.visibility = "visible";
         }
@@ -112,11 +115,11 @@ function btnCien() {
 
 }
 
-function btnNegativo1(){
+function btnNegativo1() {
     var aux = document.calc.tela1.value.indexOf("-")
-    if (aux  == -1){
-    document.calc.tela1.value = ("-"+document.calc.tela1.value)
-    } else if (aux == 0){
+    if (aux == -1) {
+        document.calc.tela1.value = ("-" + document.calc.tela1.value)
+    } else if (aux == 0) {
         document.calc.tela1.value = document.calc.tela1.value.substring(1)
     }
 
@@ -124,15 +127,15 @@ function btnNegativo1(){
 
 }
 
-function btnNegativo2(){
+function btnNegativo2() {
     var aux = document.calc.tela2.value.indexOf("-")
-    if (aux  == -1){
-    document.calc.tela2.value = ("-"+document.calc.tela2.value)
-    } else if (aux == 0){
+    if (aux == -1) {
+        document.calc.tela2.value = ("-" + document.calc.tela2.value)
+    } else if (aux == 0) {
         document.calc.tela2.value = document.calc.tela2.value.substring(1)
     }
 
-        //Função para inserir o valor negativo na tela1.
+    //Função para inserir o valor negativo na tela1.
 
 }
 
