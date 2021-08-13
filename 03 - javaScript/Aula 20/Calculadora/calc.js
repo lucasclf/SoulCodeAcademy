@@ -36,3 +36,19 @@ function btnElev(num) {
     console.log(potencia)
     document.calc.tela.value = Math.pow(aux, potencia)
 }
+
+function btnCien() {
+    var aux = []
+    aux = document.calc.querySelectorAll(".adv")
+    for (i = 0; i < aux.length; i++) {
+        aux[i].style.visibility = "visible";
+    }
+}
+
+function btnSimples(){
+    var aux = []
+    aux = document.calc.querySelectorAll(".adv")
+    for (i = 0; i < aux.length; i++) {
+        aux[i].style.visibility = "hidden";
+    }
+}
