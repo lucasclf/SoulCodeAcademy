@@ -29,3 +29,10 @@ function btnRaiz() {
     var aux = eval(document.calc.tela.value)
     document.calc.tela.value = Math.sqrt(aux)
 }
+
+function btnElev(num) {
+    var aux = eval(document.calc.tela.value)
+    var potencia = num.substring(1)
+    console.log(potencia)
+    document.calc.tela.value = Math.pow(aux, potencia)
+}
