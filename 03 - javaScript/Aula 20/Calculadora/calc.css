@@ -1,13 +1,31 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+.calc {
+    position: absolute;
+}
+
 /* Formatação geral de botões. */
 
-.botaoCalc {
-    color: #030303;
-    background-color: #F1F1F1;
+input[type="button"]{
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    color:#5386a4;
     font-weight: 700;
-    min-width: 10vw;
-    min-height: 15vh;
-    padding: 1%;
-    font-size: 1rem;
+    font-size: 1em;
+    text-shadow: 1px 1px 1px#5386a4;
+    background-color: #272727;
+    margin: 0.3rem;
+}
+
+.botaoCalc {
+    height: 5vh ;
+    width: 5vw;
 }
 
 /* Formatação geral das tela de numeros */
@@ -39,21 +57,10 @@
     border: none
 }
 
-/* Formatação de visibilidade dos botões da calculadora cientifica. */
-
-.adv {
-    visibility: visible
-}
-
 /* Formatação de posicionamento no eixo X (largura) dos botões de alteração de calculadora. */
 
-#simples, #cientifico {
-    position: absolute;
-    left: 41.5vw
-}
-
-/* Formatação de posicionamento no eixo Z (profundidade) do botão de retorno a calculadora simples para que ele sempre esteja na frente. */
-
 #simples {
-    z-index: 2;
+    height: 5vh;
+    width: 40.5vw;
+    position: relative
 }

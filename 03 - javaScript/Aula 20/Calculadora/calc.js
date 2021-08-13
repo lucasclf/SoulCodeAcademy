@@ -81,16 +81,21 @@ function btnElev(num) {
 }
 
 function btnSimples() {
-    var aux = []
-    aux = document.calc.querySelectorAll(".adv")
-    for (i = 0; i < aux.length; i++) {
-        aux[i].style.visibility = "hidden";
+    
+    if (document.calc.querySelectorAll(".adv")[1].style.visibility == "hidden"){
+        for (i = 0; i < document.calc.querySelectorAll(".adv").length; i++) {
+            document.calc.querySelectorAll(".adv")[i].style.visibility = "visible";
+        }
+        document.calc.simples.value = "Simples"
+    } else if (document.calc.querySelectorAll(".adv")[1].style.visibility != "hidden") {
+        for (i = 0; i < document.calc.querySelectorAll(".adv").length; i++) {
+            document.calc.querySelectorAll(".adv")[i].style.visibility = "hidden";
+        }
+        document.calc.simples.value = "Cientifica"
     }
-
     //Função para o botão de calculadora simples, ele pega o valor de todos os itens com classe ".adv" e joga para dentro da variavel aux que foi definida como array. Depois passa um for em cada uma das posições de aux e altera o style.visibility para hidden, escondendo assim os botões da calculadora avançada.
 
 }
-
 
 function btnCien() {
     var aux = []
@@ -110,6 +115,9 @@ function btnNegativo1(){
     } else if (aux == 0){
         document.calc.tela1.value = document.calc.tela1.value.substring(1)
     }
+
+    //Função para inserir o valor negativo na tela1.
+
 }
 
 function btnNegativo2(){
@@ -119,4 +127,21 @@ function btnNegativo2(){
     } else if (aux == 0){
         document.calc.tela2.value = document.calc.tela2.value.substring(1)
     }
+
+        //Função para inserir o valor negativo na tela1.
+
 }
+
+
+
+
+
+
+
+
+
+
+/* PROBLEMAS A SEREM SOLUCIONADOS:
+
+1 - Se a calculadora iniciar em modo simples(linha CSS - 54 = hidden) o botão só funciona no segundo clique.
+2 - */
