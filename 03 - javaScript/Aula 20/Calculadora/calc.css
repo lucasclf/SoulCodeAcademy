@@ -1,3 +1,5 @@
+/* Formatação geral de botões. */
+
 .botaoCalc {
     color: #030303;
     background-color: #F1F1F1;
@@ -8,12 +10,16 @@
     font-size: 1rem;
 }
 
+/* Formatação geral das tela de numeros */
+
 #tela {
     width: 30vw;
     min-height: 5vh;
     font-size: 2rem;
     border-right: none;
 }
+
+/* Formatação geral das tela de simbolos */
 
 #telaSimbolo {
     width: 5vw;
@@ -24,14 +30,20 @@
     left: 30.7vw
 }
 
+/* Formatação de visibilidade dos botões da calculadora cientifica. */
+
 .adv {
     visibility: visible
 }
+
+/* Formatação de posicionamento no eixo X (largura) dos botões de alteração de calculadora. */
 
 #simples, #cientifico {
     position: absolute;
     left: 41.5vw
 }
+
+/* Formatação de posicionamento no eixo Z (profundidade) do botão de retorno a calculadora simples para que ele sempre esteja na frente. */
 
 #simples {
     z-index: 2;
