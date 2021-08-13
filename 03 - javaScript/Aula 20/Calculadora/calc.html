@@ -16,37 +16,42 @@
     </nav>
     <main>
         <form name="calc">
-            <input type="text" id="tela" readonly />
+            <input type="button" value="-" onclick="btnNegativo1()">
+            <input type="text" id="tela1" readonly />
             <input type="text" id="telaSimbolo" readonly />
+            <br>
+            <input type="button" value="-" onclick="btnNegativo2()">
+            <input type="text" id="tela2" readonly />
             <br>
             <input type="button" class="botaoCalc" value="7" onclick="btn(value)">
             <input type="button" class="botaoCalc" value="8" onclick="btn(value)">
             <input type="button" class="botaoCalc" value="9" onclick="btn(value)">
-            <input type="button" class="botaoCalc" value="/" onclick="btn(value)">
-            <input type="button" class="botaoCalc" value="apagar" onclick="btnApagar()">
+            <input type="button" class="botaoCalc" value="/" onclick="btnSimbolo(value)">
+            <input type="button" class="botaoCalc" id="apagar1" value="&lt;" onclick="btnApagar()">
             <br>
             <input type="button" class="botaoCalc" value="4" onclick="btn(value)">
             <input type="button" class="botaoCalc" value="5" onclick="btn(value)">
             <input type="button" class="botaoCalc" value="6" onclick="btn(value)">
-            <input type="button" class="botaoCalc" value="*" onclick="btn(value)">
+            <input type="button" class="botaoCalc" value="*" onclick="btnSimbolo(value)">
             <input type="button" class="botaoCalc adv" id="simples" value="Simples" onclick="btnSimples()">
             <input type="button" class="botaoCalc" id="cientifico" value="Cientifica" onclick="btnCien()">
             <br>
             <input type="button" class="botaoCalc" value="3" onclick="btn(value)">
             <input type="button" class="botaoCalc" value="2" onclick="btn(value)">
             <input type="button" class="botaoCalc" value="1" onclick="btn(value)">
-            <input type="button" class="botaoCalc" value="-" onclick="btn(value)">
+            <input type="button" class="botaoCalc" value="-" onclick="btnSimbolo(value)">
             <br>
             <input type="button" class="botaoCalc" value="0" onclick="btn(value)">
-            <input type="button" class="botaoCalc" value="=" onclick="btnResult(fim)">
+            <input type="button" class="botaoCalc" value="=" onclick="btnResult()">
             <input type="button" class="botaoCalc" value="C" onclick="btnReset()">
-            <input type="button" class="botaoCalc" value="+" onclick="btn(value)">
+            <input type="button" class="botaoCalc" value="+" onclick="btnSimbolo(value)">
             <br>
             <input type="button" class="botaoCalc adv" value="Raiz" onclick="btnRaiz()">
             <input type="button" class="botaoCalc adv" value="^2" onclick="btnElev(value)">
             <input type="button" class="botaoCalc adv" value="^3" onclick="btnElev(value)">
             <input type="button" class="botaoCalc adv" value="Pi" onclick="btnPi()">
             <br>
+            <input type="text" id="telaResultado" readonly />
         </form>
 
     </main>

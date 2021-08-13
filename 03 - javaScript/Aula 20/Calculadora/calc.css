@@ -12,22 +12,31 @@
 
 /* Formatação geral das tela de numeros */
 
-#tela {
+#tela1, #tela2 {
     width: 30vw;
     min-height: 5vh;
     font-size: 2rem;
-    border-right: none;
+    border: none
 }
 
-/* Formatação geral das tela de simbolos */
+/* Formatação geral da tela de resultado*/
+
+#telaResultado {
+    width: 40.5vw;
+    min-height: 5vh;
+    font-size: 2rem;
+    border: none
+}
+
+/* Formatação geral da tela de simbolos */
 
 #telaSimbolo {
     width: 5vw;
-    min-height: 5vh;
-    font-size: 2rem;
-    border-left: none;
+    min-height: 10vh;
+    font-size: 4rem;
     position:absolute;
-    left: 30.7vw
+    left: 40vw;
+    border: none
 }
 
 /* Formatação de visibilidade dos botões da calculadora cientifica. */
