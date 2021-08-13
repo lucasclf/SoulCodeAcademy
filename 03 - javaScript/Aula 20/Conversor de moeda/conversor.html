@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <nav>
+
+    </nav>
+    <main>
+        <section id="container">
+            <form name="conversor">
+                <input type="text" id="valor">
+                <select id="currency1">
+                    <option value="real" selected>Real</option>
+                    <option value="dolarAmericano">Dollar Americano</option>
+                    <option value="dolarCanadense">Dollar Canadense</option>
+                </select>
+                <select id="currency2">
+                    <option value="real">Real</option>
+                    <option value="dolarAmericano" selected>Dollar Americano</option>
+                    <option value="dolarCanadense">Dollar Canadense</option>
+                </select>
+                <input type="button" id="converter" value="Converter" onClick="converterMoeda()" />
+                <div id="resposta"></div>
+
+                </form>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="conversor.js"></script>
+</body>
+
+</html>
