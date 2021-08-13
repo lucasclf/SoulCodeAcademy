@@ -27,3 +27,12 @@
 .adv {
     visibility: visible
 }
+
+#simples, #cientifico {
+    position: absolute;
+    left: 41.5vw
+}
+
+#simples {
+    z-index: 2;
+}
