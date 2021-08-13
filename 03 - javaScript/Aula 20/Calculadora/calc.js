@@ -24,3 +24,8 @@ function btnApagar(){
 function btnPi() {
     document.calc.tela.value += Math.PI
 }
+
+function btnRaiz() {
+    var aux = eval(document.calc.tela.value)
+    document.calc.tela.value = Math.sqrt(aux)
+}
