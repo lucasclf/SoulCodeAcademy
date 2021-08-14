@@ -138,8 +138,12 @@ function btnNegativo2() {
 
 }
 
-
-
+function modo_noturno1() {
+    document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+    document.getElementById("tela1").style.color = "white"
+    document.getElementById("tela2").style.color = "white"
+    document.getElementById("telaSimbolo").style.color = "white"
+}
 
 
 

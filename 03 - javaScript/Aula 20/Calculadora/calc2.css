@@ -1,0 +1,130 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+html{
+    background-color: rgb(246, 246, 246);
+}
+
+header {
+    height: 20vh;
+    width: 100vw;
+    margin: 0 auto;
+    background-color: #0A1124;
+    position: abosulte;
+}
+
+#menu ul {
+    margin: 0 auto;
+    background-color: pink;
+}
+
+#menu li {
+    float: left;
+    list-style: none;
+}
+
+#menu li a {
+    color: #6AFBDA;
+    text-decoration: none;
+    font-size:x-large;
+    padding: 20px;
+    display: block;
+}
+
+#menu li a:hover {
+    color: #fff;
+}
+
+#noturno{
+    width: 1.5vw;
+}
+
+#noturno1{
+    width: 1.5vw;
+}
+
+input#buscar {
+    width: 13vw;
+    border: none;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px;
+    padding: 19px 10px; 
+}
+
+.botao {
+    background: #6AFBDA;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px;
+    padding: 19px 10px;
+    color: #272727;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background: #5386a4;
+    color: #fff;
+}
+
+#acessibilidade{
+    position: relative;
+    bottom: 7vh;
+    left: 205%;
+    width: 10%;
+    background: #6AFBDA;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px;
+    padding: 8px;
+    padding-right: 17px;
+    color: #272727;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: justify;
+}
+
+.acessib_aumenta{
+    text-align: justify;
+    position: relative;
+    top: 2vh;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+footer{
+    width:100vw;
+    background-color: #0A1124
+}
+
+footer span{
+    color:#8d99a3;
+    font-size: 1rem;
+}
+
+.icon_footer{
+    height: 8vh;
+    filter: grayscale(70%);
+}
+
+.icon_footer:hover {
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    filter: grayscale(0%);
+    transform: rotate(360deg) scale(1.5);
+}
+#top_button{
+    width: 6vw;
+}
+

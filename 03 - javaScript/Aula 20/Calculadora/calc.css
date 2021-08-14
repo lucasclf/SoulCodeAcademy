@@ -1,22 +1,6 @@
-* {
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-html{
-    background-color: rgb(246, 246, 246);
-}
-
-header {
-    height: 200px;
-    background-color: purple;
-}
-
 /* Formatação geral de botões. */
 
-input[type="button"]{
+main input[type="button"]{
     border: none;
     text-align: center;
     cursor: pointer;

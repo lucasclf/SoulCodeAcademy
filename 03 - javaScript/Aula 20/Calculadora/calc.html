@@ -7,15 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="calc.css">
+    <link rel="stylesheet" href="calc2.css">
 </head>
 
 <body>
     <header>
+        <section id="logo">
 
+        </section>
+        <nav id="menu">
+            <ul id="nav">
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Calculadora
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Conversor
+                    </a>
+                </li>
+                <li>
+                    <a href="formulario.html">
+                        Cadastro
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <section id="pesquisa">
+            <input type="search" name="buscar" id="buscar" placeholder="Digite aqui">
+            <button class="botao">
+                Buscar
+            </button>
+            <input type="button" value="A+" class=".acessib_aumenta" onclick="aumenta_fonte()">
+            <input type="button" value="A-" class=".acessib_diminui" onclick="diminui_fonte()">
+            <button>
+                <img id="noturno" src="./noite.png" onclick="modo_noturno1()">
+            </button>
+            <button>
+                <img id="noturno1" src="./dia.png" onclick="modo_noturno2()">
+            </button>
+        </section>
     </header>
-    <nav>
-
-    </nav>
     <main>
         <section>
             <form name="calc">
@@ -59,8 +97,32 @@
             </form>
         </section>
     </main>
+    <aside>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+            <script>
+                new window.VLibras.Widget('https://vlibras.gov.br/app');
+            </script>
+        </div>
+    </aside>
     <footer>
-
+        <section id="copyright">
+            <span> 
+                &copy; Nome empresa, 2021
+            </span>
+        </section>
+        <section id="icones">
+            <img class="icon_footer" src="face_icon.png" alt="">
+            <img class="icon_footer" src="instagram_icon.png" alt="">
+            <img class="icon_footer" src="telegram_icon.png" alt="">
+            <img class="icon_footer" src="whatsapp_icon.png" alt="">
+            <img class="icon_footer" src="twitter_icon.png" alt="">
+            <a href="#nav"><img id="top_button"src="top.png" alt="volta topo"></a>
+        </section>
     </footer>
     <script src="calc.js"></script>
 </body>
