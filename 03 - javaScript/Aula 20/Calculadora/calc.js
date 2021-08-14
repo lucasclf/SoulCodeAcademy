@@ -6,6 +6,16 @@ function btn(botao) {
     //função geral dos botões numéricos, basicamente ele soma ao valor dos inputs "tela" e concatena com o valor do botão(numérico ou simbolo)
 }
 
+function btnPonto(botao) {
+    aux1 = document.calc.tela1.value.indexOf(".")
+    aux2 = document.calc.tela2.value.indexOf(".")
+    if (!document.calc.telaSimbolo.value && aux1 == -1) {
+        document.calc.tela1.value += botao
+    } else if (document.calc.telaSimbolo.value && aux2 == -1)
+        document.calc.tela2.value += botao
+    //função geral dos botões numéricos, basicamente ele soma ao valor dos inputs "tela" e concatena com o valor do botão(numérico ou simbolo)
+}
+
 function btnSimbolo(botao) {
     if (document.calc.tela1.value) {
     document.calc.telaSimbolo.value = botao
@@ -101,17 +111,6 @@ function btnSimples() {
         document.calc.simples.value = "Cientifica"
     }
     //Função para o botão de calculadora simples, ele pega o valor de todos os itens com classe ".adv" e joga para dentro da variavel aux que foi definida como array. Depois passa um for em cada uma das posições de aux e altera o style.visibility para hidden, escondendo assim os botões da calculadora avançada.
-
-}
-
-function btnCien() {
-    var aux = []
-    aux = document.calc.querySelectorAll(".adv")
-    for (i = 0; i < aux.length; i++) {
-        aux[i].style.visibility = "visible";
-    }
-
-    //Função para o botão de calculadora cientifica, ele pega o valor de todos os itens com classe ".adv" e joga para dentro da variavel aux que foi definida como array. Depois passa um for em cada uma das posições de aux e altera o style.visibility para visible, mostrando assim os botões da calculadora avançada.
 
 }
 
