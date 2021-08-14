@@ -151,4 +151,6 @@ function btnNegativo2() {
 /* PROBLEMAS A SEREM SOLUCIONADOS:
 
 1 - Se a calculadora iniciar em modo simples(linha CSS - 54 = hidden) o botão só funciona no segundo clique.
-2 - */
+2 - Não conseguir alterar o valor de uma variavel global, dentro de uma função, dessa forma tive que criar dois visores, onde os valores sempre estarão lá para ser armazenados.
+3 - Tendo 2 visores, ficou mais fácil que a positividade dos valores, fosse atribuida por um botão a parte, e não pelo próprio botão -.
+*/
