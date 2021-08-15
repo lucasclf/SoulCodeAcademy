@@ -1,3 +1,16 @@
+function aumenta_fonte() {
+    var elemento = document.getElementById("principal");
+    var tamanho_fonte = getComputedStyle(elemento).fontSize;
+    tamanho_atual = parseFloat(tamanho_fonte);
+    elemento.style.fontSize = (tamanho_atual + 1) + 'px';
+  }
+  
+  function diminui_fonte() {
+    var elemento = document.getElementById("principal");
+    var tamanho_fonte = getComputedStyle(elemento).fontSize;
+    tamanho_atual = parseFloat(tamanho_fonte);
+    elemento.style.fontSize = (tamanho_atual - 1) + 'px';
+  }
 function btn(botao) {
     if (!document.calc.telaSimbolo.value) {
         document.calc.tela1.value += botao

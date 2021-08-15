@@ -1,3 +1,17 @@
+function aumenta_fonte() {
+  var elemento = document.getElementById("principal");
+  var tamanho_fonte = getComputedStyle(elemento).fontSize;
+  tamanho_atual = parseFloat(tamanho_fonte);
+  elemento.style.fontSize = (tamanho_atual + 1) + 'px';
+}
+
+function diminui_fonte() {
+  var elemento = document.getElementById("principal");
+  var tamanho_fonte = getComputedStyle(elemento).fontSize;
+  tamanho_atual = parseFloat(tamanho_fonte);
+  elemento.style.fontSize = (tamanho_atual - 1) + 'px';
+}
+
 function Validacao(){
   // SE NÃO FOR NUMERO OU MENOR QUE ZERO O CAMPO SERÁ LIMPO
   var quantidade = document.getElementById('moeda_valor');

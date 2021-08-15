@@ -17,10 +17,11 @@ header {
 #logo {
     float: left;
     padding: 4vw;
+    overflow: unset;
 }
 
 #logo img{
-    width: 5vw;
+    height: 80px;
 }
 
 /* ELEMENTOS DO MENU */
@@ -76,7 +77,7 @@ input#buscar {
     padding: 19px 10px;
     position: absolute;
     top: 11vh;
-    left: 57vw;
+    left:65vw;
     outline:none
 }
 
@@ -92,7 +93,7 @@ input#buscar {
     cursor: pointer;
     position: absolute;
     top: 11vh;
-    left: 69vw;
+    left: 75vw;
 }
 
 .botao:hover {

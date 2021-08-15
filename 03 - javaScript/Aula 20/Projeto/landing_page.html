@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./CSS/index_header.css">
-    <link rel="stylesheet" href="./CSS/index_main.css">
-    <link rel="stylesheet" href="./CSS/index_footer.css">
+    <title>ConvertCode</title>
+    <link rel="shortcut icon" href="./imagens/faviteste.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style_header.css">
+    <link rel="stylesheet" href="./css/landing_page.css">
+    <link rel="stylesheet" href="./css/style_footer.css">
 </head>
 
-<body>
+<body id="principal">
     <header>
         <section id="logo">
-            <img src="./imagem/logo.jpeg" alt="" id="logoImagem">
+            <img src="./imagens/logo.jpeg" alt="Logo">
         </section>
         <nav id="menu">
             <ul id="nav">
                 <li>
-                    <a href="index.html">
+                    <a href="landing_page.html">
                         Home
                     </a>
                 </li>
@@ -34,20 +35,20 @@
                     </a>
                 </li>
                 <li>
-                    <a href="formulario.html">
+                    <a href="contato.html">
                         Cadastro
                     </a>
                 </li>
             </ul>
         </nav>
         <section id="acessibilidade">
-            <input type="button" class="botaoFonte" value="A+" id="acessib_aumenta" onclick="aumenta_fonte()">
-            <input type="button" class="botaoFonte" value="A-" id="acessib_diminui" onclick="diminui_fonte()">
+            <button type="button" class="botaoFonte" value="A+" id="acessib_aumenta" onclick="aumenta_fonte()">A+</button>
+            <button type="button" class="botaoFonte" value="A-" id="acessib_diminui" onclick="diminui_fonte()">A-</button>
             <button>
-                <img id="noturno" src="./imagem/noite.png" onclick="modo_noturno1()">
+                <img id="noturno" src="./imagens/noite.png" onclick="modo_noturno1()">
             </button>
             <button>
-                <img id="diurno" src="./imagem/dia.png" onclick="modo_noturno2()">
+                <img id="diurno" src="./imagens/dia.png" onclick="modo_noturno2()">
             </button>
         </section>
         <section id="pesquisa">
@@ -59,14 +60,14 @@
     </header>
     <main>
         <div class="sobreNos">
-            <h1>Um pouco sobre nós</h1>
-            <h2>Desenvolvimento</h2>
+            <h1 id="sobreNos">Um pouco sobre nós</h1>
+            <h2 id="desenvolvimento">Desenvolvimento</h2>
         </div>
-        <p>
+        <p id="Paragrafos">
             Nossa equipe tem como missão o desenvolvimento de excelentes páginas web. Nesse projeto focamos no desenvolvimento de uma página com conversor cambial e de página com calculadora comum e de calculadora científica. O objetivo fpi a consolidação do conhecimento de HTML, CSS e JavaScript obtido até aqui. Foco na integração do conhecimento individual sendo compartilhado a todos os integrantes deste grupo.
         </p>
 
-        <h2>
+        <h2 id="fundadores1">
             Fundadores
         </h2>
 
@@ -74,7 +75,7 @@
             <h3>Diana Müller</h3>
             <h4>Front-End</h4>
             <p>
-                É estudante Web Full-Stack pela SoulCode Academy após 6 anos trabalhando com pesquisa na área de genética psiquiátrica. Tem se interessado por ambos polos da carreira Full-Stack. Foi uma das fundadoras da ONG <a href="https://www.principioanimal.org/" target="blank">Princípio Animal.</a>
+                É estudante Web Full-Stack pela SoulCode Academy após 6 anos trabalhando com pesquisa na área de genética psiquiátrica. Tem se interessado por ambos polos da carreira Full-Stack. Foi uma das fundadoras da ONG <a id="principio_animal" href="https://www.principioanimal.org/">Princípio Animal.</a>
             </p>
         </article>
 
@@ -148,15 +149,15 @@
             </span>
         </section>
         <section id="icones">
-            <img class="icon_footer" src="./imagem/face_icon.png" alt="" id="facebook">
-            <img class="icon_footer" src="./imagem/instagram_icon.png" alt="" id="insta">
-            <img class="icon_footer" src="./imagem/telegram_icon.png" alt="" id="tele">
-            <img class="icon_footer" src="./imagem/whatsapp_icon.png" alt="" id="zap">
-            <img class="icon_footer" src="./imagem/twitter_icon.png" alt="" id="twi">
-            <a href="#nav"><img id="top_button" src="./imagem/top.png" alt="volta topo"></a>
+            <img class="icon_footer" src="./imagens/face_icon.png" alt="" id="facebook">
+            <img class="icon_footer" src="./imagens/instagram_icon.png" alt="" id="insta">
+            <img class="icon_footer" src="./imagens/telegram_icon.png" alt="" id="tele">
+            <img class="icon_footer" src="./imagens/whatsapp_icon.png" alt="" id="zap">
+            <img class="icon_footer" src="./imagens/twitter_icon.png" alt="" id="twi">
+            <a href="#nav"><img id="top_button" src="./imagens/top.png" alt="volta topo"></a>
         </section>
     </footer>
-    <script src=./js/index.js></script>
+    <script src="./js/landing_page.js"></script>
 </body>
 
 </html>

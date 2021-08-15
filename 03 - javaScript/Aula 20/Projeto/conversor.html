@@ -6,56 +6,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conversor de Moedas</title>
   <link rel="shortcut icon" href="./imagens/faviteste.png" type="image/x-icon">
-  <link rel="stylesheet" href="./css/conversor_header.css">
-  <link rel="stylesheet" href="./css/conversor_footer.css">
+  <link rel="stylesheet" href="./css/style_header.css">
+  <link rel="stylesheet" href="./css/style_footer.css">
   <link rel="stylesheet" href="./css/conversor_main.css">
 </head>
-<header>
-    <section id="logo">
-        <img src="./imagens/logo.jpeg" alt="" id="logoImagem">
-    </section>
-    <nav id="menu">
-        <ul id="nav">
-            <li>
-                <a href="index.html">
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="calc.html">
-                    Calculadora
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    Conversor
-                </a>
-            </li>
-            <li>
-                <a href="formulario.html">
-                    Cadastro
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <section id="acessibilidade">
-        <input type="button" class="botaoFonte" value="A+" id="acessib_aumenta" onclick="aumenta_fonte()">
-        <input type="button" class="botaoFonte" value="A-" id="acessib_diminui" onclick="diminui_fonte()">
-        <button>
-            <img id="noturno" src="./imagens/noite.png" onclick="modo_noturno()">
-        </button>
-        <button>
-            <img id="diurno" src="./imagens/dia.png" onclick="modo_diurno()">
-        </button>
-    </section>
-    <section id="pesquisa">
-        <input type="search" name="buscar" id="buscar" placeholder="Digite aqui">
-        <button class="botao">
-            Buscar
-        </button>
-    </section>
-</header>
-<body>
+<body id="principal">
+    <header>
+        <section id="logo">
+            <img src="./imagens/logo.jpeg" alt="" id="logoImagem">
+        </section>
+        <nav id="menu">
+            <ul id="nav">
+                <li>
+                    <a href="landing_page.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="calc.html">
+                        Calculadora
+                    </a>
+                </li>
+                <li>
+                    <a href="conversor.html">
+                        Conversor
+                    </a>
+                </li>
+                <li>
+                    <a href="contato.html">
+                        Cadastro
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <section id="acessibilidade">
+            <input type="button" class="botaoFonte" value="A+" id="acessib_aumenta" onclick="aumenta_fonte()">
+            <input type="button" class="botaoFonte" value="A-" id="acessib_diminui" onclick="diminui_fonte()">
+            <button>
+                <img id="noturno" src="./imagens/noite.png" onclick="modo_noturno()">
+            </button>
+            <button>
+                <img id="diurno" src="./imagens/dia.png" onclick="modo_diurno()">
+            </button>
+        </section>
+        <section id="pesquisa">
+            <input type="search" name="buscar" id="buscar" placeholder="Digite aqui">
+            <button class="botao">
+                Buscar
+            </button>
+        </section>
+    </header>
   <main>
     <fieldset class="fiel">
     <section class="principal">

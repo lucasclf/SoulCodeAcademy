@@ -6,6 +6,9 @@ main {
     padding: 10px 0; 
 }
 
+#sobreNos, #desenvolvimento, #fundadores1{
+    padding: 15px;
+}
 .sobreNos h3, h1, h2{
     color: #0A1124;
     font-weight: normal;
@@ -29,7 +32,10 @@ p {
     line-height: 1.5;
     width: 35vw;
 }
-
+#principio_animal{
+    text-decoration: none;
+    color: black
+}
 .coluna1 {
     float: left;
 }

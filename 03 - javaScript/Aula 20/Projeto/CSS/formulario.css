@@ -1,0 +1,82 @@
+/* Css para estilo da pagina de cadastro */
+h1, p, #label_nome, #label_cpf, #label_nascimento, #label_email, #label_sexo, #retorno, .buttonCadastro{
+    font-family: 'Roboto', sans-serif; 
+    text-align: center;
+    font-weight: bold;
+    /* margin: 15px; */
+}
+
+::-webkit-input-placeholder, options.value{
+    font-family: 'Roboto', sans-serif; 
+    font-weight: bold;
+}
+
+#retornaCadastro{
+    width: 50vw;
+    height: 20vh;
+    padding: 5px;
+    display: flex;
+    align-content: center;
+    margin-left: 30vw;
+    align-items: center;
+    font-size: 1.25em;
+    font-weight:bold ;
+}
+#formulario{
+    display: flex;
+    align-content: center;
+    margin-top:10vh;
+    margin-left: 35vw;
+}
+#fiel{
+    border-radius: 10px;
+    padding: 15px;
+}
+.formulario-cadastro .inputBox {
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.formulario-cadastro .inputBox input{
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 300;    
+}
+
+.formulario-cadastro .inputBox input[type="onclick"] {
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    max-width: 100px;
+    font-weight: 500;
+}
+select{
+    height: 30px;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: bold;
+}
+option{
+    line-height: 10px;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: bold;
+}
+.buttonCadastro{
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    color:#6AFBDA;
+    font-weight: 700;
+    font-size: 1em;
+    text-shadow: 1px 1px 1px#5386a4;
+    background-color: #0A1124;
+    padding: 17px 60px;
+    margin:1rem 1rem
+}
+
