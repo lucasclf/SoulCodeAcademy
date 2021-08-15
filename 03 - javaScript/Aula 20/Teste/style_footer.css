@@ -64,3 +64,11 @@ footer span{
     bottom: -6vh;
     left: 14vw;
 }
+
+#logo {
+    overflow:unset;
+}
+
+#logoImagem {
+    transform: scale(3);
+}

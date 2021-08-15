@@ -23,14 +23,6 @@ header {
     width: 5vw;
 }
 
-#logo {
-    overflow:unset;
-}
-
-#logoImagem {
-    transform: scale(3);
-}
-
 /* ELEMENTOS DO MENU */
 nav {
     width:50vw;

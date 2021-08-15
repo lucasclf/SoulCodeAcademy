@@ -175,3 +175,21 @@ function converter(event) {
       break;
   }
 }
+
+function modo_noturno() {
+    for (i=0; i<document.getElementsByTagName("p").length; i++){
+        document.getElementsByTagName("p")[i].style.color = "white"
+    }
+    document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+    document.getElementsByTagName("H1")[0].style.color = "white";
+    document.getElementsByTagName("H2")[0].style.color = "white";
+}
+
+function modo_diurno() {
+  for (i=0; i<document.getElementsByTagName("p").length; i++){
+    document.getElementsByTagName("p")[i].style.color = "black"
+}
+document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+document.getElementsByTagName("H1")[0].style.color = "black";
+document.getElementsByTagName("H2")[0].style.color = "black";
+}
