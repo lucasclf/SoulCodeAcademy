@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/index_header.css">
+    <link rel="stylesheet" href="./CSS/index_main.css">
+    <link rel="stylesheet" href="./CSS/index_footer.css">
+</head>
+
+<body>
+    <header>
+        <section id="logo">
+            <img src="./imagem/logo.jpeg" alt="" id="logoImagem">
+        </section>
+        <nav id="menu">
+            <ul id="nav">
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="calc.html">
+                        Calculadora
+                    </a>
+                </li>
+                <li>
+                    <a href="conversor.html">
+                        Conversor
+                    </a>
+                </li>
+                <li>
+                    <a href="formulario.html">
+                        Cadastro
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <section id="acessibilidade">
+            <input type="button" class="botaoFonte" value="A+" id="acessib_aumenta" onclick="aumenta_fonte()">
+            <input type="button" class="botaoFonte" value="A-" id="acessib_diminui" onclick="diminui_fonte()">
+            <button>
+                <img id="noturno" src="./imagem/noite.png" onclick="modo_noturno1()">
+            </button>
+            <button>
+                <img id="diurno" src="./imagem/dia.png" onclick="modo_noturno2()">
+            </button>
+        </section>
+        <section id="pesquisa">
+            <input type="search" name="buscar" id="buscar" placeholder="Digite aqui">
+            <button class="botao">
+                Buscar
+            </button>
+        </section>
+    </header>
+    <main>
+        <div class="sobreNos">
+            <h1>Um pouco sobre nós</h1>
+            <h2>Desenvolvimento</h2>
+        </div>
+        <p>
+            Nossa equipe tem como missão o desenvolvimento de excelentes páginas web. Nesse projeto focamos no desenvolvimento de uma página com conversor cambial e de página com calculadora comum e de calculadora científica. O objetivo fpi a consolidação do conhecimento de HTML, CSS e JavaScript obtido até aqui. Foco na integração do conhecimento individual sendo compartilhado a todos os integrantes deste grupo.
+        </p>
+
+        <h2>
+            Fundadores
+        </h2>
+
+        <article id="diana" class="fundadores coluna1">
+            <h3>Diana Müller</h3>
+            <h4>Front-End</h4>
+            <p>
+                É estudante Web Full-Stack pela SoulCode Academy após 6 anos trabalhando com pesquisa na área de genética psiquiátrica. Tem se interessado por ambos polos da carreira Full-Stack. Foi uma das fundadoras da ONG <a href="https://www.principioanimal.org/" target="blank">Princípio Animal.</a>
+            </p>
+        </article>
+
+        <article id="lucas" class="fundadores coluna2">
+            <h3>Lucas Coquenão</h3>
+            <h4>Back-End</h4>
+            <p>Atuou na advocacia por 10 anos, em busca de uma transição de carreira para a área da
+                programação.
+                Com grande interesse na área de back-end, vem desenvolvendo suas habilidades como developer
+                fullstack web com a SoulCode Academy.</p>
+        </article>
+
+    <div class="divisor"></div>
+
+        <article id="marcia" class="fundadores coluna1">
+            <h3>Márcia Alves</h3>
+            <h4>Back-End</h4>
+            <p>Fullstack web developer em formação pela SoulCode Academy.
+                Onde desenvolve habilidades na programação usando HTML, CSS e a liguagem JavaScript.
+                Com especialização em Comunicação Empresarial e Graduação em Comunicação social.
+                Busca destaque e crescimento na tecnologia.</p>
+        </article>
+
+        <article id="mirian" class="fundadores coluna2">
+            <h3>Mirian Virginia</h3>
+            <h4>Back-End</h4>
+            <p>É estudante Web Full-Stack pela SoulCode Academy. onde está tendo seu primeiro contato com
+                linguagem de programação. Interessada em tecnologia e Impacto Social. Foi uma das fundadoras
+                da
+                ONG Princípio Animal e tem como principais interesses tópicos relacionados à tecnologia,
+                ciência
+                e políticas sociais.</p>
+        </article>
+
+    <div class="divisor"></div>
+
+        <article id="ricardo" class="fundadores coluna1 linha3">
+            <h3>Ricardo Nunes</h3>
+            <h4>Front-End</h4>
+            <p>Microempreendedor desde 2016, com prestação de serviço em diversos segmentos. Hoje busca o
+                seu grande sonho e na transição para uma carreira na área da programação.</p>
+        </article>
+
+        <article id="yago" class="fundadores coluna2 linha3">
+            <h3>Yago Martins</h3>
+            <h4>Front-End</h4>
+            <p>É estudante Web Full-Stack pela SoulCode Academy. onde está tendo seu primeiro contato com
+                linguagem de programação. Interessada em tecnologia e Impacto Social. Foi uma das fundadoras
+                da
+                ONG Princípio Animal e tem como principais interesses tópicos relacionados à tecnologia,
+                ciência
+                e políticas sociais.</p>
+        </article>
+    </main>
+    <aside>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+            <script>
+                new window.VLibras.Widget('https://vlibras.gov.br/app');
+            </script>
+        </div>
+    </aside>
+    <footer>
+        <section id="copyright">
+            <span>
+                &copy; Nome empresa, 2021
+            </span>
+        </section>
+        <section id="icones">
+            <img class="icon_footer" src="./imagem/face_icon.png" alt="" id="facebook">
+            <img class="icon_footer" src="./imagem/instagram_icon.png" alt="" id="insta">
+            <img class="icon_footer" src="./imagem/telegram_icon.png" alt="" id="tele">
+            <img class="icon_footer" src="./imagem/whatsapp_icon.png" alt="" id="zap">
+            <img class="icon_footer" src="./imagem/twitter_icon.png" alt="" id="twi">
+            <a href="#nav"><img id="top_button" src="./imagem/top.png" alt="volta topo"></a>
+        </section>
+    </footer>
+    <script src=./js/index.js></script>
+</body>
+
+</html>

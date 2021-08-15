@@ -1,0 +1,66 @@
+footer{
+    width:100vw;
+    background-color: #0A1124
+}
+
+footer span{
+    color:#8d99a3;
+    font-size: 1rem;
+}
+
+.icon_footer{
+    height: 8vh;
+    filter: grayscale(70%);
+}
+
+.icon_footer:hover {
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    filter: grayscale(0%);
+    transform: rotate(360deg) scale(1.5);
+}
+
+.linha3 {
+    height: 28vh;
+}
+
+#top_button{
+    width: 6vw;
+}
+
+#facebook {
+    position: absolute;
+    right: 5vw;
+}
+
+#insta {
+    position: absolute;
+    right: 10vw;
+}
+
+#tele {
+        position: absolute;
+        right: 15vw;
+}
+
+#zap {
+    position: absolute;
+    right: 20vw;
+}
+
+#twi {
+    position: absolute;
+    right: 25vw;
+}
+
+#top_button {
+    position: relative;
+    left: 94vw;
+    bottom: 2vh;
+}
+
+#copyright {
+    position: relative;
+    bottom: -6vh;
+    left: 14vw;
+}

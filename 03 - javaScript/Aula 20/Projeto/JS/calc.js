@@ -165,7 +165,6 @@ function modo_diurno() {
 
 
 
-
 /* PROBLEMAS A SEREM SOLUCIONADOS:
 
 1 - Se a calculadora iniciar em modo simples(linha CSS - 54 = hidden) o botão só funciona no segundo clique.

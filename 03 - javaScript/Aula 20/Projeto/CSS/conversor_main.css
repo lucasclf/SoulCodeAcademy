@@ -1,0 +1,78 @@
+h1{
+  text-align: center;
+  padding-top: 5px;
+  font-size: 2em;
+}
+p{
+  font-size: 1.25em;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.fiel{
+    border-radius: 10px;
+}
+
+
+.formulario{
+  text-align: center;
+  padding: 15px;
+ 
+}
+.formulario input{
+  padding: 8px;
+  margin: 10px;
+  height:40px;
+  border-radius:4px;
+  width: 500px;
+  box-sizing: border-box;
+ 
+
+}
+#moeda_original{
+
+  padding: 5px;
+  margin: 10px;
+  height:30px;
+  border-radius:4px;
+}
+.but1{
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      text-transform: uppercase;
+      position: relative;
+      color:#5386a4;
+      font-weight: 700;
+      font-size: 1em;
+      text-shadow: 1px 1px 1px#5386a4;
+      background-color: #272727;
+      padding: 17px 60px;
+      margin: 2rem auto;
+ 
+}
+.but2{
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  color:#5386a4;
+  font-weight: 700;
+  font-size: 1em;
+  text-shadow: 1px 1px 1px#5386a4;
+  background-color: #272727;
+  padding: 17px 60px;
+  margin: 2rem auto;
+
+}
+
+.select {
+  padding: 5px;
+  margin: 10px;
+  height:40px;
+  border-radius:4px;
+  width: 500px;
+}

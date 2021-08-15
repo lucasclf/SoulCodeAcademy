@@ -1,5 +1,9 @@
 /* Formatação geral de botões. */
 
+main {
+    min-height: 60vh;
+}
+
 main input[type="button"]{
     border: none;
     text-align: center;
@@ -59,8 +63,37 @@ main input[type="button"]{
 
 form{
     display: flex;
-    align-content: center;
-    margin-top:10vh;
-    margin-left: 40vw;
-  
+    align-content:space-around;
+    margin: 3vw;
+
+}
+
+h3 {
+    color: #0A1124;
+    font-weight: normal;
+    text-align: center;
+}
+
+p {
+    text-indent: 2rem;
+    line-height: 1.5rem;
+    padding: 10px;
+    margin-left: 20px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(110, 110, 110);
+}
+
+#instrucoes {
+    margin:2rem;
+    margin-left: 15rem ;
+    background-color: rgb(237, 239, 241);
+    color: rgb(41, 41, 41); 
+    line-height: 1.5;
+    width: 35vw;
+}
+
+#calculadora {
+    width: 25vw;
+    margin-left: 10rem;
 }
