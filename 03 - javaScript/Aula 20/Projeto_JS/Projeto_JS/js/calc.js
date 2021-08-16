@@ -1,23 +1,9 @@
-function aumenta_fonte() {
-    var elemento = document.getElementById("principal");
-    var tamanho_fonte = getComputedStyle(elemento).fontSize;
-    tamanho_atual = parseFloat(tamanho_fonte);
-    elemento.style.fontSize = (tamanho_atual + 1) + 'px';
-}
-
-  function diminui_fonte() {
-    var elemento = document.getElementById("principal");
-    var tamanho_fonte = getComputedStyle(elemento).fontSize;
-    tamanho_atual = parseFloat(tamanho_fonte);
-    elemento.style.fontSize = (tamanho_atual - 1) + 'px';
-}
-
 function btn(botao) {
     if (!document.calc.telaSimbolo.value) {
         document.calc.tela1.value += botao
     } else
         document.calc.tela2.value += botao
-    //função geral dos botões numéricos, basicamente ele soma ao valor dos inputs "tela" e concatena com o valor do botão(numérico ou simbolo)
+    //função geral dos botões numéricos, basicamente ele soma ao valor dos inputs "tela" e concatena com o valor do botão(numérico ou simbolo).
 }
 
 function btnPonto(botao) {
@@ -102,7 +88,6 @@ function btnElev(num) {
     if (!document.calc.tela2.value) {
         var aux = eval(document.calc.tela1.value)
         var potencia = num.substring(1)
-        console.log(potencia)
         document.calc.tela1.value = Math.pow(aux, potencia)
     } else
         alert("A função de potencia só pode ser utilizada caso o segundo valor esteja em branco, favor apaga-lo")
@@ -125,7 +110,6 @@ function btnSimples() {
         document.calc.simples.value = "Cientifica"
     }
     //Função para o botão de calculadora simples, ele pega o valor de todos os itens com classe ".adv" e joga para dentro da variavel aux que foi definida como array. Depois passa um for em cada uma das posições de aux e altera o style.visibility para hidden, escondendo assim os botões da calculadora avançada.
-
 }
 
 function btnNegativo1() {
@@ -135,9 +119,7 @@ function btnNegativo1() {
     } else if (aux == 0) {
         document.calc.tela1.value = document.calc.tela1.value.substring(1)
     }
-
     //Função para inserir o valor negativo na tela1.
-
 }
 
 function btnNegativo2() {
@@ -176,12 +158,16 @@ function modo_diurno() {
     document.getElementById("instrucoes").style.backgroundColor = "rgb(237, 239, 241)"
 }
 
-
-
-
-/* PROBLEMAS A SEREM SOLUCIONADOS:
-
-1 - Se a calculadora iniciar em modo simples(linha CSS - 54 = hidden) o botão só funciona no segundo clique.
-2 - Não conseguir alterar o valor de uma variavel global, dentro de uma função, dessa forma tive que criar dois visores, onde os valores sempre estarão lá para ser armazenados.
-3 - Tendo 2 visores, ficou mais fácil que a positividade dos valores, fosse atribuida por um botão a parte, e não pelo próprio botão -.
-*/
+function aumenta_fonte() {
+    var elemento = document.getElementById("principal");
+    var tamanho_fonte = getComputedStyle(elemento).fontSize;
+    tamanho_atual = parseFloat(tamanho_fonte);
+    elemento.style.fontSize = (tamanho_atual + 1) + 'px';
+}
+  
+function diminui_fonte() {
+    var elemento = document.getElementById("principal");
+    var tamanho_fonte = getComputedStyle(elemento).fontSize;
+    tamanho_atual = parseFloat(tamanho_fonte);
+    elemento.style.fontSize = (tamanho_atual - 1) + 'px';
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Moedas</title>
+  <link rel="shortcut icon" href="./imagens/faviteste.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style_header.css">
+  <link rel="stylesheet" href="./css/style_footer.css">
+  <link rel="stylesheet" href="./css/conversor_main.css">
+  
+</head>
+<body id="principal">
+    <header>
+        <section id="logo">
+            <a href="landing_page.html"><img src="./imagens/logo.jpeg" alt="Logo"></a>
+        </section>
+        <nav id="menu">
+            <ul id="nav">
+                <li>
+                    <a href="landing_page.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="calc.html">
+                        Calculadora
+                    </a>
+                </li>
+                <li>
+                    <a href="conversor.html">
+                        Conversor
+                    </a>
+                </li>
+                <li>
+                    <a href="contato.html">
+                        Cadastro
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <section id="acessibilidade">
+            <input type="button" class="botaoFonte" value="A+" id="acessib_aumenta" onclick="aumenta_fonte()">
+            <input type="button" class="botaoFonte" value="A-" id="acessib_diminui" onclick="diminui_fonte()">
+            <button>
+                <img id="noturno" src="./imagens/noite.png" onclick="modo_noturno()">
+            </button>
+            <button>
+                <img id="diurno" src="./imagens/dia.png" onclick="modo_diurno()">
+            </button>
+        </section>
+        <section id="pesquisa">
+            <input type="search" name="buscar" id="buscar" placeholder="Digite aqui">
+            <button class="botao">
+                Buscar
+            </button>
+        </section>
+    </header>
+  <main>
+    <fieldset class="fiel">
+    <section class="principal">
+        <h1> Conversor de Moedas</h1>
+        <p>
+            Faça conversões entre moedas de até <Strong>6 países</Strong> com
+            base em dados diários fornecidos pelo Banco Central do Brasil.
+        </p>
+    </section>
+
+
+    <form class=" formulario" method="POST">
+        <div class="pri">
+            <input type="text" placeholder="1.00"  id="moeda_valor" onkeyup="Validacao()" >
+        </div>
+        <div>
+            <select name="moeda_original" id="moeda_original_a" class="select">
+                <option value="dolar-americano">Dólar americano </option>
+                <option value="dolar-canadense">Dólar canadense</option>
+                <option value="real-brasileiro">Real brasileiro</option>
+                <option value="euro">Euro</option>
+                <option value="libra">Libra</option>
+                <option value="peso-argentino">peso argentino</option>
+            </select>
+        </div>
+        <div >
+            <button class="but1" onclick="inverter(event)"><img src=".//imagens/inverter_preto_vertical.png" alt="icone de Converversão" class="img_converter"></button>
+        </div>
+
+        <div>
+            <select name="moeda_original" id="moeda_original_b" class="select">
+                <option value="dolar-americano">Dólar americano </option>
+                <option value="dolar-canadense">Dólar canadense</option>
+                <option value="real-brasileiro">Real brasileiro</option>
+                <option value="euro">Euro</option>
+                <option value="libra">Libra</option>
+                <option value="peso-argentino">Peso argentino</option>
+            </select>
+        </div>
+        
+        <div> 
+            <button onclick="converter(event)" class="but2">Converter</button>
+        </div>
+
+        <div class="Imprimir">
+            <h2 id="resultado">Resultado da conversão:</h2>
+        </div>
+    </form>
+</fieldset>
+<div id="graphic">
+    <button onclick="grafico()" id="analisar_grafico">Analisar Relatório da Semana em Real</button>
+    <canvas class="line-chart" id="test"></canvas>
+</div>
+
+</main>
+<aside>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+    </div>
+</aside>
+<footer>
+    <section id="copyright">
+        <span>
+            &copy; ConvertCode, 2021
+        </span>
+    </section>
+    <section id="icones">
+        <a href="https://www.facebook.com/SoulCodeAcademy/" target="_blank"><img class="icon_footer" src="./imagens/face_icon.png" alt="" id="facebook"></a>
+        <a href="https://www.instagram.com/soulcodeacademy/" target="_blank"><img class="icon_footer" src="./imagens/instagram_icon.png" alt="" id="insta"></a>
+        <a href="#"><img class="icon_footer" src="./imagens/telegram_icon.png" alt="" id="tele"></a>
+        <a href="#"><img class="icon_footer" src="./imagens/whatsapp_icon.png" alt="" id="zap"></a>
+        <a href="https://twitter.com/SoulCodeAcademy?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="icon_footer" src="./imagens/twitter_icon.png" alt="" id="twi"></a>
+        <a href="#nav"><img id="top_button" src="./imagens/top.png" alt="volta topo"></a>
+    </section>
+</footer>
+<script src="./js/conversor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</body>
+</html>

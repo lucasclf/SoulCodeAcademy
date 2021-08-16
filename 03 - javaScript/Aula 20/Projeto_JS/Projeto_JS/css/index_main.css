@@ -1,0 +1,49 @@
+main {
+    background: rgba(255, 255, 255, 0.616);
+    width: 80%;
+    min-height: 70vh;
+    margin: auto;
+    padding: 10px 0; 
+}
+
+.sobreNos h3, h1, h2{
+    color: #0A1124;
+    font-weight: normal;
+    text-align: center;
+}
+
+p {
+    text-indent: 2rem;
+    line-height: 1.5rem;
+    padding: 10px;
+    margin-left: 20px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(110, 110, 110);
+}
+
+.fundadores{
+    margin:1rem;
+    background-color: rgb(237, 239, 241);
+    color: rgb(41, 41, 41); 
+    line-height: 1.5;
+    width: 35vw;
+}
+
+.coluna1 {
+    float: left;
+}
+
+.divisor {
+    clear: both;
+}
+
+.coluna2 {
+    float: right;
+}
+
+.fundadores h3, .fundadores h4, #fundadores1{
+    text-align: center;
+}
+
+

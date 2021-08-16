@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConvertCode</title>
+    <link rel="shortcut icon" href="./imagens/faviteste.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style_header.css">
+    <link rel="stylesheet" href="./css/style_footer.css">
+    <link rel="stylesheet" href="./css/formulario.css">
+</head>
+
+<body id="principal">
+    <header>
+        <section id="logo">
+            <a href="landing_page.html"><img src="./imagens/logo.jpeg" alt="Logo"></a>
+        </section>
+        <nav id="menu">
+            <ul id="nav">
+                <li>
+                    <a href="landing_page.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="calc.html">
+                        Calculadora
+                    </a>
+                </li>
+                <li>
+                    <a href="conversor.html">
+                        Conversor
+                    </a>
+                </li>
+                <li>
+                    <a href="contato.html">
+                        Cadastro
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <section id="acessibilidade">
+            <button type="button" class="botaoFonte" value="A+" id="acessib_aumenta" onclick="aumenta_fonte()">A+</button>
+            <button type="button" class="botaoFonte" value="A-" id="acessib_diminui" onclick="diminui_fonte()">A-</button>
+            <button>
+                <img id="noturno" src="./imagens/noite.png" onclick="modo_noturno1()">
+            </button>
+            <button>
+                <img id="diurno" src="./imagens/dia.png" onclick="modo_noturno2()">
+            </button>
+        </section>
+        <section id="pesquisa">
+            <input type="search" name="buscar" id="buscar" placeholder="Digite aqui">
+            <button class="botao">
+                Buscar
+            </button>
+        </section>
+    </header>
+    <main>
+        <form id="formulario" action="/pagina-processa-dados-do-form" method="post">
+            <fieldset id="fiel" class="formulario-cadastro">
+                <h1 id="cadastro">Cadastro</h1>
+                <p id="cadastro_p">Para cadastrar-se preencha o formulário</p>
+                <section id="box" class="inputBox">
+                    <label id="label_nome" for="nome">Nome Completo: </label>
+                    <input onblur="validaNome(this)" type="text" placeholder="Nome e Sobrenome" id="nome"
+                        required="required">
+                </section>
+
+                <section class="inputBox">
+                    <label id="label_cpf"for="cpf">CPF: </label>
+                    <input onblur="validaCPF(this)" type="text" placeholder="___-___-___-__" id="cpf" maxlength="11" size="11">
+                </section>
+
+                <section class="inputBox">
+                    <label id="label_nascimento" for="dataNascimento">Data de Nascimento: </label>
+                    <input onblur="validaNascimento(this)" type="date" id="nascimento">
+                </section>
+
+                <section class="inputBox">
+                    <label id="label_email" for="email">Email: </label>
+                    <input onblur="validaEmail(this)" type="text" placeholder=" seu_e-mail@email.com" id="email" required="required">
+                </section>
+
+                <section class="inputBox">
+                    <label id="label_sexo" for="sexo">Gênero: </label>
+                    <select id ="selecao" name="select" class="select">
+                        <option id="sexo" value="Não Informado">Não Informado</option>
+                        <option value="femenino">Feminino</option>
+                        <option value="masculino">Masculino</option>
+                    </select>
+                </section>
+
+                <section class="inputBox">
+                    <button onclick ="retornaInf()"  id="cadastro" class="buttonCadastro" type="button">Enviar</button>
+                    <button class="buttonCadastro" type="reset">Limpar</button>
+                </section>
+            </fieldset>
+        </form>
+
+        <section id="retornaCadastro"><span id="retorno"></span></section>
+
+    </main>
+
+    <aside>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+            <script>
+                new window.VLibras.Widget('https://vlibras.gov.br/app');
+            </script>
+        </div>
+    </aside>
+    <footer>
+        <section id="copyright">
+            <span>
+                &copy; ConvertCode, 2021
+            </span>
+        </section>
+        <section id="icones">
+            <a href="https://www.facebook.com/SoulCodeAcademy/" target="_blank"><img class="icon_footer" src="./imagens/face_icon.png" alt="" id="facebook"></a>
+            <a href="https://www.instagram.com/soulcodeacademy/" target="_blank"><img class="icon_footer" src="./imagens/instagram_icon.png" alt="" id="insta"></a>
+            <a href="#"><img class="icon_footer" src="./imagens/telegram_icon.png" alt="" id="tele"></a>
+            <a href="#"><img class="icon_footer" src="./imagens/whatsapp_icon.png" alt="" id="zap"></a>
+            <a href="https://twitter.com/SoulCodeAcademy?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="icon_footer" src="./imagens/twitter_icon.png" alt="" id="twi"></a>
+            <a href="#nav"><img id="top_button" src="./imagens/top.png" alt="volta topo"></a>
+        </section>
+    </footer>
+    <!-- <script src="landing_page.js"></script>   Não funcionou com duas chamadas js -->
+    <script src="./js/formulario.js"></script>
+</body>
+
+</html>

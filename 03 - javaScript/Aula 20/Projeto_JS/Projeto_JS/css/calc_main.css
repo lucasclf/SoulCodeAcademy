@@ -1,0 +1,99 @@
+/* Formatação geral de botões. */
+
+main {
+    min-height: 60vh;
+}
+
+main input[type="button"]{
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    color:#5386a4;
+    font-size: 1em;
+    background-color: #272727;
+    margin: 0.3rem;
+}
+
+.botaoCalc {
+    border-radius: 8px;
+    height: 5vh ;
+    width: 5vw;
+}
+
+#simples {
+    border-radius: 8px;
+    height: 5vh;
+    width: 10.9vw;
+}
+
+.btnNeg {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+}
+
+#negativo2 {
+    position: relative;
+    bottom:4px
+}
+
+/* Formatação geral das telas*/
+
+#tela1, #tela2 {
+    width: 19vw;
+    min-height: 5vh;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
+
+/* Formatação geral da tela de simbolos */
+
+#telaSimbolo {
+    width: 1vw;
+    min-height: 5vh;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
+
+/* Formatação de posicionamento no eixo X (largura) dos botões de alteração de calculadora. */
+
+form{
+    display: flex;
+    align-content:space-around;
+    margin: 3vw;
+
+}
+
+h3 {
+    color: #0A1124;
+    font-weight: normal;
+    text-align: center;
+}
+
+p {
+    text-indent: 2rem;
+    line-height: 1.5rem;
+    padding: 10px;
+    margin-left: 20px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(110, 110, 110);
+}
+
+#instrucoes {
+    margin:2rem;
+    margin-left: 15rem ;
+    background-color: rgb(237, 239, 241);
+    color: rgb(41, 41, 41); 
+    line-height: 1.5;
+    width: 35vw;
+}
+
+#calculadora {
+    width: 25vw;
+    margin-left: 10rem;
+}

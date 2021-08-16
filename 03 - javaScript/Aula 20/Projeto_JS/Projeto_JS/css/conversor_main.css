@@ -1,0 +1,105 @@
+h1{
+  text-align: center;
+  padding-top: 5px;
+  font-size: 2em;
+}
+p{
+  font-size: 1.25em;
+  text-align: center;
+  padding-top: 5px;
+}
+main{
+  position: relative;
+  top: 5vh;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.fiel{
+    border-radius: 10px;
+    width: 70vw;
+    
+}
+
+.formulario{
+  text-align: center;
+  padding: 15px;
+ 
+}
+.formulario input{
+  padding: 8px;
+  margin: 10px;
+  height:40px;
+  border-radius:4px;
+  width: 500px;
+  box-sizing: border-box;
+}
+#moeda_original{
+  padding: 5px;
+  margin: 10px;
+  height:30px;
+  border-radius:4px;
+}
+.but1{
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    color:#5386a4;
+    font-size: 1em;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: #ffff;
+    padding: 0px 60px;
+    margin: 2rem auto;
+}
+.but2{
+   border: none;
+    text-align: center;
+    cursor: pointer;
+    color:#5386a4;
+    font-size: 1em;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: #272727;
+    margin: 0.3rem;
+
+
+}
+
+.select {
+  padding: 5px;
+  margin: 10px;
+  height:40px;
+  border-radius:4px;
+  width: 500px;
+}
+
+#test {
+  display: none;
+}
+
+#analisar_grafico{
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  color:#5386a4;
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #272727;
+}
+
+.img_converter{
+  height: 9vh;
+  width: 5vw;
+}
+
+#graphic{
+  display: flex;
+  justify-content: center;
+  flex-direction: column; 
+  margin: 20px 0 50px 0;
+  width: 70vw;
+}

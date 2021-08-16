@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="shortcut icon" href="./imagens/faviteste.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style_header.css">
+    <link rel="stylesheet" href="./css/calc_main.css">
+    <link rel="stylesheet" href="./css/style_footer.css ">
+</head>
+
+<body id="principal">
+    <header>
+        <section id="logo">
+            <a href="landing_page.html"><img src="./imagens/logo.jpeg" alt="Logo"></a>
+        </section>
+        <nav id="menu">
+            <ul id="nav">
+                <li>
+                    <a href="landing_page.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="calc.html">
+                        Calculadora
+                    </a>
+                </li>
+                <li>
+                    <a href="conversor.html">
+                        Conversor
+                    </a>
+                </li>
+                <li>
+                    <a href="contato.html">
+                        Cadastro
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <section id="acessibilidade">
+            <input type="button" class="botaoFonte" value="A+" id="acessib_aumenta" onclick="aumenta_fonte()">
+            <input type="button" class="botaoFonte" value="A-" id="acessib_diminui" onclick="diminui_fonte()">
+            <button>
+                <img id="noturno" src="./imagens/noite.png" onclick="modo_noturno()">
+            </button>
+            <button>
+                <img id="diurno" src="./imagens/dia.png" onclick="modo_diurno()">
+            </button>
+        </section>
+        <section id="pesquisa">
+            <input type="search" name="buscar" id="buscar" placeholder="Digite aqui">
+            <button class="botao">
+                Buscar
+            </button>
+        </section>
+    </header>
+    <main>
+        <section>
+            <form name="calc">
+                <article id="calculadora">
+                    <input type="button" class="btnNeg" id="negativo1" value="-" onclick="btnNegativo1()">
+                    <input type="text" class = "tela" id="tela1" readonly />
+                    <input type="text" class = "tela" id="telaSimbolo" readonly />
+                    <br>
+                    <input type="button" class="btnNeg" id="negativo2" value="-" onclick="btnNegativo2()">
+                    <input type="text" class = "tela" id="tela2" readonly />
+                    <br>
+                    <input type="button" value="Convêncional" id="simples" onclick="btnSimples()">
+                    <input type="button" class="botaoCalc" value="C" onclick="btnReset()">
+                    <input type="button" class="botaoCalc" id="apagar1" value="&lt;" onclick="btnApagar()">
+                    <br>
+                    <input type="button" class="botaoCalc" value="7" onclick="btn(value)">
+                    <input type="button" class="botaoCalc" value="8" onclick="btn(value)">
+                    <input type="button" class="botaoCalc" value="9" onclick="btn(value)">
+                    <input type="button" class="botaoCalc" value="/" onclick="btnSimbolo(value)">
+                    <br>
+                    <input type="button" class="botaoCalc" value="4" onclick="btn(value)">
+                    <input type="button" class="botaoCalc" value="5" onclick="btn(value)">
+                    <input type="button" class="botaoCalc" value="6" onclick="btn(value)">
+                    <input type="button" class="botaoCalc" value="*" onclick="btnSimbolo(value)">
+                    <br>
+                    <input type="button" class="botaoCalc" value="1" onclick="btn(value)">
+                    <input type="button" class="botaoCalc" value="2" onclick="btn(value)">
+                    <input type="button" class="botaoCalc" value="3" onclick="btn(value)">
+                    <input type="button" class="botaoCalc" value="-" onclick="btnSimbolo(value)">
+                    <br>
+                    <input type="button" class="botaoCalc" value="0" onclick="btn(value)">
+                    <input type="button" class="botaoCalc" value="." onclick="btnPonto(value)">
+                    <input type="button" class="botaoCalc" value="=" onclick="btnResult()">
+                    <input type="button" class="botaoCalc" value="+" onclick="btnSimbolo(value)">
+                    <br>
+                    <input type="button" id="raiz" class="botaoCalc adv" value="&radic;2" onclick="btnRaiz()">
+                    <input type="button" class="botaoCalc adv" value="^2" onclick="btnElev(value)">
+                    <input type="button" class="botaoCalc adv" value="^3" onclick="btnElev(value)">
+                    <input type="button" class="botaoCalc adv" value="Pi" onclick="btnPi()">
+                </article>
+                <article id="instrucoes">
+                    <h3>
+                        Instruções de uso:
+                    </h3>
+                    <p>
+                        1 - Para alternar entre a cálculadora cientifica e a cálculadora convêncional, aperte o botão convêncional/ciêntifica.
+                    </p>
+                    <p>
+                        2 - Utilize os botões de sinalização "-", ao lado dos visores numéricos para alterar os valores entre negativo e positivo.
+                    </p>
+                    <p>
+                        3 - As funções da cálculadora cientifica só podem ser utilizadas caso o segundo visor esteja em branco.
+                    </p>
+                    
+                </article>
+            </form>
+        </section>
+    </main>
+    <aside>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+            <script>
+                new window.VLibras.Widget('https://vlibras.gov.br/app');
+            </script>
+        </div>
+    </aside>
+    <footer>
+        <section id="copyright">
+            <span>
+                &copy; ConvertCode, 2021
+            </span>
+        </section>
+        <section id="icones">
+            <a href="https://www.facebook.com/SoulCodeAcademy/" target="_blank"><img class="icon_footer" src="./imagens/face_icon.png" alt="" id="facebook"></a>
+            <a href="https://www.instagram.com/soulcodeacademy/" target="_blank"><img class="icon_footer" src="./imagens/instagram_icon.png" alt="" id="insta"></a>
+            <a href="#"><img class="icon_footer" src="./imagens/telegram_icon.png" alt="" id="tele"></a>
+            <a href="#"><img class="icon_footer" src="./imagens/whatsapp_icon.png" alt="" id="zap"></a>
+            <a href="https://twitter.com/SoulCodeAcademy?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="icon_footer" src="./imagens/twitter_icon.png" alt="" id="twi"></a>
+            <a href="#nav"><img id="top_button" src="./imagens/top.png" alt="volta topo"></a>
+        </section>
+    </footer>
+    <script src="./js/calc.js"></script>
+</body>
+
+</html>

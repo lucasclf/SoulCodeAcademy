@@ -1,0 +1,138 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    height: 28vh;
+    width: 100vw;
+    margin: 0 auto;
+    background-color: #0A1124;
+}
+
+/* ELEMENTOS DA LOGO */
+#logo {
+    float: left;
+    padding: 4vw;
+}
+
+#logo img{
+    width: 5vw;
+}
+
+#logo {
+    overflow:unset;
+}
+
+#logoImagem {
+    transform: scale(3);
+}
+
+/* ELEMENTOS DO MENU */
+nav {
+    width:50vw;
+    position:absolute;
+    left: 17vw;
+    top: 6vh
+}
+
+#menu {
+    padding: 2vw
+}
+
+#menu li {
+    float: left;
+    list-style: none;
+}
+
+#menu li a {
+    color: #6AFBDA;
+    text-decoration: none;
+    font-size:x-large;
+    padding: 20px;
+    display: block;
+}
+
+#menu li a:hover {
+    color: #fff;
+}
+
+#noturno{
+    width: 2.5vw;
+    position: absolute;
+    top: 20vh;
+    right: 11.5vw;
+}
+
+#diurno{
+    width: 2.5vw;
+    position: absolute;
+    top: 20vh;
+    right: 9vw;
+}
+
+input#buscar {
+    width: 13vw;
+    border: none;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px;
+    padding: 19px 10px;
+    position: absolute;
+    top: 11vh;
+    left: 57vw;
+    outline:none
+}
+
+.botao {
+    background: #6AFBDA;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px;
+    padding: 19px 10px;
+    color: #272727;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: absolute;
+    top: 11vh;
+    left: 69vw;
+}
+
+.botao:hover {
+    background: #5386a4;
+    color: #fff;
+}
+
+#acessib_aumenta{
+    right:1.5vw;
+    top:8.5vh;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px;
+}
+
+#acessib_diminui{
+    right:1.5vw;
+    top:12.5vh;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+}
+
+.botaoFonte{
+    position: absolute;
+    width: 1.6vw;
+    height: 4vh;
+    background: #6AFBDA;
+    color: #272727;
+    cursor: pointer;
+    border-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+}
