@@ -58,133 +58,133 @@ function converter(event) {
       // SE A  SEGUNDA MOEDA FOR DOLA CANADENSE  MULTIPLICA PELO DOLAR CANADENSE
       if (valor_select_b == "dolar-canadense") {
         conversao = moeada_valor * 1.25
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "real-brasileiro") {
         conversao = moeada_valor * 5.25
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "euro") {
         conversao = moeada_valor * 0.85
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "libra") {
-        conversao = moeada_valor * 15.70
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        conversao = moeada_valor * 15.69
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "peso-argentino") {
-        conversao = moeada_valor * 97.08
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        conversao = moeada_valor * 97.07
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       break;
     case 'dolar-canadense':
       if (valor_select_b == "dolar-americano") {
         conversao = moeada_valor * 0.80
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "real-brasileiro") {
         conversao = moeada_valor * 4.19
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "euro") {
-        conversao = moeada_valor * 0.65
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        conversao = moeada_valor * 0.68
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "libra") {
         conversao = moeada_valor * 12.54
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "peso-argentino") {
-        conversao = moeada_valor * 77.59
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        conversao = moeada_valor * 77.57
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       break;
     case 'real-brasileiro':
       if (valor_select_b == "dolar-americano") {
         conversao = moeada_valor * 0.19
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "dolar-canadense") {
         conversao = moeada_valor * 0.24
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "euro") {
         conversao = moeada_valor * 0.16
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "libra") {
         conversao = moeada_valor * 2.99 
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "peso-argentino") {
         conversao = moeada_valor * 18.49
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       break;
     case 'euro':
       if (valor_select_b == "dolar-americano") {
         conversao = moeada_valor * 1.18
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "dolar-canadense") {
         conversao = moeada_valor * 1.48 
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "real-brasileiro") {
         conversao = moeada_valor * 6.19
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "libra") {
-        conversao = moeada_valor * 18.52 
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        conversao = moeada_valor * 18.51 
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "peso-argentino") {
-        conversao = moeada_valor * 114.53 
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        conversao = moeada_valor * 114.52 
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       break;
     case 'libra':
       if (valor_select_b == "dolar-americano") {
         conversao = moeada_valor * 0.064
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "dolar-canadense") {
         conversao = moeada_valor * 0.08
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "real-brasileiro") {
         conversao = moeada_valor * 0.33
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "euro") {
         conversao = moeada_valor * 0.054
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "peso-argentino") {
-        conversao = moeada_valor * 6.19
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        conversao = moeada_valor * 6.18
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       break;
     case 'peso-argentino':
       if (valor_select_b == "dolar-americano") {
         conversao = moeada_valor * 0.01
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "dolar-canadense") {
         conversao = moeada_valor * 0.013
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "real-brasileiro") {
         conversao = moeada_valor * 0.054
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "euro") {
         conversao = moeada_valor * 0.0087
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       else if (valor_select_b == "libra") {
         conversao = moeada_valor * 0.16
-        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 18.08.21: ' + parseFloat(conversao).toFixed(2);
+        resultadoEl.innerHTML = 'Resultado da conversão atualizada em 16.08.2021: ' + parseFloat(conversao).toFixed(2);
       }
       break;
     default:
