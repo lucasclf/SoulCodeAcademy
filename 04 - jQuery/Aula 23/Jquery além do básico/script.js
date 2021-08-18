@@ -20,4 +20,4 @@ $("div").remove()
 //Questão 10
 $("div").empty()
 //Questão 11
-$("div").remove(".test", ".demo")
+$("div").remove(".test, .demo")
