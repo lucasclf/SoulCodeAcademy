@@ -1,5 +1,5 @@
 :root {
-    background-color:lavenderblush
+    background-color: lavenderblush
 }
 
 h1, h2, h6 {
@@ -19,28 +19,27 @@ td {
 }
 
 #c1x1 {
-    background-image: linear-gradient(red,ivory,blue);
+    background-image: linear-gradient(red, ivory, blue);
 }
 
 #c1x2 {
-    background-image: linear-gradient(95deg, red,ivory,blue);
+    background-image: linear-gradient(95deg, red, ivory, blue);
 }
 
 #c2x1 {
-    background-image: linear-gradient(to left bottom, red,ivory,blue);
+    background-image: linear-gradient(to left bottom, red, ivory, blue);
 }
 
 #c2x2 {
-    background-image: repeating-linear-gradient(rgb(255, 0, 200),ivory 50%);
-
+    background-image: repeating-linear-gradient(rgb(255, 0, 200), ivory 50%);
 }
 
 #c3x1 {
-    background-image: repeating-linear-gradient(red, blue 10%, rgb(122, 0, 150),ivory 50%);
+    background-image: repeating-linear-gradient(red, blue 10%, rgb(122, 0, 150), ivory 50%);
 }
 
 #c3x2 {
-    background-image: repeating-linear-gradient(to bottom right,red, blue 10%, rgb(122, 0, 150),ivory 50%);
+    background-image: repeating-linear-gradient(to bottom right, red, blue 10%, rgb(122, 0, 150), ivory 50%);
 }
 
 #c4x1 {
@@ -56,7 +55,7 @@ td {
 }
 
 #c5x1 {
-    background-image: radial-gradient(at top left,red, black, pink);
+    background-image: radial-gradient(at top left, red, black, pink);
 }
 
 #c5x1 span {
