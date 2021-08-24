@@ -1,0 +1,17 @@
+p {
+    padding: 10px;
+    border: purple solid 1px;
+    border-radius: 16px;
+}
+
+header, footer{
+    background-color: violet;
+}
+
+.corpo {
+    margin-top: 10px;
+}
+
+.lista{
+    margin-bottom: 10px;
+}
