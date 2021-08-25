@@ -1,0 +1,11 @@
+.branco {
+    display: none
+}
+
+main{
+    min-height: 70vh ;
+}
+
+.copy, header{
+    background-color: purple
+}
