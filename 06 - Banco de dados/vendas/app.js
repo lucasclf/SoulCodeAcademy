@@ -28,7 +28,6 @@ app.get("/produtos", (req, res)=>{
         if(err){
             return res.status(500).send("Erro ao consultar produto!")
         }
-        console.log(dado)
         res.render("produtos", {catalogoProdutos:dado}); 
                
     })

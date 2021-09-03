@@ -5,14 +5,11 @@ $(document).ready(function () {
     $("#nome").keypress(function (e) {
 
         var tecla = new Number();
-
         if (window.event) {
             tecla = e.keyCode;
-        }
-        else if (e.which) {
+        } else if (e.which) {
             tecla = e.which;
-        }
-        else {
+        } else {
             return true;
         }
         if ((tecla >= "48") && (tecla <= "57")) {
