@@ -19,22 +19,22 @@
                 <h3 class="display-3 mt-5">Cadastro de Alunos</h3>
             </article>
         </section>
-        <form action="" method="POST">
+        <form action="" method="POST" id="formAluno">
             <article class="form-group form-row">
                 <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nome" name="nomeAluno">
+                <input type="text" class="form-control" id="nome" name="nome">
             </article>
             <article class="form-group form-row">
                 <label for="cpf">CPF do Responsável</label>
-                <input type="number" class="form-control" id="cpf" name="cpfAluno">
+                <input type="number" class="form-control" id="cpf" name="cpf">
             </article>
             <article class="form-group form-row">
                 <label for="nasc">Data de Nascimento</label>
-                <input type="date" class="form-control" id="nasc" name="nascAluno">
+                <input type="date" class="form-control" id="nasc" name="nasc">
             </article>
             <article class="form-group form-row">
                 <label class="form-check-label" for="turma">Turma</label>
-                <select class="form-control" name="turma" id="turmaAluno">
+                <select class="form-control" name="turma" id="turma">
                     <option value="A">A</option>
                     <option value="B">B</option>
                     <option value="C">C</option>
@@ -45,49 +45,13 @@
             <article class="form-group form-row">
                 <article class="col-2 mx-auto">
                     <label class="form-check-label" for="pcd">PCD</label>
-                    <select class="form-control" name="pcdAluno" id="pcd">
+                    <select class="form-control" name="pcd" id="pcd">
                         <option value="true">Sim</option>
                         <option value="false">Não</option>
                     </select>
                 </article>
                 <article class="col-2 mx-auto">
-                    <button type="submit" class="btn btn-outline-dark" id="btnAluno">Enviar</button>
-                </article>
-            </article>
-        </form>
-        <section class="row">
-            <article class="col">
-                <h2 class="display-2">CoqueSchool</h2>
-                <h3 class="display-3 mt-5">Cadastro de Professores</h3>
-            </article>
-        </section>
-        <form action="" method="POST">
-            <article class="form-group form-row">
-                <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nome" name="nome">
-            </article>
-            <article class="form-group form-row">
-                <label for="cpf">CPF</label>
-                <input type="number" class="form-control" id="cpf" name="cpf">
-            </article>
-            <article class="form-group form-row">
-                <label for="idade">Idade</label>
-                <input type="number" class="form-control" id="idade" name="idade">
-            </article>
-            <article class="form-group form-row">
-                <label for="materia">Materia</label>
-                <input type="text" class="form-control" id="materia" name="materia">
-            </article>
-            <article class="form-group form-row">
-                <article class="col-2 mx-auto">
-                    <label class="form-check-label" for="pcd">PCD</label>
-                    <select class="custom-select" name="pcd" id="pcd">
-                        <option value="true">Sim</option>
-                        <option value="false">Não</option>
-                    </select>
-                </article>
-                <article class="col-2 mx-auto">
-                    <button type="submit" class="btn btn-outline-dark" id="btnProfessor">Enviar</button>
+                    <button type="button" class="btn btn-outline-dark" id="btnAluno">Enviar</button>
                 </article>
             </article>
         </form>

@@ -19,15 +19,18 @@ app.use(express.urlencoded({ extended: true })); //Permitindo que os dados passe
 app.use(express.json()); //Informando que o fluxo de arquivos sejam transportados em formato json.
 
 app.get("/", (req, res)=>{
-    res.send("Página inicial.");
+    res.redirect("produtos");
 });
 
 app.get("/produtos", (req, res)=>{
     let consultaDB = Collection.find({}, (err, dado)=>{
+        
         if(err){
             return res.status(500).send("Erro ao consultar produto!")
         }
-        res.render("produtos", {catalogoProdutos:dado});        
+        console.log(dado)
+        res.render("produtos", {catalogoProdutos:dado}); 
+               
     })
 });
 
@@ -36,7 +39,7 @@ app.get("/cadastrarProdutos", (req, res)=>{
 })
 
 app.post("/cadastrarProdutos", (req, res)=>{
-    let produto = new produtos();
+    let produto = new Collection();
     produto.nome = req.body.nome;
     produto.vlUnit = req.body.valor;
     produto.codigoBarras = req.body.codBarras;
@@ -46,6 +49,16 @@ app.post("/cadastrarProdutos", (req, res)=>{
             return res.status(500).send("Erro ao cadastrar!")
         return res.redirect("/produtos")
     })
+})
+
+app.get("/deletarProduto/:id", (req, res)=> {
+    let chave = req.params.id;
+    Collection.deleteOne({_id:chave}, (err, result)=>{
+        if(err){
+            return res.status(500).send("Falha ao deletar.")
+        }
+    });
+    res.send("<script>alert('Produto deletado com sucesso.'); window.location.href = '/produtos'; </script>");
 })
 
 app.listen(port, ()=>{

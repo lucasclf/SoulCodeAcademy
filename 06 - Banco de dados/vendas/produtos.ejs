@@ -26,16 +26,23 @@
                             <th>NOME</th>
                             <th>VALOR</th>
                             <th>CÓDIGO</th>
+                            <th>DELETAR</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <% catalogoProdutos.forEach(function(objeto){ %>
+                        <% catalogoProdutos.forEach(function(objeto){ %>   
                             <tr>
                                 <td><%= objeto.nome %></td>
                                 <td><%= objeto.vlUnit %></td>
                                 <td><%= objeto.codigoBarras %></td>
+                                <td><a href="/deletarProduto/<%= objeto._id %>" class="btn btn-warning"><small class="text-muted">apagar</small></a></td>
                             </tr>
                         <% }) %>
+                        <% if(catalogoProdutos == 0) { %>
+                            <tr>
+                                <td colspan="4"> NENHUM PRODUTO CADASTRADO </td>
+                            </tr>
+                        <% } %>
                     </tbody>
                 </table>
             </section>
