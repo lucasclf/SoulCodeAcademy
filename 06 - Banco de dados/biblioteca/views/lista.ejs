@@ -1,0 +1,62 @@
+<section class="container">
+    <section class="row">
+        <section class="col">
+            <section class="row mt-5">
+                <article class="col-12">
+                    <h1 class="text-center">Lista de livros</h1>
+                </article>
+            </section>
+            <table class="text-center table table-hover table-bordered table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th>NOME</th>
+                        <th>CDD</th>
+                        <th>LCC</th>
+                        <th>FAIXA ETÁRIA</th>
+                        <th>AUTOR</th>
+                        <th>ANO</th>
+                        <th>DISPONIVEL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% catalogoLivros.forEach(function(objeto){ %>
+                        <tr>
+                            <td>
+                                <%= objeto.nome %>
+                            </td>
+                            <td>
+                                <%= objeto.cdd %>
+                            </td>
+                            <td>
+                                <%= objeto.lcc %>
+                            </td>
+                            <td>
+                                <%= objeto.faixaEtaria %>
+                            </td>
+                            <td>
+                                <%= objeto.autor %>
+                            </td>
+                            <td>
+                                <%= objeto.ano %>
+                            </td>
+                            <td>
+                                <% if(objeto.local == 0) {  %>
+                                    Sim
+                                <% } else { %>
+                                    Não
+                                <% } %>
+                            </td>
+
+                        </tr>
+                        <% }) %>
+                            <% if(catalogoLivros==0) { %>
+                                <tr>
+                                    <td colspan="6" class="alert alert-warning text-center"> NENHUM LIVRO CADASTRADO
+                                    </td>
+                                </tr>
+                            <% } %>
+                </tbody>
+            </table>
+        </section>
+    </section>
+</section>
