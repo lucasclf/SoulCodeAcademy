@@ -6,7 +6,7 @@
                     <h1 class="text-center">Lista de livros</h1>
                 </article>
             </section>
-            <table class="text-center table table-hover table-bordered table-striped table-dark">
+            <table id="tabelaLivrosAdmin"  class="text-center table table-hover table-bordered table-striped table-dark">
                 <thead>
                     <tr>
                         <th>NOME</th>
@@ -57,6 +57,10 @@
                             <% } %>
                 </tbody>
             </table>
+            <article class="form-group">
+                <label for="search">Pesquisar</label>
+                <input type="text" id="search" name="search" class="form-control">
+            </article>
         </section>
     </section>
 </section>
