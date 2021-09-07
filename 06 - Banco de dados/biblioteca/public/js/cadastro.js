@@ -124,5 +124,14 @@ $(document).ready(function () {
             })
         }
 
+        
+        
 })
 
+/* function confirmarDel() {
+    let aux = prompt("Para habilitar o botão de deletar escreva DELETAR")
+    if (aux == "DELETAR"){
+        $(this).removeClass("btn-warning")
+        $(this).addClass("btn-danger")
+    }
+} */

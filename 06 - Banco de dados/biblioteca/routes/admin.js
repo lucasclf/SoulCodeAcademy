@@ -41,12 +41,12 @@
 //Rota de deletar
     router.get("/deletarLivro/:id", (req, res) => {
         let id = req.params.id;
-        Livro.deleteOne({ _id: id }, (err, result) => {
-            if (err) {
-                return res.status(500).send("Falha ao deletar.")
-            }
-        });
-        res.send("<script>alert('Livro deletado com sucesso.'); window.location.href = '/admin/lista'; </script>");
+            Livro.deleteOne({ _id: id }, (err, result) => {
+                if (err) {
+                    return res.status(500).send("Falha ao deletar.")
+                }
+            });
+            res.send("<script>alert('Livro deletado com sucesso.'); window.location.href = '/admin/lista'; </script>");
     })
 
 // Rotas de edição de produtos
