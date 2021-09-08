@@ -106,7 +106,7 @@ $(document).ready(function () {
     // Busca na planilha
         $("#search").keyup(function (){ 
             search_table($("#search").val()); 
-        });
+        }); //Chama a função search_table, usando o valor do input#search como parametro.
 
         function search_table(value){ 
             $("#tabelaLivrosAdmin tbody tr").each( function (){

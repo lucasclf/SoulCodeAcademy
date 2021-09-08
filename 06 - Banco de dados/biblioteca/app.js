@@ -8,10 +8,10 @@
 
 // Configurações
     // Definindo porta
-        const port = 4242; // Definindo a porta.
+        const PORT = process.env.PORT || 4242; // Definindo a porta.
     
     // Mongoose
-    mongoose.connect("mongodb+srv://lucas_cqn:lucas_cqn@cluster0.xn84s.mongodb.net/CqnLibrary?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true }); // Conectando ao servidor do mongoDB
+        mongoose.connect("mongodb+srv://lucas_cqn:lucas_cqn@cluster0.xn84s.mongodb.net/CqnLibrary?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true }); // Conectando ao servidor do mongoDB
 
     // EJS
         app.use(expressLayouts)
@@ -30,6 +30,6 @@
         app.use("/", routesUsuario);
 
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     console.log("Banco de dados rodando na porta: " + port);
 });

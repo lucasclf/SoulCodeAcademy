@@ -1,0 +1,72 @@
+<section class="container">
+    <section class="row">
+        <section class="col">
+            <section class="row mt-5">
+                <article class="col-12">
+                    <h1 class="text-center">Lista de livros</h1>
+                </article>
+            </section>
+<!--             <hr>
+            <article class="form-group">
+                <label for="search">Pesquisar</label>
+                <input type="search" id="search" name="search" class="form-control">
+            </article>
+            <form action="/pesquisa" method="GET">
+                <article class="form-group">
+                    <label for="searchDB">Pesquisar no DB</label>
+                    <input type="search" id="searchDB" name="searchDB" class="form-control">
+                    <button class="btn btn-success mt-3" type="submit">Pesquisar</button>
+                </article> -->
+            </form>
+            <hr>
+            <table id="tabelaLivrosAdmin" class="text-center table table-bordered table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>NOME</th>
+                        <th>ISBN</th>
+                        <th>FAIXA ETÁRIA</th>
+                        <th>AUTOR</th>
+                        <th>ANO</th>
+                        <th>DISPONIVEL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% catalogoLivros.forEach(function(objeto){ %>
+                        <tr>
+                            <td>
+                                <%= objeto.nome %>
+                            </td>
+                            <td>
+                                <%= objeto.isbn %>
+                            </td>
+                            <td>
+                                <%= objeto.faixaEtaria %>
+                            </td>
+                            <td>
+                                <%= objeto.autor %>
+                            </td>
+                            <td>
+                                <%= objeto.ano %>
+                            </td>
+                            <td>
+                                <% if(objeto.local == 0) {  %>
+                                    Sim
+                                <% } else { %>
+                                    Não
+                                <% } %>
+                            </td>
+
+                        </tr>
+                        <% }) %>
+                            <% if(catalogoLivros==0) { %>
+                                <tr>
+                                    <td colspan="6" class="alert alert-warning text-center"> NENHUM LIVRO CADASTRADO
+                                    </td>
+                                </tr>
+                            <% } %>
+                </tbody>
+            </table>
+        </section>
+    </section>
+</section>
+<br>
