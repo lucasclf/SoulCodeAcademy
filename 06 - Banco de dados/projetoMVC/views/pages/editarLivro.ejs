@@ -1,0 +1,48 @@
+<section class="container">
+    <section class="row">
+        <article class="col">
+            <h1 class="mt-5 text-center">Editar <%= livro_item.nome %></h1>
+            <form action="/admin/editarLivro" method="POST">
+                <article class="form-group">
+                    <label for="nome">Nome</label>
+                    <input class="form-control" type="text" id="nome" name="nome" placeholder="Nome do produto"
+                        value="<%= livro_item.nome %>">
+                </article>
+                <article class="form-group">
+                    <label for="isbn">ISBN</label>
+                    <input class="form-control" type="number" step="0.01" id="isbn" name="isbn" placeholder="000.0"
+                        value="<%= livro_item.isbn %>">
+                </article>
+
+                <article class="form-group">
+                    <label for="faixaEtaria">Classificação etária</label>
+                    <select class="form-control" name="faixaEtaria" id="faixaEtaria">
+                        <option value="Infantil">Infantil</option>
+                        <option value="Infanto-juvenil">Infanto-juvenil</option>
+                        <option value="Adulto">Adulto</option>
+                        <option value="Livre">Livre</option>
+                    </select>
+                </article>
+                <article class="form-group">
+                    <label for="autor">Autor</label>
+                    <input class="form-control" type="text" id="autor" name="autor" placeholder="João da Silva Sauro"
+                        value="<%= livro_item.autor %>">
+                </article>
+                <article class="form-group">
+                    <label for="ano">Ano de lançamento</label>
+                    <input class="form-control" type="number" step="0.01" id="ano" name="ano" placeholder="1900"
+                        value="<%= livro_item.ano %>">
+                </article>
+                <article class="form-group">
+                    <label for="local">Localização</label>
+                    <input class="form-control" type="text" id="local" name="local" placeholder="id_usuario"
+                        value="<%= livro_item.local %>">
+                </article>
+
+                <input type="hidden" name="id" value="<%=livro_item._id %>">
+
+                <button type="submit" class="btn btn-primary mb-5">Enviar</button>
+            </form>
+        </article>
+    </section>
+</section>

@@ -3,7 +3,8 @@
     const app = express(); // Inserindo a função express() dentro do const app
     const mongoose = require("mongoose"); // Importando o mongoose para dentro da const mongoose
     const expressLayouts = require("express-ejs-layouts"); //Importando o express-ejs-layouts
-    const routesLivros = require("./routes/livros")
+    const userRouter = require("./routes/userRouter")
+    const adminRouter = require("./routes/adminRouter")
 
 //Configurações
     //Criando a porta
@@ -26,7 +27,8 @@
         app.use(express.static("public"));
 
     //Rotas
-        app.use("/", routesLivros);
+        app.use("/", userRouter);
+        app.use("/admin", adminRouter)
     
     // Criando o evento de escuta que vai ativar a aplicação
     app.listen((process.env.PORT || port), () => {

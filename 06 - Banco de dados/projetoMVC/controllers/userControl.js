@@ -6,6 +6,6 @@ const Livro = require("../models/livros")
             if (err) {
                 return res.status(500).send("Erro ao consultar livro!")
             }
-            res.render("./pages/lista", { catalogoLivros: dado });
+            res.render("pages/lista", { catalogoLivros: dado });
         })
     };

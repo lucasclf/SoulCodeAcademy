@@ -2,14 +2,12 @@ $(document).ready(function () {
     var validation = new Array(6)
 
     function habilitarBtn() {
-
+        $("#submit").removeAttr("disabled");
         for(i=0; i < validation.length; i++) {
-            $("#submit").removeAttr("disabled");
             if (validation[i] != true) {
                 $("#submit").attr("disabled", "disabled");
             }
         }
-        
     }
 
     $("#nome").blur(function () {
@@ -112,9 +110,5 @@ $(document).ready(function () {
                 }
             })
         }
-    
-    // Busca no servidor
-        
-    $('#tabelaLivrosAdmin').DataTable()   
         
 })
