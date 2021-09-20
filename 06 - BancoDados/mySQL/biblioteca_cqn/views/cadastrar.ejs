@@ -1,0 +1,22 @@
+<section class="container">
+    <section class="row">
+        <article class="col">
+            <h1 class="mt-5 text-center">Cadastrar Livros</h1>
+            <form action="/admin/cadastrar" method="POST">
+                <article class="form-group">
+                    <label for="nome">Nome</label>
+                    <input class="form-control" type="text" id="nome" name="nome" placeholder="Nome do produto">
+                </article>
+                <article class="form-group">
+                    <label for="lcc">ISBN</label>
+                    <input class="form-control" type="text" id="isbn" name="isbn" placeholder="X000">
+                </article>
+                <article class="form-group">
+                    <label for="autor">Autor</label>
+                    <input class="form-control" type="text" id="autor" name="autor" placeholder="João da Silva Sauro">
+                </article>
+                <button id="submit" type="submit" disabled class="mb-5 btn btn-primary">Enviar</button>
+            </form>
+        </article>
+    </section>
+</section>

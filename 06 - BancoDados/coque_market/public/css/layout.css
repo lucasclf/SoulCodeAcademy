@@ -1,0 +1,35 @@
+header, .navbar {
+    background-color: #6c336d;
+}
+
+header span {
+    color: #F2F08A;
+}
+
+main {
+    background-color: #f2f08a38;
+    min-height: 85vh;
+}
+
+footer {
+    background-color: #6c336d;
+    min-height: 10vh;  
+}
+
+footer p{
+    font-size: 20px;
+    color: #F2F08A;
+}
+
+footer a {
+    color: #F2F08A;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #46A65F;
+}
+
+h1 {
+    color: #6c336d;
+}

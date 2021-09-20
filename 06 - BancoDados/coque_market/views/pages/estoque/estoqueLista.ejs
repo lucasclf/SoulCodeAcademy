@@ -1,0 +1,44 @@
+<section class="container">
+    <section class="row">
+        <section class="col">
+            <section class="row mt-5 mb-5">
+                <article class="col-6 text-left">
+                    <h1 class="">LISTA DE PRODUTOS</h1>
+                </article>
+                <article class="col-6 text-right">
+                    <a href="/estoque/add " class="btn btn-success btn-lg">CADASTRAR PRODUTO</a>
+                </article>
+            </section>
+            <table id="tabelaLivrosAdmin"  class="text-center table table-hover table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>NOME</th>
+                        <th>FORNECEDOR</th>
+                        <th>QUANTIDADE</th>
+                        <th>VALOR UNITÁRIO</th>
+                        <th>EDITAR</th>
+                        <TH>DELETAR</TH>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (estoque_lista.length==0) { %>
+                        <div class="alert alert-warning"> Não existem dados cadastrados.</div>
+                    <% } else {%>
+                    <% estoque_lista.forEach(function(objeto){ %>
+                        <tr>
+                            <td><%=objeto.estoque_id %></td>
+                            <td><%=objeto.estoque_nome %></td>
+                            <td><%=objeto.forn_nome %></td>
+                            <td><%=objeto.estoque_quant %></td>
+                            <td><%=objeto.estoque_valor %></td>
+                            <td><a href="/estoque/editar/<%=objeto.estoque_id %>" class="btn btn-warning bt-sm">EDITAR</a></td> 
+                            <td><a href="/estoque/drop/<%=objeto.estoque_id %>" class="btn btn-danger bt-sm">DELETAR</a></td> 
+                        </tr>
+                    <% }) %>
+                    <% } %>
+                </tbody>
+            </table>
+        </section>
+    </section>
+</section>

@@ -1,0 +1,8 @@
+problema de autenticação
+use sys;
+ALTER USER 'user' IDENTIFIED WITH mysql_native_password BY 'user';
+FLUSH PRIVILEGES;
+UPDATE mysql.user SET Grant_priv='Y', Insert_priv='Y' WHERE User='user';
+UPDATE mysql.user SET Grant_priv='Y', Super_priv='Y' WHERE User='user';
+exit
+node teste.js
