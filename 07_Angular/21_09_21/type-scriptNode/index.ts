@@ -46,7 +46,7 @@ pessoa.setNome("Pedro")
 console.log(pessoa.getNome())
 
 interface propriedadesCarro{
-    marca: private string
+    marca: string
 }
 
 class Carro implements propriedadesCarro{
