@@ -1,1 +1,0 @@
-Autores/Authors: João Valdevino, Roberta Moura, Rafael Pontes e Lucas Coquenão
