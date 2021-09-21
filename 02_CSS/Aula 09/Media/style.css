@@ -1,0 +1,19 @@
+* {
+    margin: 0px;
+    padding-top: 0px;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 780px) {
+    img {
+        margin: auto;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    img {
+        margin: auto;
+        width: 10%;
+    }
+}
