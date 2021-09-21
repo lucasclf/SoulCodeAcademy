@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConvertCode</title>
+    <link rel="shortcut icon" href="./imagens/faviteste.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style_header.css">
+    <link rel="stylesheet" href="./css/landing_page.css">
+    <link rel="stylesheet" href="./css/style_footer.css">
+</head>
+
+<body id="principal">
+    <header>
+        <section id="logo">
+            <a href="landing_page.html"><img src="./imagens/logo.jpeg" alt="Logo"></a>
+        </section>
+        <nav id="menu">
+            <ul id="nav">
+                <li>
+                    <a href="landing_page.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="calc.html">
+                        Calculadora
+                    </a>
+                </li>
+                <li>
+                    <a href="conversor.html">
+                        Conversor
+                    </a>
+                </li>
+                <li>
+                    <a href="contato.html">
+                        Cadastro
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <section id="acessibilidade">
+            <button type="button" class="botaoFonte" value="A+" id="acessib_aumenta" onclick="aumenta_fonte()">A+</button>
+            <button type="button" class="botaoFonte" value="A-" id="acessib_diminui" onclick="diminui_fonte()">A-</button>
+            <button>
+                <img id="noturno" src="./imagens/noite.png" onclick="modo_noturno1()">
+            </button>
+            <button>
+                <img id="diurno" src="./imagens/dia.png" onclick="modo_noturno2()">
+            </button>
+        </section>
+        <section id="pesquisa">
+            <input type="search" name="buscar" id="buscar" placeholder="Digite aqui">
+            <button class="botao">
+                Buscar
+            </button>
+        </section>
+    </header>
+    <main>
+        <div class="sobreNos">
+            <h1 id="sobreNos">Um pouco sobre nós</h1>
+            <h2 id="desenvolvimento">Desenvolvimento</h2>
+        </div>
+        <p id="Paragrafos">
+            Nossa equipe tem como missão o desenvolvimento de excelentes páginas web. Nesse projeto focamos no desenvolvimento de uma página com conversor cambial e de página com calculadora convencional e científica. O objetivo foi a consolidação do conhecimento de HTML, CSS e JavaScript obtido até aqui. Foco na integração do conhecimento individual sendo compartilhado a todos os integrantes deste grupo.
+        </p>
+
+        <h2 id="fundadores1">
+            Fundadores
+        </h2>
+
+        <article id="diana" class="fundadores coluna1">
+            <h3>Diana Müller</h3>
+            <h4>Front-End</h4>
+            <p>
+                É estudante Web Full-Stack pela SoulCode Academy após 6 anos trabalhando com pesquisa na área de genética psiquiátrica. Tem se interessado por ambos polos da carreira Full-Stack. Foi uma das fundadoras da ONG <a id="principio_animal" href="https://www.principioanimal.org/">Princípio Animal.</a>
+            </p>
+        </article>
+
+        <article id="lucas" class="fundadores coluna2">
+            <h3>Lucas Coquenão</h3>
+            <h4>Back-End</h4>
+            <p>Atuou na advocacia por 10 anos, em busca de uma transição de carreira para a área da
+                programação.
+                Com grande interesse na área de back-end, vem desenvolvendo suas habilidades como developer
+                fullstack web com a SoulCode Academy.</p>
+        </article>
+
+    <div class="divisor"></div>
+
+        <article id="marcia" class="fundadores coluna1">
+            <h3>Márcia Alves</h3>
+            <h4>Back-End</h4>
+            <p>Fullstack web developer em formação pela SoulCode Academy.
+                Onde desenvolve habilidades na programação usando HTML, CSS e a liguagem JavaScript.
+                Com especialização em Comunicação Empresarial e Graduação em Comunicação social.
+                Busca destaque e crescimento na tecnologia.</p>
+        </article>
+
+        <article id="mirian" class="fundadores coluna2">
+            <h3>Mirian Virginia</h3>
+            <h4>Back-End</h4>
+            <p>Fullstack web developer em formação pela SoulCode Academy.
+                Onde desenvolve habilidades na programação usando HTML, CSS e a liguagem JavaScript.
+                Graduação em Gestao finananceira. E agora em busca de uma o portunidade na área de programaçao.
+            </p>
+        </article>
+
+    <div class="divisor"></div>
+
+        <article id="ricardo" class="fundadores coluna1 linha3">
+            <h3>Ricardo Nunes</h3>
+            <h4>Front-End</h4>
+            <p>Microempreendedor desde 2016, com prestação de serviço em diversos segmentos. Hoje busca o
+                seu grande sonho e na transição para uma carreira na área da programação.</p>
+        </article>
+
+        <article id="yago" class="fundadores coluna2 linha3">
+            <h3>Yago Mathias</h3>
+            <h4>Front-End</h4>
+            <p>É estudante desenvolvedor Web Full-Stack pela SoulCode Academy.
+                É sua primeira experiência com linguagens de programação.
+                Principal meta é seguir carreira e se tornar um dos melhores em sua área</p>
+        </article>
+    </main>
+    <aside>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+            <script>
+                new window.VLibras.Widget('https://vlibras.gov.br/app');
+            </script>
+        </div>
+    </aside>
+    <footer>
+        <section id="copyright">
+            <span>
+                &copy; ConvertCode, 2021
+            </span>
+        </section>
+        <section id="icones">
+        <a href="https://www.facebook.com/SoulCodeAcademy/" target="_blank"><img class="icon_footer" src="./imagens/face_icon.png" alt="" id="facebook"></a>
+        <a href="https://www.instagram.com/soulcodeacademy/" target="_blank"><img class="icon_footer" src="./imagens/instagram_icon.png" alt="" id="insta"></a>
+        <a href="#"><img class="icon_footer" src="./imagens/telegram_icon.png" alt="" id="tele"></a>
+        <a href="#"><img class="icon_footer" src="./imagens/whatsapp_icon.png" alt="" id="zap"></a>
+        <a href="https://twitter.com/SoulCodeAcademy?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="icon_footer" src="./imagens/twitter_icon.png" alt="" id="twi"></a>
+        <a href="#nav"><img id="top_button" src="./imagens/top.png" alt="volta topo"></a>
+        </section>
+    </footer>
+    <script src="./js/landing_page.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário de Vacinação</title>
+    <meta authors="João Valdevino, Roberta Moura, Rafael Pontes e Lucas Coquenão">
+</head>
+
+<body>
+
+    <div id="botoes">
+        <button onclick="modoNoturno()" class="btn">
+            <img src="images/lampada.png" alt="" title="Ativar modo noturno">
+        </button>
+    
+        <button onclick="modoAcessivo()" class="btn">
+            <img src="images/A.png" alt="" title="Alterar tamanho da letra">
+        </button>
+    </div>
+
+    <main>
+        <form name="formulario" onsubmit="validarTudo()">
+            <div id="flex-container">
+                <h2 id="titulo" oncopy="copiar()" onmouseenter="colorirVermelho(this)" onmouseleave="colorirVerde(this)">Formulário de Vacinação</h2>
+                <div class="flex-item">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome1" name="nome2" oninput="validarNome()">
+                </div>
+                <div class="flex-item">
+                    <label for="tipo-sanguineo">Tipo San:</label>
+                    <input oninput="validarSangue()" type="text" name="sangue" id="tipo-sanguineo">
+                </div>
+                <div class="flex-item">
+                    <label for="rh">Fator RH:</label>
+                    <input oninput="validarRH()" id="rh-input" name="rh" type="text">
+                </div>
+                <div class="flex-item">
+                    <label for="vacinas">Vacinas aplicadas:</label>
+                    <input type="text" id="vacinas" name="vacinas" oninput="validarVacinas()">
+                </div>
+                <div class="flex-item">
+                    <label for="rua">Rua:</label>
+                    <input type="text" id="rua" name="rua" oninput="validarRua()">
+                </div>
+                <div class="flex-item">
+                    <label for="numero">Número:</label>
+                    <input type="number" id="numero">
+                </div>
+                <div class="flex-item">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro" oninput="validarBairro()">
+                </div>
+                <div class="flex-item">
+                    <label for="cep">CEP:</label>
+                    <input type="number" id="cep">
+                </div>
+                <div class="flex-item">
+                    <label for="estado">Estado:</label>
+                    <input type="text" id="estado" name="estado" oninput="validarEstado()">
+                </div>
+                <div class="flex-item">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" oninput="validarCidade()">
+                </div>
+                <div class="flex-item">
+                    <div class="button">
+                        <button type="submit" class="submit-btn">Enviar</button>
+                        <button type="reset" class="submit-btn">Limpar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
