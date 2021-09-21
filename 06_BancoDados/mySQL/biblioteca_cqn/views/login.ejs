@@ -1,0 +1,17 @@
+<section>
+    <h2 class="display-3 text-center">Login</h2>
+</section>
+    <% if(error){ %>
+        <article class="alert alert-danger container">
+            <%= error %>
+        </article>
+    <% } %>
+<section class="card container mt-5">
+    <form action="/login" method="POST">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome" class="form-control">
+        <label for="senha">Senha: </label>
+        <input type="password" name="senha" class="form-control" id="senha">
+        <button type="submit" class="btn btn-success mt-3 mb-3">Logar</button>
+    </form>
+</section>

@@ -1,0 +1,45 @@
+<section class="container">
+    <section class="row">
+        <section class="col">
+            <section class="row mt-5">
+                <article class="col-12">
+                    <h1 class="text-center">Lista de livros</h1>
+                </article>
+            </section>
+            <table id="tabelaLivrosAdmin" class=" text-center table table-hover table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>NOME</th>
+                        <th>ISBN</th>
+                        <th>AUTOR</th>
+                        <th>EDITAR</th>
+                        <th>DELETAR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (livros_lista.length==0) { %>
+                        <div class="alert alert-warning"> Não existem dados cadastrados.</div>
+                    <% } else {%>
+                    <% livros_lista.forEach(function(rows){ %>
+                        <tr>
+                            <td><%=rows.nome_livro %></td>
+                            <td><%=rows.isbn_livro %></td>
+                            <td><%=rows.autor_livro %></td>
+                            <td><a href="/admin/editarLivro/<%= rows.id_livro %>" class="btn btn-sm btn-success">editar</a></td>
+                            <td><a href="/admin/deletarLivro/<%= rows.id_livro %>" class="btnDelet btn btn-sm btn-warning">apagar</a></td>
+                        </tr>
+                        <% }) %>
+                        <% } %>
+                </tbody>
+            </table>
+            <article class="form-group">
+                <label for="search">Pesquisar</label>
+                <input type="text" id="search" name="search" class="form-control">
+            </article>
+            <hr>
+            <article class="row mb-5">
+                <a href="/admin/cadastrar" class="btn btn-primary mx-auto col-2">Cadastrar Livros</a>
+            </article>
+        </section>
+    </section>
+</section>

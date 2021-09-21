@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="agradecimento.html">
+        <table border align="center">
+            <thead>
+                <tr>
+                    <th colspan="2">FÓRMULÁRIO DE NAVEGAÇÃO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="nome">Nome: </label>
+                        <input type="text" id="nome" autofocus required>
+                    </td>
+                    <td>
+                        <label for="data_nascimento">Data de Nascimento: </label>
+                        <input type="date" id="data_nascimento" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="tel">Telefone: </label>
+                        <input pattern="[0-9]+" type="tel" id="tel"> 
+                    </td>
+                    <td>
+                        <label for="email">E-mail: </label>
+                        <input type="email" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="emergencia">Contato de emergência: </label>
+                        <input pattern="[0-9]+" type="tel" id="emergencia">
+                    </td>
+                    <td>
+                        <label for="comorbidade">Comorbidade: </label>
+                        <input type="text" id="comorbidade" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Tipo sanguinio:
+                        <input list="tipo_sang">
+                                <datalist id="tipo_sang">
+                                    <option value="A">
+                                    <option value="B">
+                                    <option value="AB">
+                                    <option value="O">
+                            </datalist>
+                    </td>
+                    <td>
+                        Fator RH:
+                        <input type="radio" id="positivo" name="rh" value="Positivo">
+                        <label for="positivo">Positivo</label>
+                        <input type="radio" id="negativo" name="rh" value="Negativo">
+                        <label for="negativo">Negativo</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="cep">CEP: </label>
+                        <input type="number" id="cep">
+                    </td>
+                    <td>
+                        <label for="estado">Estado: </label>
+                        <input type="text" id="estado">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="cidade">Cidade: </label>
+                        <input type="text" id="cidade">
+                    </td>
+                    <td>
+                        <label for="bairro">Bairro: </label>
+                        <input type="text" id="bairro">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="rua">Rua: </label>
+                        <input type="text" id="rua">
+                    </td>
+                    <td>
+                        <label for="numero">Numero: </label>
+                        <input pattern="[0-9]+" type="text" id="numero">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="data_atendimento">Data de atendimento: </label>
+                        <input type="date" id="data_atendimento" required>
+                    </td>
+                    <td>
+                        <label for="prioridade">Prioridade de atendimento: </label>
+                        <input type="color" id="prioridade" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Vacinas Aplicadas:
+                        <br>
+                        <input type="checkbox" id="gripe" name="gripe" value="gripe" required>
+                        <label for="gripe">Gripe.</label>
+                        <br>
+                        <input type="checkbox" id="covid" name="covid" value="covid">
+                        <label for="covid">Covid.</label>
+                        <br>
+                        <input type="checkbox" id="tuberculose" name="tuberculose" value="tuberculose">
+                        <label for="tuberculose">Tuberculose.</label>
+                    </td>
+                    <td>
+                        Genero:
+                           <br>
+                            <input type="radio" id="naoresponder" name="genero" value="naoresponder">
+                            <label for="naoresponder">Prefiro não responder.</label>
+                            <br>
+                            <input type="radio" id="feminino" name="genero" value="feminino">
+                            <label for="feminino">Feminino.</label>
+                            <br>
+                            <input type="radio" id="masculino" name="genero" value="masculino">
+                            <label for="masculino">Masculino.</label>
+                            <br>
+                            <input type="radio" id="outro" name="genero" value="outro">
+                            <label for="outro">Outro: </label>
+                            <input type="text" id="outrogenero">
+                            <label for="outrogenero"></label>
+                            <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <label for="velocidade">Velocidade de atendimento.</label>
+                        <br>Lento 
+                        <input type="range" id="velocidade"  min="1" max="3" step="1" value="1" required>
+                        Rápido
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <label for="observacoes">Observações: </label>
+                        <br>
+                        <textarea id="observacoes"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr align="center">
+                    <td>
+                        <button type="submit">Enviar sua mensagem</button>
+                    </td>
+                    <td>
+                        <button type="reset">Reset</button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</body>
+</html>

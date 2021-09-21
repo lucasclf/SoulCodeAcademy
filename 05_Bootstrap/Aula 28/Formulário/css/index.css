@@ -1,0 +1,25 @@
+.branco {
+    display: none
+}
+
+main{
+    min-height: 70vh ;
+}
+
+.copy{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.roxo{
+    background-color: rgba(138, 43, 226,0.5);
+}
+
+#textoDoJogo{
+    color: gold;
+}
+
+@media (max-width: 999px) {
+    .pesquisa{
+        display: none;
+    }
+  }

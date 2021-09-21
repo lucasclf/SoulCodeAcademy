@@ -1,0 +1,60 @@
+<section class="container">
+    <section class="row">
+        <article class="col">
+            <h1 class="mt-5 text-center">EDITAR PRODUTOS</h1>
+            <form action="/estoque/editar" method="POST">
+                <article class="form-group">
+                    <label for="nome">NOME</label>
+                    <input class="form-control" type="text" id="nome" name="nome" placeholder="Nome do fornecedor" value="<%= estoque_lista[0].estoque_nome %>">
+                </article>
+                <article class="form-group">
+                    <label for="fornecedor">FORNECEDOR</label>
+                    <% if (estoque_lista.length==0) { %>
+                        <div class="alert alert-warning"> Não existem fornecedores  cadastrados.</div>
+                    <% } else {%>
+                    <select name="fornecedor" id="fornecedor" class="form-control">
+                        <% estoque_lista.forEach(function(objeto){ %>
+                        <option value="<%= objeto.forn_id %>"><%= objeto.forn_nome %></option>
+                        <% }) %>
+                    </select>
+                    <% } %>
+                </article>
+                <article class="form-group">
+                    <label for="valorUnit">VALOR UNITÁRIO</label>
+                    <input class="form-control" type="number" id="valorUnit" name="valorUnit" placeholder="VALOR UNITÁRIO" step="any" value="<%= estoque_lista[0].estoque_valor %>">
+                </article>
+                <article>
+                    <input type="hidden" name="id" id="id" value="<%= estoque_lista[0].estoque_id %>">
+                </article>
+                <button id="submit" type="submit" class="mb-5 btn btn-primary">Enviar</button>
+            </form>
+        </article>
+    </section>
+</section>
+
+
+<!-- <section class="container">
+    <section class="row">
+        <article class="col">
+            <h1 class="mt-5 text-center">EDITAR PRODUTOS</h1>
+            <form action="/estoque/editar" method="POST">
+                <article class="form-group">
+                    <label for="nome">Nome</label>
+                    <input class="form-control" type="text" id="nome" name="nome" placeholder="Nome do fornecedor" value="<%= estoque_lista.estoque_nome %>">
+                </article>
+                <article class="form-group">
+                    <label for="fornecedor">FORNECEDOR</label>
+                    <input class="form-control" type="number" id="fornecedor" name="fornecedor" placeholder="0000" value="<%= estoque_lista.estoque_forn %>">
+                </article>
+                <article class="form-group">
+                    <label for="quantidade">QUANTIDADE</label>
+                    <input class="form-control" type="number" id="quantidade" name="quantidade" placeholder="0000" value="<%= estoque_lista.estoque_quant %>">
+                </article>
+                <article>
+                    <input type="hidden" name="id" id="id" value="<%= estoque_lista.estoque_id %>">
+                </article>
+                <button id="submit" type="submit" class="mb-5 btn btn-primary">Enviar</button>
+            </form>
+        </article>
+    </section>
+</section> -->

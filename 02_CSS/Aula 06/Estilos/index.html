@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIANDO CSS</title>
+    <style>
+        p {
+            color: rgb(125, 228, 66);
+        }
+    </style>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    
+    <p>
+        No CSS devemos ter o seletor inicialmente seguido de {} por exemplo p {}. 
+        Existem 3 fotos de aplicar o CSS.
+    </p>
+    <p style=color:blue>
+        <br>
+        inline - Aplicado no próprio elemento, como na linha 20, colocamos o style dentro da tag do elemento.
+        <br>
+        interno - Abre-se uma tag chamada style no meta, conforme linha 8 deste código.
+    </p>
+    <p class="externo">
+        externo - Criaremos um arquivo .css e o linkaremos no meta atraves da tag link
+    </p>
+    <p>
+        A prioridade de aplicação será a mais perto do elemento em caso de existirem as 3 utilizações. Dessa forma primeiro a inline, depois a interna e por fim a externa.
+    </p>
+    <div><!--  -->
+        No CSS os comentários são feitos no seguinte formato /*Comentário*/
+    </div>
+</body>
+</html>
