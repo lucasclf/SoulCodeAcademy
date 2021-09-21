@@ -11,7 +11,7 @@ interface UserProps{
 
 class User implements UserProps{
 
-    constructor(firstName: string, public lastName: string, public username: string, public email: string, public password: string, public cpf: string, public contact: string, public isAdmin: boolean) {
+    constructor(public firstName: string, public lastName: string, public username: string, public email: string, public password: string, public cpf: string, public contact: string, public isAdmin: boolean) {
         this.firstName = firstName
         this.lastName = lastName
         this.username = username
@@ -33,8 +33,52 @@ class User implements UserProps{
         console.log(this.isAdmin)
     }
 
+    setFirstName(firstName: string){
+        this.firstName = firstName;
+    }
+
+    setLastName(lastName: string){
+        this.lastName = lastName;
+    }
+
+    setUsername(username: string){
+        this.username = username;
+    }
+
+    setEmail(email: string){
+        this.email = email;
+    }
+
+    setPassword(password: string){
+        this.password = password;
+    }
+
+    setCpf(cpf: string){
+        this.cpf = cpf;
+    }
+
+    setContact(contact: string){
+        this.contact = contact;
+    }
+
+    setIsAdmin(isAdmin: boolean){
+        this.isAdmin = isAdmin;
+    }
+
+    setAllInfo(firstName: string, lastName: string, username: string, email: string, password: string, cpf: string, contact: string, isAdmin: boolean){
+        this.setFirstName(firstName)
+        this.setLastName(lastName)
+        this.setUsername(username)
+        this.setEmail(email)
+        this.setPassword(password)
+        this.setCpf(cpf)
+        this.setContact(contact)
+        this.setIsAdmin(isAdmin)   
+    }
 }
 
-let lucas = new User("Lucas", "Coquenão", "lucas_cqn", "teste@teste.com", "teste", "111.111.111-11", "(11)-11111-1111", true)
+let lucas = new User("", "", "n", "", "", "", "", false)
+
+lucas.setAllInfo("Lucas", "Coquenão", "lucas_cqn", "teste@a.com", "teste", "111.111.111-11", "(11)111111-1111", true)
 
 console.log(lucas.escreverPropriedades())
