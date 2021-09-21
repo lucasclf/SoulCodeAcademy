@@ -81,4 +81,4 @@ let lucas = new User("", "", "n", "", "", "", "", false)
 
 lucas.setAllInfo("Lucas", "Coquenão", "lucas_cqn", "teste@a.com", "teste", "111.111.111-11", "(11)111111-1111", true)
 
-console.log(lucas.escreverPropriedades())
+lucas.escreverPropriedades()
