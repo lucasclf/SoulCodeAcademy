@@ -1,0 +1,20 @@
+.container{
+  background-color:  red;
+}
+
+.row{
+  background-color:  orange
+}
+
+.conteudo{
+  background-color:  purple;
+}
+
+.side{
+  background-color:  black;
+  color: white;
+}
+
+.rodape {
+  background-color: orangered
+}
