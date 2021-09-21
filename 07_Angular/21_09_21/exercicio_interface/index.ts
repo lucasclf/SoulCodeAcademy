@@ -11,7 +11,16 @@ interface UserProps{
 
 class User implements UserProps{
 
-    constructor(public firstName: string, public lastName: string, public username: string, public email: string, public password: string, public cpf: string, public contact: string, public isAdmin: boolean) {
+    constructor(
+        public firstName: string,
+        public lastName: string,
+        public username: string,
+        public email: string,
+        public password: string,
+        public cpf: string,
+        public contact: string,
+        public isAdmin: boolean
+    ){
         this.firstName = firstName
         this.lastName = lastName
         this.username = username
