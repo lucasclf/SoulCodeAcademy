@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/server.ts",
+    "dist": "nodemon dist/server.js",
     "build": "sucrase ./src -d ./dist --transforms typescript,imports"
   },
   "author": "",

@@ -1,8 +1,7 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true});const mongoose = require("mongoose");
-require("./usuarios");
-const USUARIO = mongoose.model("usuarios");
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _usuarios = require('./usuarios'); var _usuarios2 = _interopRequireDefault(_usuarios);
 
- class Usuario {
+
+class Usuario {
 
     
     
@@ -29,7 +28,7 @@ const USUARIO = mongoose.model("usuarios");
     } */
 
     cadastro(req, res) {
-        let user = new USUARIO();
+        let user = new (0, _usuarios2.default)();
         user.nome = this.NOME;
         user.cpf = this.CPF;
         user.conta = this.CONTA;
@@ -40,8 +39,10 @@ const USUARIO = mongoose.model("usuarios");
         user.save((err) => {
         })
 
-        res.send("Cadastro bem sucedido")
+        res.redirect("/listaGet")
 
     }
 
-} exports.Usuario = Usuario;
+}
+
+exports. default = Usuario

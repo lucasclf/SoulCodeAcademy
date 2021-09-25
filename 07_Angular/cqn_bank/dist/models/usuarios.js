@@ -1,7 +1,15 @@
-"use strict";const MONGOOSE = require("mongoose")
-const SCHEMA = MONGOOSE.Schema;
+"use strict";Object.defineProperty(exports, "__esModule", {value: true});var _mongoose = require('mongoose');
 
-const USUARIOMODELO = new SCHEMA ({
+
+
+
+
+
+
+
+
+
+const UsuarioSchema = new (0, _mongoose.Schema) ({
     nome: {
         type: String,
         required: true
@@ -28,4 +36,4 @@ const USUARIOMODELO = new SCHEMA ({
     }
 });
 
-MONGOOSE.model("usuarios", USUARIOMODELO)
+exports. default = _mongoose.model('usuarios', UsuarioSchema)

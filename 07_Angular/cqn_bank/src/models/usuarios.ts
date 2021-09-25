@@ -1,7 +1,15 @@
-const MONGOOSE = require("mongoose")
-const SCHEMA = MONGOOSE.Schema;
+import { Schema, model, Document } from 'mongoose'
 
-const USUARIOMODELO = new SCHEMA ({
+interface UsuarioInterface extends Document{
+    nome: string
+    cpf: string
+    agencia: string
+    conta: string
+    senha: string
+    saldo: number
+}
+
+const UsuarioSchema = new Schema ({
     nome: {
         type: String,
         required: true
@@ -28,4 +36,4 @@ const USUARIOMODELO = new SCHEMA ({
     }
 });
 
-MONGOOSE.model("usuarios", USUARIOMODELO)
+export default model<UsuarioInterface>('usuarios', UsuarioSchema)

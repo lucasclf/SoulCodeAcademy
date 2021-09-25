@@ -1,8 +1,7 @@
-const mongoose = require("mongoose");
-require("./usuarios");
-const USUARIO = mongoose.model("usuarios");
+import usuarios from './usuarios'
 
-export class Usuario {
+
+class Usuario {
 
     NOME!: string;
     CPF!: string;
@@ -29,7 +28,7 @@ export class Usuario {
     } */
 
     cadastro(req: any, res: any) {
-        let user = new USUARIO();
+        let user = new usuarios();
         user.nome = this.NOME;
         user.cpf = this.CPF;
         user.conta = this.CONTA;
@@ -40,8 +39,10 @@ export class Usuario {
         user.save((err: any) => {
         })
 
-        res.send("Cadastro bem sucedido")
+        res.redirect("/lista")
 
     }
 
 }
+
+export default Usuario

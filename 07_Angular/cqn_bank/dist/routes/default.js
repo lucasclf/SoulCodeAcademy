@@ -9,8 +9,11 @@
     //RAIZ
         routes.get("/", _defaultController2.default.homeGet);
 
+    //LISTA
+        routes.get("/lista", _defaultController2.default.listaGet )
+
     //CADASTRAR
-        /* routes.get("/criarconta", defaultControl.criarContaGet);
-        routes.get("/criarconta", defaultControl.criarContaPost); */
+        routes.get("/criarConta", _defaultController2.default.criarContaGet);
+        routes.post("/criarConta", _defaultController2.default.criarContaPost);
 
 exports. default = routes
