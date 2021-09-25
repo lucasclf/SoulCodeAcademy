@@ -118,16 +118,15 @@ export class CientificaComponent implements OnInit {
     this.num2 = null;
   }
 
-  get display(){
-    if(this.resultado !== null){
-      return this.resultado.toString();
-    };
+  get display() {
 
-    if(this.num2 !== null){
-      return this.num2.toString();
-    };
-
+    if (this.num2 != null) {
+      return this.num1+this.operacao+this.num2
+    }
+    if(this.operacao !=null){
+      return this.num1+this.operacao
+    }
     return this.num1.toString();
-  };
+  }
 
 }
