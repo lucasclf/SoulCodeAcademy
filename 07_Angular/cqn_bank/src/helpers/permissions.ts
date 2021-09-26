@@ -3,7 +3,6 @@ import storage from '../helpers/storage'
 
 function authMiddleware (req, res, next) {
     const chave = storage.getItem('token')
-    console.log("CHAVE: ", chave)
 
 /*     if(!chave){
         return res.send('token não existe')

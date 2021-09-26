@@ -13,6 +13,15 @@
 
 //ROTAS 
     //AREA DE USUÁRIO
-    routes.get("/", loggedControl.userGet);
+        routes.get('/', loggedControl.userGet);
+
+    //DEPOSITO
+        routes.post('/deposito', loggedControl.depositoPost)
+
+    //SAQUE
+        routes.post('/saque', loggedControl.saquePost)
+
+    //TRANSFERÊNCIA
+        routes.post('/transferir', loggedControl.transferirPost)
 
     export default routes

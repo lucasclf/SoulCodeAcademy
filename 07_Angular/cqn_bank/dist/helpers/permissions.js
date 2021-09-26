@@ -3,7 +3,6 @@ var _storage = require('../helpers/storage'); var _storage2 = _interopRequireDef
 
 function authMiddleware (req, res, next) {
     const chave = _storage2.default.getItem('token')
-    console.log("CHAVE: ", chave)
 
 /*     if(!chave){
         return res.send('token não existe')

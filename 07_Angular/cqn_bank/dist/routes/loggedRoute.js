@@ -13,6 +13,15 @@
 
 //ROTAS 
     //AREA DE USUÁRIO
-    routes.get("/", _loggedController2.default.userGet);
+        routes.get('/', _loggedController2.default.userGet);
+
+    //DEPOSITO
+        routes.post('/deposito', _loggedController2.default.depositoPost)
+
+    //SAQUE
+        routes.post('/saque', _loggedController2.default.saquePost)
+
+    //TRANSFERÊNCIA
+        routes.post('/transferir', _loggedController2.default.transferirPost)
 
     exports. default = routes

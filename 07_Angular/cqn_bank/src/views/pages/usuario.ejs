@@ -1,0 +1,36 @@
+<section>
+    <p>Olá <%= userInfo.nome %> seja bem vindo!</p>
+    <p>Agência <%= userInfo.idBank.substring(1, 4) %></p>
+    <p>Conta: <%= userInfo.idBank.substring(5, userInfo.idBank.length) %></p>
+    <p>Saldo: R$ <%= userInfo.saldo %></p>
+    <p>CPF: <%= userInfo.cpf %></p>
+    
+    
+    <form action="deposito" method="POST">
+        
+        <label for="valorDeposito">VALOR A SER DEPOSITADO R$:</label>
+        <input type="number" name="valorDeposito" id="valorDeposito">
+        <button>DEPOSITAR</button>
+        
+    </form>
+    
+    <form action="saque" method="POST">
+    
+        <label for="valorSaque">VALOR A SER SACADO R$:</label>
+        <input type="number" name="valorSaque" id="valorSaque">
+        <button>SACAR</button>
+
+    </form>
+    
+    <form action="transferir" method="POST">
+    
+        <label for="valorTranferir">VALOR A SER DEPOSITADO R$:</label>
+        <input type="number" name="valorTranferir" id="valorTranferir">
+        <label for="contaTransferir">INFORME O CPF DO RECEPTOR</label>
+        <input type="number" name="contaTransferir" id="contaTransferir">
+        
+        <button>TRANSFERIR</button>
+
+    </form>
+
+</section>
