@@ -8,22 +8,28 @@ class Usuario {
     
     
     
-    
 
-    constructor(nome, cpf, conta, agencia, senha, saldo) {
+    constructor(nome, cpf, idBank, senha, saldo) {
         this.NOME = nome;
         this.CPF = cpf;
-        this.CONTA = conta;
-        this.AGENCIA = agencia;
+        this.IDBANK = idBank;
         this.SENHA = senha;
         this.SALDO = saldo;
     }
 
-/*      saldo(){
+    /* saldo(){
 
-    }
+    } */
 
-    transferir(){
+    /* saque(){
+
+    } */
+
+    /* deposito(){
+
+    } */
+
+    /* transferir(){
 
     } */
 
@@ -31,15 +37,14 @@ class Usuario {
         let user = new (0, _usuarios2.default)();
         user.nome = this.NOME;
         user.cpf = this.CPF;
-        user.conta = this.CONTA;
-        user.agencia = this.AGENCIA;
+        user.idBank = this.IDBANK;
         user.senha = this.SENHA;
         user.saldo = this.SALDO;
 
         user.save((err) => {
         })
 
-        res.redirect("/listaGet")
+        res.redirect("/lista")
 
     }
 

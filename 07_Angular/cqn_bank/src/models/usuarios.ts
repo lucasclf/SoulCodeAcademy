@@ -1,10 +1,11 @@
 import { Schema, model, Document } from 'mongoose'
+import bcrypt from 'bcryptjs'
+import { NextFunction } from 'express'
 
 interface UsuarioInterface extends Document{
     nome: string
     cpf: string
-    agencia: string
-    conta: string
+    idBank: string
     senha: string
     saldo: number
 }
@@ -18,11 +19,7 @@ const UsuarioSchema = new Schema ({
         type: String,
         required: true
     },
-    conta: {
-        type: String,
-        required: true
-    },
-    agencia:{
+    idBank: {
         type: String,
         required: true
     },
@@ -34,6 +31,13 @@ const UsuarioSchema = new Schema ({
         type: Number,
         default: 0
     }
-});
+    },
+    {timestamps: true
+    })
+
+    UsuarioSchema.pre('save', async function(next) {
+        const hash = await bcrypt.hash(this.senha, 10)
+        this.senha = hash
+    })
 
 export default model<UsuarioInterface>('usuarios', UsuarioSchema)

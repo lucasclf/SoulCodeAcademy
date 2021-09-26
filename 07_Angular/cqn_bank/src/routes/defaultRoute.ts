@@ -16,4 +16,8 @@
         routes.get("/criarConta", defaultControl.criarContaGet);
         routes.post("/criarConta", defaultControl.criarContaPost);
 
+    //LOGIN
+        routes.get("/login", defaultControl.loginGet)
+        routes.post("/login", defaultControl.loginPost)
+
 export default routes

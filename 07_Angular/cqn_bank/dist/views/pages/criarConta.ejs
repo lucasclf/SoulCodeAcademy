@@ -1,13 +1,16 @@
 <form action="/criarConta" method="POST">
-    <input type="text" name="nome">
-    <input type="text" name="cpf">
-    <input type="text" name="conta">
-    <input type="text" name="agencia">
-    <input type="text" name="senha">
-    <input type="text" name="saldo">
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome">
+    <label for="cpf">CPF</label>
+    <input type="text" name="cpf" id="cpf">
+    <label for="agencia">AGENCIA</label>
+    <input type="text" name="agencia" id="agencia">
+    <label for="conta">CONTA</label>
+    <input type="text" name="conta" id="conta">
+    <label for="senha">SENHA</label>
+    <input type="text" name="senha" id="senha">
+    <input type="hidden" value="0" name="saldo" id="saldo">
     <button type="submit">ENVIAR</button>
 </form>
-
-<button (click)="teste()">TESTE</button>
 
 <script src="teste.ts"></script>

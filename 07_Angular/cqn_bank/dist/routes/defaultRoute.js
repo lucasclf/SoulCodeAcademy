@@ -19,5 +19,5 @@
     //LOGIN
         routes.get("/login", _defaultController2.default.loginGet)
         routes.post("/login", _defaultController2.default.loginPost)
-        
+
 exports. default = routes
