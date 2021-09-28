@@ -1,43 +1,45 @@
-import { Schema, model, Document } from 'mongoose'
-import bcrypt from 'bcryptjs'
-import { NextFunction } from 'express'
+/**
+ * Arquivo responsavel pela criação da interface de Usuario e do Modelo de 
+ * usuário a ser usado pelo banco de dados.
+ */
 
-interface UsuarioInterface extends Document{
-    nome: string
-    cpf: string
-    idBank: string
-    senha: string
-    saldo: number
-}
+//Importação dos módulos
+    import { Schema, model, Document } from 'mongoose'
 
-const UsuarioSchema = new Schema ({
-    nome: {
-        type: String,
-        required: true
-    },
-    cpf: {
-        type: String,
-        required: true
-    },
-    idBank: {
-        type: String,
-        required: true
-    },
-    senha: {
-        type: String,
-        required: true
-    },
-    saldo: {
-        type: Number,
-        default: 0
+//Criação da interface do Usuário.
+    interface UsuarioInterface extends Document{
+        nome: string
+        cpf: string
+        idBank: string
+        senha: string
+        saldo: number
     }
-    },
-    {timestamps: true
-    })
 
-    UsuarioSchema.pre('save', async function(next) {
-        const hash = await bcrypt.hash(this.senha, 10)
-        this.senha = hash
-    })
+//Criação do modelo de Usuario a ser usado pelo banco de dados.
+    const UsuarioSchema = new Schema ({
+        nome: {
+            type: String,
+            required: true
+        },
+        cpf: {
+            type: String,
+            required: true
+        },
+        idBank: {
+            type: String,
+            required: true
+        },
+        senha: {
+            type: String,
+            required: true
+        },
+        saldo: {
+            type: Number,
+            default: 0
+        }
+        },
+        {timestamps: true
+        })
 
-export default model<UsuarioInterface>('usuarios', UsuarioSchema)
+//Exportação do modelo de usuario.
+    export default model<UsuarioInterface>('usuarios', UsuarioSchema)

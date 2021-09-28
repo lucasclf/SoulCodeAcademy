@@ -1,4 +1,13 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }//IMPORTANDO O EXPRESSE E O ROUTER
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }/**
+ * Arquivo de rotas logado, utilizadas caso o usuário esteja logado.
+ * @authMiddleware - Middleware de autenticação, que verifica se 
+ * o usuário está logado.
+ * @loggedControl - Importação do arquivo controller responsavel pelas
+ * rotas deslogadas.
+ * 
+ */
+
+//IMPORTANDO O EXPRESSE E O ROUTER
     var _express = require('express');
     const routes = _express.Router.call(void 0, )
 
@@ -24,4 +33,8 @@
     //TRANSFERÊNCIA
         routes.post('/transferir', _loggedController2.default.transferirPost)
 
+    //LOGOUT
+        routes.get('/logout', _loggedController2.default.logout)
+
+//Exportação das rotas.
     exports. default = routes

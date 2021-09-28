@@ -1,4 +1,10 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }//IMPORTANDO O EXPRESSE E O ROUTER
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }/**
+ * Arquivo de rotas padrões, utilizadas caso o usuário esteja deslogado.
+ * @defaultControl - Importação do arquivo controller responsavel pelas
+ * rotas deslogadas.
+ */
+
+//IMPORTANDO O EXPRESSE E O ROUTER
     var _express = require('express');
     const routes = _express.Router.call(void 0, )
 
@@ -10,7 +16,7 @@
         routes.get("/", _defaultController2.default.homeGet);
 
     //LISTA
-        routes.get("/lista", _defaultController2.default.listaGet )
+        routes.get("/lista", _defaultController2.default.listaGet)
 
     //CADASTRAR
         routes.get("/criarConta", _defaultController2.default.criarContaGet);
@@ -20,4 +26,5 @@
         routes.get("/login", _defaultController2.default.loginGet)
         routes.post("/login", _defaultController2.default.loginPost)
 
-exports. default = routes
+//Exportação das rotas.        
+    exports. default = routes

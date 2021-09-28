@@ -1,23 +1,36 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var _usuarios = require('../models/usuarios'); var _usuarios2 = _interopRequireDefault(_usuarios);
-var _objetoUsuario = require('../models/objetoUsuario'); var _objetoUsuario2 = _interopRequireDefault(_objetoUsuario);
-var _bcryptjs = require('bcryptjs'); var _bcryptjs2 = _interopRequireDefault(_bcryptjs);
-var _jsonwebtoken = require('jsonwebtoken'); var _jsonwebtoken2 = _interopRequireDefault(_jsonwebtoken);
-var _storage = require('../helpers/storage'); var _storage2 = _interopRequireDefault(_storage);
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }/**
+ * Arquivo responsável por definir as ações de cada rota 
+ * default(ver ../routes/defaultRoute).
+ * @homeGet - Renderiza a página principal.
+ * @listaGet - Rota de teste para exibir a lista de usuários do banco de dados.DELETAR!
+ * @criarContaGet - Renderiza a página de registro de conta.
+ * @criarContaPost - Cria um novo objeto usuario e utiliza o metodo cadastro.
+ * @loginGet - Renderiza a página de login.
+ * @loginPost - Reseta o storage, verifica se login e senha conferem com algum
+ * usuário do banco de dados, gera um token deste usuário e armazena no storage
+ * o token e o id desse usuário.
+ * 
+ */
 
-//ROTA DO HOME
+//Importando módulos.
+    
+    var _usuarios = require('../models/usuarios'); var _usuarios2 = _interopRequireDefault(_usuarios);
+    var _objetoUsuario = require('../models/objetoUsuario'); var _objetoUsuario2 = _interopRequireDefault(_objetoUsuario);
+    var _jsonwebtoken = require('jsonwebtoken'); var _jsonwebtoken2 = _interopRequireDefault(_jsonwebtoken);
+    var _storage = require('../helpers/storage'); var _storage2 = _interopRequireDefault(_storage);
 
-class defaultControl {
-
+//Criando class de defaultControl
+    class defaultControl {
+        
      homeGet (req, res){
         res.render('pages/index')
     }
-
+    //DELETAR!
      async listaGet (req, res) {
         const lista = await _usuarios2.default.find()
         return res.json(lista)
     }
-    
+
      criarContaGet (req, res) {
         return res.render("pages/criarConta")
     }
@@ -42,7 +55,9 @@ class defaultControl {
             return res.send("Usuário não encontrado")
         }
 
-        if(!await _bcryptjs2.default.compare(senha, user.senha)){
+        console.log(user.senha)
+        
+        if(senha != user.senha){
             return res.send("Senha inválida")
         }
         
@@ -58,31 +73,6 @@ class defaultControl {
     }
 
 }
-/* exports.homeGet = (req: any, res: any) => {
-    res.render("pages/index")
-};
 
-exports.criarContaGet = (req: any, res: any) => {
-    res.render("pages/criarConta")
-}
-
-exports.criarContaPost = (req: any, res: any) => {
-    let usuario = new Usuario(req.body.nome, req.body.cpf, req.body.conta, req.body.agencia, req.body.senha, req.body.saldo);
-
-    usuario.cadastro(req, res);
-
-
-    let nome = req.body.nome;
-    let cpf = req.body.cpf;
-    let conta = req.body.conta;
-    let agencia = req.body.agencia;
-    let senha = req.body.senha;
-    let saldo = req.body.saldo;
-
-    Usuario.cadastro(nome, cpf, conta, agencia, senha, saldo)
-
-        console.log(usuario)
-
-} */
-
-exports. default = new defaultControl()
+//Exportando um novo objeto defaultControl.
+    exports. default = new defaultControl()

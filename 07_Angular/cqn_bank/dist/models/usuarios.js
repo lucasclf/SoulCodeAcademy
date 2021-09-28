@@ -1,5 +1,13 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _mongoose = require('mongoose');
-var _bcryptjs = require('bcryptjs'); var _bcryptjs2 = _interopRequireDefault(_bcryptjs);
+"use strict";Object.defineProperty(exports, "__esModule", {value: true});/**
+ * Arquivo responsavel pela criação da interface de Usuario e do Modelo de 
+ * usuário a ser usado pelo banco de dados.
+ */
+
+//Importação dos módulos
+    var _mongoose = require('mongoose');
+
+//Criação da interface do Usuário.
+    
 
 
 
@@ -7,37 +15,31 @@ var _bcryptjs = require('bcryptjs'); var _bcryptjs2 = _interopRequireDefault(_bc
 
 
 
+//Criação do modelo de Usuario a ser usado pelo banco de dados.
+    const UsuarioSchema = new (0, _mongoose.Schema) ({
+        nome: {
+            type: String,
+            required: true
+        },
+        cpf: {
+            type: String,
+            required: true
+        },
+        idBank: {
+            type: String,
+            required: true
+        },
+        senha: {
+            type: String,
+            required: true
+        },
+        saldo: {
+            type: Number,
+            default: 0
+        }
+        },
+        {timestamps: true
+        })
 
-
-
-const UsuarioSchema = new (0, _mongoose.Schema) ({
-    nome: {
-        type: String,
-        required: true
-    },
-    cpf: {
-        type: String,
-        required: true
-    },
-    idBank: {
-        type: String,
-        required: true
-    },
-    senha: {
-        type: String,
-        required: true
-    },
-    saldo: {
-        type: Number,
-        default: 0
-    }
-    },
-    {timestamps: true
-    })
-
-    UsuarioSchema.pre('save', async function(next) {
-        const hash = await _bcryptjs2.default.hash(this.senha, 10)
-        this.senha = hash
-    })
-
-exports. default = _mongoose.model('usuarios', UsuarioSchema)
+//Exportação do modelo de usuario.
+    exports. default = _mongoose.model('usuarios', UsuarioSchema)

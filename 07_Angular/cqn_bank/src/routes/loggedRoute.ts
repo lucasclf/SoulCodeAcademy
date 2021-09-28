@@ -1,3 +1,12 @@
+/**
+ * Arquivo de rotas logado, utilizadas caso o usuário esteja logado.
+ * @authMiddleware - Middleware de autenticação, que verifica se 
+ * o usuário está logado.
+ * @loggedControl - Importação do arquivo controller responsavel pelas
+ * rotas deslogadas.
+ * 
+ */
+
 //IMPORTANDO O EXPRESSE E O ROUTER
     import { Router } from 'express'
     const routes = Router()
@@ -24,4 +33,8 @@
     //TRANSFERÊNCIA
         routes.post('/transferir', loggedControl.transferirPost)
 
+    //LOGOUT
+        routes.get('/logout', loggedControl.logout)
+
+//Exportação das rotas.
     export default routes

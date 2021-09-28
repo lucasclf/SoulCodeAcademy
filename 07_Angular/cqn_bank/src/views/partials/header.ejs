@@ -19,10 +19,31 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous" defer></script>
+    <!-- Folha de estilo própria -->
+        <link rel="stylesheet" href="/css/layout.css">
     <title>CqnBank</title>
 </head>
 <body>
     <header>
-
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="/"><span>Coque Bank</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <section class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/criarConta"><span>Cadastre-se</span></a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/user/logout"><span>Logout</span></a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/login"><span>Login</span></a>
+                </li>
+              </ul>
+            </section>
+          </nav>
     </header>
     <main>

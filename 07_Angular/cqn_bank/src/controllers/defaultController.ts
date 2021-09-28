@@ -1,23 +1,36 @@
-import { Request, Response } from 'express'
-import usuarios from '../models/usuarios'
-import Usuario from '../models/objetoUsuario'
-import bcrypt from 'bcryptjs'
-import jwt from 'jsonwebtoken'
-import storage from '../helpers/storage'
+/**
+ * Arquivo responsável por definir as ações de cada rota 
+ * default(ver ../routes/defaultRoute).
+ * @homeGet - Renderiza a página principal.
+ * @listaGet - Rota de teste para exibir a lista de usuários do banco de dados.DELETAR!
+ * @criarContaGet - Renderiza a página de registro de conta.
+ * @criarContaPost - Cria um novo objeto usuario e utiliza o metodo cadastro.
+ * @loginGet - Renderiza a página de login.
+ * @loginPost - Reseta o storage, verifica se login e senha conferem com algum
+ * usuário do banco de dados, gera um token deste usuário e armazena no storage
+ * o token e o id desse usuário.
+ * 
+ */
 
-//ROTA DO HOME
+//Importando módulos.
+    import { Request, Response } from 'express'
+    import usuarios from '../models/usuarios'
+    import Usuario from '../models/objetoUsuario'
+    import jwt from 'jsonwebtoken'
+    import storage from '../helpers/storage'
 
-class defaultControl {
-
+//Criando class de defaultControl
+    class defaultControl {
+        
     public homeGet (req: Request, res: Response){
         res.render('pages/index')
     }
-
+    //DELETAR!
     public async listaGet (req: Request, res: Response): Promise<Response> {
         const lista = await usuarios.find()
         return res.json(lista)
     }
-    
+
     public criarContaGet (req: any, res: any) {
         return res.render("pages/criarConta")
     }
@@ -42,7 +55,9 @@ class defaultControl {
             return res.send("Usuário não encontrado")
         }
 
-        if(!await bcrypt.compare(senha, user.senha)){
+        console.log(user.senha)
+        
+        if(senha != user.senha){
             return res.send("Senha inválida")
         }
         
@@ -58,31 +73,6 @@ class defaultControl {
     }
 
 }
-/* exports.homeGet = (req: any, res: any) => {
-    res.render("pages/index")
-};
 
-exports.criarContaGet = (req: any, res: any) => {
-    res.render("pages/criarConta")
-}
-
-exports.criarContaPost = (req: any, res: any) => {
-    let usuario = new Usuario(req.body.nome, req.body.cpf, req.body.conta, req.body.agencia, req.body.senha, req.body.saldo);
-
-    usuario.cadastro(req, res);
-
-
-    let nome = req.body.nome;
-    let cpf = req.body.cpf;
-    let conta = req.body.conta;
-    let agencia = req.body.agencia;
-    let senha = req.body.senha;
-    let saldo = req.body.saldo;
-
-    Usuario.cadastro(nome, cpf, conta, agencia, senha, saldo)
-
-        console.log(usuario)
-
-} */
-
-export default new defaultControl()
+//Exportando um novo objeto defaultControl.
+    export default new defaultControl()

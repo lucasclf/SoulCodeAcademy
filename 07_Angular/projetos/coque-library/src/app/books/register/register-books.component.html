@@ -1,0 +1,99 @@
+<main class="container">
+    <form class="form needs-validation mt-5 mb-5" (ngSubmit)="onSubmit()">
+        <fieldset>
+            <legend class="text-center display-4">Book registration</legend>
+
+            <small id="asterisco" class="form-text text-muted mb-4">Fields marked with an asterisk * are mandatory.</small>
+
+            <div class="row mt-5">
+                <div class="form-group col-9">
+                    <div class="input-group">                           
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">* Title</div>
+                        </div>
+                        <input type="text" class="form-control" name="title" id="title" placeholder="Título do Livro" 
+                        [(ngModel)]="title"
+                        onblur="validaTituloLivro (this.value)" required>
+                    </div>  
+                </div>   
+                <div class="form-group col-3">
+                    <div class="input-group">                           
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">* Pages nº</div>
+                        </div>
+                        <input type="number" class="form-control " name="pages" id="pages" placeholder="N° de Páginas" [(ngModel)]="pages" onblur="validaNrPaginas(this.value)" required>
+                    </div>  
+                </div>                
+            </div>
+
+            <div class="row mt-5">
+                <div class="form-group col-9">
+                    <div class="input-group">                           
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">* Author name</div>
+                        </div>
+                        <input type="text" class="form-control " name="author" id="author" placeholder="Nome do Autor" [(ngModel)]="author" onblur="validaAutor(this.value)" required>
+                    </div>  
+                </div>
+                <div class="form-group col-3">
+                    <div class="input-group">                           
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">* ISBN</div>
+                        </div>
+                        <input type="number" class="form-control " name="isbn" id="isbn" placeholder="ISBN-13 ou ISBN-10" [(ngModel)]="isbn" onblur="validaISBN(this.value)" title="preferencialmente ISBN-13, caso tenha" required>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="form-group col-6">
+                    <div class="input-group">                           
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">* Edition</div>
+                        </div>
+                        <input type="text" class="form-control " name="edition" id="edition" [(ngModel)]="edition" placeholder="Edição" onblur="validaEdicao(this.value)" required>
+                    </div>  
+                </div>
+                <div class="form-group col-6">
+                    <div class="input-group">                           
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">* Publisher</div>
+                        </div>
+                        <input type="text" class="form-control " name="publisher" id="publisher" [(ngModel)]="publisher" placeholder="Editora" onblur="validaEditora(this.value)" required>
+                    </div>  
+                </div>
+                
+            </div>
+            <div class="row mt-5">
+                <div class="form-group col-6">
+                    <div class="input-group">                           
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Literary genre</div>
+                        </div>
+                        <input type="text" class="form-control " name="genre" id="genre" [(ngModel)]="genre" placeholder="Gênero Literário" onblur="validaGenero(this.value)">
+                    </div>  
+                </div>
+                
+                <div class="form-group col-6">
+                    <div class="input-group">                           
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">* Publication date</div>
+                        </div>
+                        <input type="date" minlength="13" maxlength="13" class="form-control " name="date" id="date" [(ngModel)]="date" placeholder="Data de Publicação" required>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-6 d-flex justify-content-start">
+                    <button class="btn btn-primary text-uppercase pr-5 pl-5" type="submit">Register</button>
+                </div> 
+                 
+                <div class="col-6 d-flex justify-content-end">
+                    <a href="/books" class="btn btn-dark pr-5 pl-5">See list</a>
+                </div> 
+            </div>
+            
+        </fieldset>
+    </form>
+</main>

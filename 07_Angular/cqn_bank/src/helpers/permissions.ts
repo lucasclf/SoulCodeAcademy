@@ -1,32 +1,24 @@
-import jwt from 'jsonwebtoken'
-import storage from '../helpers/storage'
+/**
+ * Arquivo responsavel pela criação da função de autenticação, responsável
+ * por impedir que alguem deslogado acesse páginas restritas dos usuários.
+ */
 
-function authMiddleware (req, res, next) {
-    const chave = storage.getItem('token')
+//Importação dos módulos.
+    import jwt from 'jsonwebtoken'
+    import storage from '../helpers/storage'
 
-/*     if(!chave){
-        return res.send('token não existe')
+//Criação da função de autenticação.
+    function authMiddleware (req, res, next) {
+        const chave = storage.getItem('token')
+
+        jwt.verify(chave, {"secret": "832374c92d8272d8c100bf63118bc3ac"}.secret, (err, decoded) => {
+            if (err){
+                res.status(401).send({ error: 'Token invalido'})
+            }
+            storage.setItem('userId', decoded.id)
+            return next()
+        })
     }
 
-    const parts = chave.split('')
-
-    if(parts.length !== 2){
-        return res.send('token não está correto')
-    }
-
-    const [ scheme, token] = parts
-    
-    if(!/^Bearer$/i.test(scheme)){
-        return res.send('token não está correto')
-    } */
-
-    jwt.verify(chave, {"secret": "832374c92d8272d8c100bf63118bc3ac"}.secret, (err, decoded) => {
-        if (err){
-            res.status(401).send({ error: 'Token invalido'})
-        }
-        storage.setItem('userId', decoded.id)
-        return next()
-    })
-}
-
-export default authMiddleware
+//Exportação da função.
+    export default authMiddleware
