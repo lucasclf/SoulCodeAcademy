@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Book } from '..';
-import { BookService } from '..';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { BookService, Book} from '../shared';
 
 @Component({
   selector: 'app-register-books',
@@ -9,15 +11,21 @@ import { BookService } from '..';
 })
 export class RegisterBooksComponent implements OnInit {
 
-  books: Book[]
+  @ViewChild('formBook', {static: true})formBook: NgForm;
 
-  constructor() { }
+  book: Book
+
+  constructor(private bookService: BookService, private router: Router) { }
 
   ngOnInit(): void {
-  }
+    this.book = new Book()
+  };
 
-  onSubmit() {
-
+  register(): void {
+    if(this.formBook.form.valid){
+      this.bookService.registerBook(this.book)
+      this.router.navigate(['/books/list'])
+    }
   }
 
 }

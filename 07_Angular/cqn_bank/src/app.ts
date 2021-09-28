@@ -38,7 +38,7 @@
 
         private database (): void {
             mongoose.Promise = global.Promise;
-            mongoose.connect("mongodb+srv://lucas_cqn:goldship666@cluster0.xn84s.mongodb.net/CqnBank?retryWrites=true&w=majority")
+            mongoose.connect("COLOCAR LINK DE CONEXÃO COM O BANCO DE DADOS!")
         }
 
         private layout (): void {

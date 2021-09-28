@@ -14,15 +14,23 @@ export class ListTaskComponent implements OnInit {
 
   ngOnInit() {
     this.tasks = this.listTasks()
-    this.tasks = [
-      new Task(1, 'Tarefa 01', false),
-      new Task(2, 'Tarefa 02', true),
-      new Task(3, 'Tarefa 03', false)
-    ]
   }
 
   listTasks(): Task[] {
     return this.taskService.listTasks()
   }
 
+  updateConcluded(task: Task): void{
+    if(confirm('Do you want to change the status of the task "' +task.name+'"?')){
+      this.taskService.updateConcluded(task.id)
+      this.tasks = this.listTasks();
+    }
+  }
+
+  deleteTask(task: Task): void {
+    if(confirm('Do you want to delete the task "' +task.name+'"?')){
+      this.taskService.deleteTask(task.id)
+      this.tasks = this.listTasks();
+    }
+  }
 }

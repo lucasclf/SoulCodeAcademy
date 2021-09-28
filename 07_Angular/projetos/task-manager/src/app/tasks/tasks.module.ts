@@ -4,7 +4,7 @@ import { TaskService } from './shared';
 import { ListTaskComponent } from './list';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { RegisterTaskComponent } from './register/register-task.component';
+import { RegisterTaskComponent } from './register';
 
 
 @NgModule({

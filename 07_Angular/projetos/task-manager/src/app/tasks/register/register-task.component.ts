@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { Task, TaskService } from '../shared';
+
 
 @Component({
   selector: 'app-register-task',
@@ -7,9 +12,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterTaskComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('formTask', {static: true})formTask: NgForm;
+  
+  task: Task;
 
-  ngOnInit(): void {
-  }
+  constructor(private taskService: TaskService, private router: Router) { };
 
-}
+  ngOnInit() {
+    this.task = new Task();
+  };
+
+  register(): void {
+    if(this.formTask.form.valid){
+      this.taskService.registerTask(this.task);
+      this.router.navigate(['/tasks/list']);
+    };
+  };
+
+};

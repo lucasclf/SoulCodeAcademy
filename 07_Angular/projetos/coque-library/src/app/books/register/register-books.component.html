@@ -1,99 +1,127 @@
 <main class="container">
-    <form class="form needs-validation mt-5 mb-5" (ngSubmit)="onSubmit()">
+    <form class="form mt-5 mb-5" #formBook="ngForm">
         <fieldset>
             <legend class="text-center display-4">Book registration</legend>
 
-            <small id="asterisco" class="form-text text-muted mb-4">Fields marked with an asterisk * are mandatory.</small>
+            <small id="asterisco" class="form-text text-muted mb-4">Fields marked with an asterisk * are
+                mandatory.</small>
 
             <div class="row mt-5">
                 <div class="form-group col-9">
-                    <div class="input-group">                           
+                    <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">* Title</div>
                         </div>
-                        <input type="text" class="form-control" name="title" id="title" placeholder="Título do Livro" 
-                        [(ngModel)]="title"
-                        onblur="validaTituloLivro (this.value)" required>
-                    </div>  
-                </div>   
+                        <input type="text" class="form-control" name="title" id="title" [(ngModel)]="book.title"
+                            #title="ngModel" placeholder="Title of the book" required>
+                    </div>
+                    
+                    <div class="alert alert-danger text-center" *ngIf="title.errors && (title.dirty || title.touched)">
+                        <div [hidden]="!title.errors.required">
+                            Inform the book title!
+                        </div>
+                    </div>
+
+                </div>
                 <div class="form-group col-3">
-                    <div class="input-group">                           
+                    <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">* Pages nº</div>
                         </div>
-                        <input type="number" class="form-control " name="pages" id="pages" placeholder="N° de Páginas" [(ngModel)]="pages" onblur="validaNrPaginas(this.value)" required>
-                    </div>  
-                </div>                
+                        <input type="number" class="form-control " name="pages" id="pages" [(ngModel)]="book.pages"
+                            #pages="ngModel" placeholder="Number of pages" required>
+                    </div>
+
+                    <div class="alert alert-danger text-center" *ngIf="pages.errors && (pages.dirty || pages.touched)">
+                        <div [hidden]="!pages.errors.required">
+                            Inform the number of pages!
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="row mt-5">
                 <div class="form-group col-9">
-                    <div class="input-group">                           
+                    <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">* Author name</div>
                         </div>
-                        <input type="text" class="form-control " name="author" id="author" placeholder="Nome do Autor" [(ngModel)]="author" onblur="validaAutor(this.value)" required>
-                    </div>  
+                        <input type="text" class="form-control " name="author" id="author" [(ngModel)]="book.author"
+                            #author="ngModel" placeholder="Name of Author" required>
+                    </div>
+                    <div class="alert alert-danger text-center" *ngIf="author.errors && (author.dirty || author.touched)">
+                        <div [hidden]="!author.errors.required">
+                            Inform the book author!
+                        </div>
+                    </div>
+
                 </div>
                 <div class="form-group col-3">
-                    <div class="input-group">                           
+                    <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">* ISBN</div>
                         </div>
-                        <input type="number" class="form-control " name="isbn" id="isbn" placeholder="ISBN-13 ou ISBN-10" [(ngModel)]="isbn" onblur="validaISBN(this.value)" title="preferencialmente ISBN-13, caso tenha" required>
-                    </div>  
+                        <input type="number" class="form-control " name="isbn" id="isbn" [(ngModel)]="book.isbn"
+                            #isbn="ngModel" placeholder="ISBN-13 or ISBN-10"
+                            title="preferencialmente ISBN-13, caso tenha" required>
+                    </div>
+
+                    <div class="alert alert-danger text-center" *ngIf="isbn.errors && (isbn.dirty || isbn.touched)">
+                        <div [hidden]="!isbn.errors.required">
+                            Inform the isbn!
+                        </div>
+                    </div>
                 </div>
             </div>
 
+            
+            
+
             <div class="row mt-5">
                 <div class="form-group col-6">
-                    <div class="input-group">                           
+                    <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">* Edition</div>
                         </div>
-                        <input type="text" class="form-control " name="edition" id="edition" [(ngModel)]="edition" placeholder="Edição" onblur="validaEdicao(this.value)" required>
-                    </div>  
+                        <input type="text" class="form-control " name="edition" id="edition" [(ngModel)]="book.edition"
+                            #edition="ngModel" placeholder="Edition" required>
+                    </div>
+                    <div class="alert alert-danger text-center" *ngIf="edition.errors && (edition.dirty || edition.touched)">
+                        <div [hidden]="!edition.errors.required">
+                            Inform the book's edition!
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group col-6">
-                    <div class="input-group">                           
+                    <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">* Publisher</div>
                         </div>
-                        <input type="text" class="form-control " name="publisher" id="publisher" [(ngModel)]="publisher" placeholder="Editora" onblur="validaEditora(this.value)" required>
-                    </div>  
-                </div>
-                
-            </div>
-            <div class="row mt-5">
-                <div class="form-group col-6">
-                    <div class="input-group">                           
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">Literary genre</div>
+                        <input type="text" class="form-control " name="publisher" id="publisher"
+                            [(ngModel)]="book.publisher" #publisher="ngModel" placeholder="Publisher" required>
+                    </div>
+                    <div class="alert alert-danger text-center" *ngIf="publisher.errors && (publisher.dirty || publisher.touched)">
+                        <div [hidden]="!publisher.errors.required">
+                            Inform the publisher!
                         </div>
-                        <input type="text" class="form-control " name="genre" id="genre" [(ngModel)]="genre" placeholder="Gênero Literário" onblur="validaGenero(this.value)">
-                    </div>  
+                    </div>
                 </div>
+
                 
-                <div class="form-group col-6">
-                    <div class="input-group">                           
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">* Publication date</div>
-                        </div>
-                        <input type="date" minlength="13" maxlength="13" class="form-control " name="date" id="date" [(ngModel)]="date" placeholder="Data de Publicação" required>
-                    </div>  
-                </div>
+                
+
             </div>
 
             <div class="row mt-5">
                 <div class="col-6 d-flex justify-content-start">
-                    <button class="btn btn-primary text-uppercase pr-5 pl-5" type="submit">Register</button>
-                </div> 
-                 
+                    <button class="btn btn-primary text-uppercase pr-5 pl-5" type="submit"
+                        (click)="register()">Register</button>
+                </div>
+
                 <div class="col-6 d-flex justify-content-end">
-                    <a href="/books" class="btn btn-dark pr-5 pl-5">See list</a>
-                </div> 
+                    <a [routerLink]="['/tasks/list']" class="btn btn-dark pr-5 pl-5">See list</a>
+                </div>
             </div>
-            
         </fieldset>
     </form>
 </main>
