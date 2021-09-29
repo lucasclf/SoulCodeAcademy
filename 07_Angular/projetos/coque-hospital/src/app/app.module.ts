@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TasksModule } from './tasks';
+import { PatientsModule } from './patients';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { TasksModule } from './tasks';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TasksModule
+    PatientsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

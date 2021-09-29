@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TaskService } from './shared';
-import { ListTaskComponent } from './list';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+
+import { TaskService, TaskConcludedDirective, ListTaskComponent } from './shared';
 import { RegisterTaskComponent } from './register';
+import { EditTaskComponent } from './edit';
+
 
 
 @NgModule({
   declarations: [
     ListTaskComponent,
-    RegisterTaskComponent
+    RegisterTaskComponent,
+    EditTaskComponent,
+    TaskConcludedDirective
   ],
   imports: [
     CommonModule,

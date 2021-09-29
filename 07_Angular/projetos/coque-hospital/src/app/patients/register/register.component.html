@@ -1,0 +1,91 @@
+<main class="container">
+    <form class="form mt-5 mb-5" #formPatient="ngForm">
+        <fieldset>
+            <legend class="text-center display-4">Patient registration</legend>
+
+            <small id="asterisco" class="form-text text-muted mb-4">Fields marked with an asterisk * are
+                mandatory.</small>
+
+            <div class="row mt-5">
+                <div class="form-group col-9">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">* Name</div>
+                        </div>
+                        <input type="text" class="form-control" name="name" id="name" [(ngModel)]="patient.name"
+                            #name="ngModel" placeholder="Name of the patient" required>
+                    </div>
+                    
+                    <div class="alert alert-danger text-center" *ngIf="name.errors && (name.dirty || name.touched)">
+                        <div [hidden]="!name.errors.required">
+                            Inform the patient name!
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group col-3">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">* Age</div>
+                        </div>
+                        <input type="number" class="form-control " name="age" id="age" [(ngModel)]="patient.age"
+                            #age="ngModel" placeholder="Age of patient." required>
+                    </div>
+
+                    <div class="alert alert-danger text-center" *ngIf="age.errors && (age.dirty || age.touched)">
+                        <div [hidden]="!age.errors.required">
+                            Inform the age of patient!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="form-group col-9">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">* CPF</div>
+                        </div>
+                        <input type="text" class="form-control " name="cpf" id="cpf" [(ngModel)]="patient.cpf"
+                            #cpf="ngModel" placeholder="CPF" required>
+                    </div>
+                    <div class="alert alert-danger text-center" *ngIf="cpf.errors && (cpf.dirty || cpf.touched)">
+                        <div [hidden]="!cpf.errors.required">
+                            Inform the cpf of patient!
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group col-3">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">* Priority</div>
+                        </div>
+                        <select class="form-control " name="priority" id="priority" [(ngModel)]="patient.priority" #priority="ngModel" required>
+                            <option value="1">Alta</option>
+                            <option value="2">Média</option>
+                            <option value="3">Baixa</option>
+                        </select>
+                    </div>
+
+                    <div class="alert alert-danger text-center" *ngIf="priority.errors && (priority.dirty || priority.touched)">
+                        <div [hidden]="!priority.errors.required">
+                            Inform the priority!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-6 d-flex justify-content-start">
+                    <button class="btn btn-primary text-uppercase pr-5 pl-5" type="submit"
+                        (click)="register()">Register</button>
+                </div>
+
+                <div class="col-6 d-flex justify-content-end">
+                    <a [routerLink]="['/patients']" class="btn btn-dark pr-5 pl-5">See list</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</main>

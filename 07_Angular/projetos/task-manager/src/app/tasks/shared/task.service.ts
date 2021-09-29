@@ -30,7 +30,7 @@ export class TaskService {
         objs[index] = task
       }
     });
-    localStorage['tasks'] = JSON.stringify(task);
+    localStorage['tasks'] = JSON.stringify(tasks);
   }
 
   deleteTask(id: number): void{

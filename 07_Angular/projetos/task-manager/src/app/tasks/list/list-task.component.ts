@@ -24,6 +24,8 @@ export class ListTaskComponent implements OnInit {
     if(confirm('Do you want to change the status of the task "' +task.name+'"?')){
       this.taskService.updateConcluded(task.id)
       this.tasks = this.listTasks();
+    } else{
+      this.tasks = this.listTasks();
     }
   }
 
