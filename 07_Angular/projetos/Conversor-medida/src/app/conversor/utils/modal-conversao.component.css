@@ -1,0 +1,21 @@
+*{
+    border: none;
+}
+
+.modal-content {
+    background-color: rgb(230, 237, 243);
+}
+.fa-times-circle {
+    font-size: 2rem;
+}
+
+.btn-primary {
+    font-size: larger;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.textheader {
+    font-size: 1.5rem;
+    padding-top: 6px;
+}

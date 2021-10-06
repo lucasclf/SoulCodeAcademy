@@ -1,0 +1,56 @@
+main{
+  background-color: rgb(230, 237, 243);
+  height: 90vh;
+  background-size: cover;
+}
+
+.card {
+  height: 20vh;
+  font-size: large;
+  font-weight: bolder;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-heading {
+  font-size:x-large;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+
+span {
+  font-size: x-large;
+
+}
+
+.form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+
+  .form-control {
+      margin-left: 5px;
+      margin-right: 5px;
+      font-size: larger;
+  }
+
+  #btnConverter {
+    margin-left: 5px;
+    font-size: larger;
+
+  }
+
+  label {
+    margin-bottom: 0.5rem;
+  }
+

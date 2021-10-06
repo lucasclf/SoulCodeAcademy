@@ -1,0 +1,47 @@
+<main class="container-fluid">
+
+<br />
+<section class="container">
+    <div class="alert alert-danger" role="alert" *ngIf="possuiErro">
+        Erro obtendo dados. Tente novamente.
+    </div>
+    <div class="card card-success">
+        <div class="card-heading text-center alert-primary">
+            Selecione a temperatura a ser convertida
+        </div>
+        <div class="card-body text-center">
+            <form #conversaoForm="ngForm" class="row form-inline">
+                <div>
+                    <input type="text" name="valor" class="form-control text-right" placeholder="0"
+                        [(ngModel)]="conversao.valor" validaNumero required>
+
+                    <select name="medidaDe" class="form-control" [(ngModel)]="conversao.medidaDe" required>
+                        <option *ngFor="let medida of medida" [value]="medida.unidade">
+                            {{medida.unidade}} - {{medida.descricao}}
+                        </option>
+                    </select>
+
+                    <span class="px-2">➜</span>
+
+                    <select name="medidaPara" class="form-control" [(ngModel)]="conversao.medidaPara" required>
+                        <option *ngFor="let medida of medida" [value]="medida.unidade">
+                            {{medida.unidade}} - {{medida.descricao}}
+                        </option>
+                    </select>
+                    <input id="btnConverter" type="submit" value="Converter" class="btn btn-primary"
+                        data-bs-toggle="modal" data-bs-target="#modalConversao" (click)="converter()"
+                        [disabled]="!conversaoForm.form.valid">
+                </div>
+                <div>
+
+                </div>
+            </form>
+        </div>
+        <modal-conversao 
+	[id]="'modalConversao'"  
+	[conversao]="conversao"
+	(onConfirm)="init()">
+        </modal-conversao>
+    </div>
+</section>
+</main>

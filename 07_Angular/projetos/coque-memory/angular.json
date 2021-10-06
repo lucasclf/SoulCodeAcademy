@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "task-manager": {
+    "coque-memory": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/task-manager",
+            "outputPath": "dist/coque-memory",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -30,12 +30,10 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
-            "scripts": [
-
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -74,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "task-manager:build:production"
+              "browserTarget": "coque-memory:build:production"
             },
             "development": {
-              "browserTarget": "task-manager:build:development"
+              "browserTarget": "coque-memory:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "task-manager:build"
+            "browserTarget": "coque-memory:build"
           }
         },
         "test": {
@@ -100,6 +98,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -108,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "task-manager"
+  "defaultProject": "coque-memory"
 }
