@@ -1,0 +1,56 @@
+<form class="row" #dadosForm="ngForm" [hidden]="formFlag">
+    <label for="junho">JUNHO</label>
+    <input type="text" name="junho" id="junho" class="form-control" [(ngModel)]="junho" type="number" min='0' required>
+    <label for="julho">JULHO</label>
+    <input type="text" name="julho" id="julho" class="form-control" [(ngModel)]="julho" type="number" min='0' required>
+    <label for="agosto">AGOSTO</label>
+    <input type="text" name="agosto" id="agosto" class="form-control" [(ngModel)]="agosto" type="number" min='0'
+        required>
+    <label for="setembro">SETEMBRO</label>
+    <input type="text" name="setembro" id="setembro" class="form-control" [(ngModel)]="setembro" type="number" min='0'
+        required>
+    <input class="btn btn-primary mt-5" type="submit" value="ENVIAR" (click)="definirDados()"
+        [disabled]="!dadosForm.form.valid">
+</form>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist" [hidden]="!formFlag">
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pie_chart-tab" data-bs-toggle="tab" data-bs-target="#pie_chart"
+            type="button" role="tab" aria-controls="pie_chart" aria-selected="true">Pizza</button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="3d_pie_chart-tab" data-bs-toggle="tab" data-bs-target="#pie3d_chart" type="button"
+            role="tab" aria-controls="3d_pie_chart" aria-selected="false">Pizza 3d</button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="donut_chart-tab" data-bs-toggle="tab" data-bs-target="#donut_chart" type="button"
+            role="tab" aria-controls="donut_chart" aria-selected="false">Rosca</button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="bar_chart-tab" data-bs-toggle="tab" data-bs-target="#bar_chart" type="button"
+            role="tab" aria-controls="bar_chart" aria-selected="false">Barra</button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="line_chart-tab" data-bs-toggle="tab" data-bs-target="#line_chart" type="button"
+            role="tab" aria-controls="line_chart" aria-selected="false">Linha</button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="column_chart-tab" data-bs-toggle="tab" data-bs-target="#column_chart" type="button"
+            role="tab" aria-controls="column_chart" aria-selected="false">Coluna</button>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade show active" role="tabpanel" id="pie_chart"></div>
+    <div class="tab-pane fade show" role="tabpanel" id="pie3d_chart"></div>
+    <div class="tab-pane fade show" role="tabpanel" id="donut_chart"></div>
+    <div class="tab-pane fade show" role="tabpanel" id="bar_chart"></div>
+    <div class="tab-pane fade show" role="tabpanel" id="line_chart"></div>
+    <div class="tab-pane fade show" role="tabpanel" id="column_chart"></div>
+</div>
