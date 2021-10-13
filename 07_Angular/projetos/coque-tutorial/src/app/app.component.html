@@ -1,0 +1,46 @@
+<ng-container>
+  <mat-toolbar class="header">
+      <button mat-mini-fab color="primary" (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div>
+        <h1 id="header">ANGULAR</h1>
+      </div>
+</mat-toolbar>
+
+  <mat-sidenav-container class="container">
+    <mat-sidenav #sidenav mode="side" opened class="sidenav">
+      <mat-list role="list">
+        <mat-list-item role="listitem"><a [routerLink]="['introducao']">Introdução</a></mat-list-item>
+<!--         <mat-list-item role="listitem"><a [routerLink]="['typescript']">Typescript</a></mat-list-item>
+        <mat-list-item role="listitem"><a [routerLink]="['poo']">Orientação a objeto</a></mat-list-item> -->
+        <mat-divider></mat-divider>
+        <mat-list-item role="listitem"><a [routerLink]="['modulos']">Módulos</a></mat-list-item>
+        <mat-list-item role="listitem"><a [routerLink]="['componentes']">Componentes</a></mat-list-item>
+        <mat-list-item role="listitem"><a [routerLink]="['servicos']">Serviços</a></mat-list-item>
+        <mat-list-item role="listitem"><a [routerLink]="['diretivas']">Diretivas</a></mat-list-item>
+<!--         <mat-list-item role="listitem"><a [routerLink]="['pipes']">Pipes</a></mat-list-item> -->
+        <mat-divider></mat-divider>
+<!--         <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Material
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a [routerLink]="['material']">Material</a>
+        </mat-expansion-panel> -->
+
+      </mat-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <mat-toolbar class="footer">
+    <article>
+    <small class="text-center">Desenvolvido por <a href="https://github.com/lucasclf">Lucas Coquenão</a> &copy; 2021</small>
+  </article>
+  </mat-toolbar>
+</ng-container>

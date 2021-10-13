@@ -1,0 +1,111 @@
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+* {
+  overflow: hidden
+}
+
+.container {
+    position: absolute;
+    top: 60px;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+  }
+  
+  .sidenav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background: rgba(128, 0, 128, 0.301);
+    
+  }
+
+
+  .mat-expansion-panel {
+    background: rgba(128, 0, 128, 0.301);
+  }
+
+  .mat-list-item {
+    margin-left: 10px;
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(128, 0, 128, 0.301);
+  }
+  
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(128, 0, 128, 0.301);
+  }
+
+  .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+  #header{
+    margin-left: 750px;
+  }
+
+  
+mat-sidenav-content {
+  background-color: aliceblue;
+}
+
+article {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}

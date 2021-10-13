@@ -1,0 +1,78 @@
+<section class="container my-4">
+    <article class="calc card">
+        <input type="text" class="calc-screen" readonly [value]="display">
+        <article class="calc-btn">
+
+            <button type="button" class="cientifica btn" (click)="adicionaRaiz()">
+                √
+            </button>
+            <button type="button" class="cientifica btn" (click)="adicionaQuadrado()">
+                x²
+            </button>
+            <button type="button" class="cientifica btn" (click)="adicionaCubo()">
+                x³
+            </button>
+            <button type="button" class="cientifica btn" (click)="adicionaPi()">
+                π
+            </button>
+
+            <button type="button" class="operacao btn" (click)="definirOperacao('+')">
+                +
+            </button>
+            <button type="button" class="operacao btn" (click)="definirOperacao('-')">
+                -
+            </button>
+            <button type="button" class="operacao btn" (click)="definirOperacao('*')">
+                &times;
+            </button>
+            <button type="button" class="operacao btn" (click)="definirOperacao('/')">
+                &divide;
+            </button>
+
+            <button type="button" class="btn numero" (click)="adicionaNumero('7')">
+                7
+            </button>
+            <button type="button" class="btn numero" (click)="adicionaNumero('8')">
+                8
+            </button>
+            <button type="button" class="btn numero" (click)="adicionaNumero('9')">
+                9
+            </button>
+
+            <button type="button" class="btn numero" (click)="adicionaNumero('4')">
+                4
+            </button>
+            <button type="button" class="btn numero" (click)="adicionaNumero('5')">
+                5
+            </button>
+            <button type="button" class="btn numero" (click)="adicionaNumero('6')">
+                6
+            </button>
+
+            <button type="button" class="btn numero" (click)="adicionaNumero('1')">
+                1
+            </button>
+            <button type="button" class="btn numero" (click)="adicionaNumero('2')">
+                2
+            </button>
+            <button type="button" class="btn numero" (click)="adicionaNumero('3')">
+                3
+            </button>
+
+            <button type="button" class="btn numero" (click)="adicionaNumero('0')">
+                0
+            </button>
+            <button type="button" class="btn numero" (click)="adicionaNumero('.')">
+                .
+            </button>
+            <button type="button" class="btn btn-danger " (click)="limpar()">
+                C
+            </button>
+
+            <button type="button" class="btn btn-success" id="resultado" (click)="calcular()">
+                =
+            </button>
+
+        </article>
+    </article>
+</section>

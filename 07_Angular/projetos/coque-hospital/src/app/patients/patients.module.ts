@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { PatientsService, ListComponent, PatientAttendDirective } from './shared';
 import { RegisterComponent } from './register';
 import { EditComponent } from './edit';
+import { DemoMaterialModule } from '../shared/material-module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { EditComponent } from './edit';
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    DemoMaterialModule
   ],
   providers: [
     PatientsService

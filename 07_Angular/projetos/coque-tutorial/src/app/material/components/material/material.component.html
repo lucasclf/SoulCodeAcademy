@@ -1,0 +1,60 @@
+<div>
+    <mat-radio-group [(ngModel)]="myColor" name="myColor"> 
+     
+         <mat-radio-button labelPosition="after" value="blue">
+             Azul
+         </mat-radio-button>
+         <br>
+         <mat-radio-button labelPosition="after" value="red">
+             Vermelho
+         </mat-radio-button>
+         <br>
+         <mat-radio-button labelPosition="after" value="green">
+             Verde
+         </mat-radio-button>
+     </mat-radio-group>
+     <hr>
+     <p [ngStyle]="{ color: myColor }">RESULTADO</p>
+ </div>
+ <hr>
+ <!-- -------------------------------------Ripples-------------------------------------- -->
+ 
+ <section>
+     <mat-checkbox [(ngModel)]="centered" class="example-ripple-checkbox">Centered</mat-checkbox>
+     <mat-checkbox [(ngModel)]="disabled" class="example-ripple-checkbox">Disabled</mat-checkbox>
+     <mat-checkbox [(ngModel)]="unbounded" class="example-ripple-checkbox">Unbounded</mat-checkbox>
+     
+     <mat-form-field class="example-ripple-form-field" appearance="fill">
+     <input matInput [(ngModel)]="radius" type="number" placeholder="Radius">
+     </mat-form-field>
+     <mat-form-field class="example-ripple-form-field" appearance="fill">
+     <input matInput [(ngModel)]="color1" type="text" placeholder="Color">
+     </mat-form-field>
+ 
+     <div class="example-ripple-container mat-elevation-z4"
+         matRipple
+         [matRippleCentered]="centered"
+         [matRippleDisabled]="disabled"
+         [matRippleUnbounded]="unbounded"
+         [matRippleRadius]="radius"
+         [matRippleColor]="color1">
+     Click me
+     </div>
+ </section>
+ <hr>
+ <!-- --------------------------------Select--------------------------------------- -->
+ <div>  
+     <mat-form-field appearance="fill">
+         <mat-select [(ngModel)]="valor" name="valor">
+         <mat-label>Tecnologias</mat-label>
+             <mat-option value="JavaScript">JavaScript</mat-option>
+             <mat-option value="Python">Python</mat-option>
+             <mat-option value="C++">C++</mat-option>
+             <mat-option value="PHP">PHP</mat-option>    
+         </mat-select>  
+     </mat-form-field>
+     <p>
+         Minha tecnologia preferiada é: <strong>{{valor}}</strong> 
+     </p>
+ </div>
+ <br><br><br>

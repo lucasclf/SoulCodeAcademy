@@ -1,0 +1,23 @@
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" [id]='id'>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-space-between">
+        <p class="textheader">Resultado:</p>
+        <span class="close" data-bs-dismiss="modal" aria-label="Fechar" aria-hidden="true"><i
+            class="far fa-times-circle"></i></span>
+      </div>
+      <div class="modal-body text-center">
+        <div>
+          <h2>
+            {{conversao.valor}} {{conversao.medidaDe}} = {{valorConvertido}} {{conversao.medidaPara}}
+          </h2>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)='novaConsulta() '>
+          Nova conversao
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -78,12 +78,12 @@
 
             <div class="row mt-5">
                 <div class="col-6 d-flex justify-content-start">
-                    <button class="btn btn-primary text-uppercase pr-5 pl-5" type="submit"
+                    <button mat-raised-button color="primary" class="text-uppercase pr-5 pl-5" type="submit"
                         (click)="editPatient()">Register</button>
                 </div>
 
                 <div class="col-6 d-flex justify-content-end">
-                    <a [routerLink]="['/patients']" class="btn btn-dark pr-5 pl-5">See list</a>
+                    <button [routerLink]="['/patients']" mat-raised-button  class="pr-5 pl-5">See list</button>
                 </div>
             </div>
         </fieldset>
